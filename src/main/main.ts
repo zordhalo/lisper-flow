@@ -88,11 +88,15 @@ async function handleRecordingStart(): Promise<void> {
   // Check for API key
   if (!configStore.hasDeepgramKey()) {
     trayManager.showError('Deepgram API key not configured');
+    settingsWindow?.webContents.send(IPC_CHANNELS.RECORDING_STATE_CHANGED, 'error');
     settingsWindow?.show();
     return;
   }
 
   trayManager.setState(RecordingState.Recording);
+
+  // Notify settings window of recording state
+  settingsWindow?.webContents.send(IPC_CHANNELS.RECORDING_STATE_CHANGED, 'recording');
 
   try {
     // Start Deepgram stream
@@ -108,6 +112,7 @@ async function handleRecordingStart(): Promise<void> {
   } catch (error) {
     console.error('Failed to start recording:', error);
     trayManager.showError('Failed to start recording');
+    settingsWindow?.webContents.send(IPC_CHANNELS.RECORDING_STATE_CHANGED, 'error');
   }
 }
 
@@ -115,6 +120,9 @@ async function handleRecordingStop(): Promise<void> {
   console.log('Recording stopped');
 
   trayManager.setState(RecordingState.Processing);
+
+  // Notify settings window of processing state
+  settingsWindow?.webContents.send(IPC_CHANNELS.RECORDING_STATE_CHANGED, 'processing');
 
   // Tell renderer to stop capturing audio
   audioWindow?.webContents.send(IPC_CHANNELS.STOP_RECORDING);
@@ -127,6 +135,7 @@ async function handleRecordingStop(): Promise<void> {
     if (!rawTranscript) {
       console.log('No transcript received');
       trayManager.setState(RecordingState.Idle);
+      settingsWindow?.webContents.send(IPC_CHANNELS.RECORDING_STATE_CHANGED, 'idle');
       return;
     }
 
@@ -148,9 +157,11 @@ async function handleRecordingStop(): Promise<void> {
     settingsWindow?.webContents.send(IPC_CHANNELS.TRANSCRIPT_FINAL, finalText);
 
     trayManager.setState(RecordingState.Idle);
+    settingsWindow?.webContents.send(IPC_CHANNELS.RECORDING_STATE_CHANGED, 'idle');
   } catch (error) {
     console.error('Error processing transcript:', error);
     trayManager.showError('Error processing transcript');
+    settingsWindow?.webContents.send(IPC_CHANNELS.RECORDING_STATE_CHANGED, 'error');
   }
 }
 

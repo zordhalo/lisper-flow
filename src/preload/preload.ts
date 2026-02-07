@@ -16,6 +16,7 @@ export interface ElectronAPI {
   onStopRecording: (callback: () => void) => () => void;
   onPartialTranscript: (callback: (text: string) => void) => () => void;
   onFinalTranscript: (callback: (text: string) => void) => () => void;
+  onRecordingStateChanged: (callback: (state: string) => void) => () => void;
   onStatusUpdate: (callback: (status: string) => void) => () => void;
   onError: (callback: (error: string) => void) => () => void;
 }
@@ -54,6 +55,12 @@ const api: ElectronAPI = {
     const handler = (_: IpcRendererEvent, text: string) => callback(text);
     ipcRenderer.on(IPC_CHANNELS.TRANSCRIPT_FINAL, handler);
     return () => ipcRenderer.removeListener(IPC_CHANNELS.TRANSCRIPT_FINAL, handler);
+  },
+
+  onRecordingStateChanged: (callback: (state: string) => void) => {
+    const handler = (_: IpcRendererEvent, state: string) => callback(state);
+    ipcRenderer.on(IPC_CHANNELS.RECORDING_STATE_CHANGED, handler);
+    return () => ipcRenderer.removeListener(IPC_CHANNELS.RECORDING_STATE_CHANGED, handler);
   },
 
   onStatusUpdate: (callback: (status: string) => void) => {

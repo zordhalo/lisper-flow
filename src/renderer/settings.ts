@@ -23,15 +23,18 @@ deepgramLink.addEventListener('click', (e) => {
 async function loadSettings(): Promise<void> {
   try {
     const config = await window.electronAPI.getConfig();
+    console.log('Loaded config:', config);
 
     deepgramApiKeyInput.value = config.deepgramApiKey || '';
     llmApiKeyInput.value = config.llmApiKey || '';
-    cleanupEnabledInput.checked = config.cleanupEnabled;
+    cleanupEnabledInput.checked = config.cleanupEnabled ?? true;
 
     if (config.insertionMode === 'type') {
       modeTypeInput.checked = true;
+      modePasteInput.checked = false;
     } else {
       modePasteInput.checked = true;
+      modeTypeInput.checked = false;
     }
   } catch (error) {
     console.error('Failed to load settings:', error);
@@ -41,6 +44,7 @@ async function loadSettings(): Promise<void> {
 // Save settings on form submit
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
+  e.stopPropagation();
 
   const config = {
     deepgramApiKey: deepgramApiKeyInput.value.trim(),
@@ -49,13 +53,18 @@ form.addEventListener('submit', async (e) => {
     insertionMode: modeTypeInput.checked ? 'type' as const : 'paste' as const,
   };
 
+  console.log('Saving config:', config);
+
   try {
-    await window.electronAPI.setConfig(config);
+    const savedConfig = await window.electronAPI.setConfig(config);
+    console.log('Saved config returned:', savedConfig);
     showStatus('Settings saved!', 'success');
   } catch (error) {
     console.error('Failed to save settings:', error);
     showStatus('Failed to save settings', 'error');
   }
+
+  return false;
 });
 
 function showStatus(message: string, type: 'success' | 'error'): void {
@@ -107,13 +116,11 @@ function escapeHtml(text: string): string {
 }
 
 // Set up IPC listeners
-window.electronAPI.onStartRecording(() => {
-  updateRecordingState('recording');
-  updateTranscript('', false);
-});
-
-window.electronAPI.onStopRecording(() => {
-  updateRecordingState('processing');
+window.electronAPI.onRecordingStateChanged((state) => {
+  updateRecordingState(state as 'idle' | 'recording' | 'processing' | 'error');
+  if (state === 'recording') {
+    updateTranscript('', false);
+  }
 });
 
 window.electronAPI.onPartialTranscript((text) => {
@@ -122,7 +129,6 @@ window.electronAPI.onPartialTranscript((text) => {
 
 window.electronAPI.onFinalTranscript((text) => {
   updateTranscript(text, true);
-  updateRecordingState('idle');
 });
 
 window.electronAPI.onError((error) => {

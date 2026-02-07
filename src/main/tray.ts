@@ -22,30 +22,39 @@ class TrayManager {
       const possiblePaths = [
         path.join(__dirname, '../../assets'),
         path.join(__dirname, '../../../assets'),
+        path.join(__dirname, '../../../../assets'),
         path.join(app.getAppPath(), 'assets'),
+        path.join(app.getAppPath(), '../assets'),
         path.join(process.resourcesPath || '', 'assets'),
+        path.resolve('./assets'),
       ];
+
+      console.log('Looking for icons in paths:', possiblePaths);
+      console.log('__dirname:', __dirname);
+      console.log('app.getAppPath():', app.getAppPath());
 
       for (const basePath of possiblePaths) {
         const idlePath = path.join(basePath, 'icon.png');
         const recordingPath = path.join(basePath, 'icon-recording.png');
+
+        console.log('Trying icon path:', idlePath);
 
         try {
           this.iconIdle = nativeImage.createFromPath(idlePath);
           this.iconRecording = nativeImage.createFromPath(recordingPath);
 
           if (!this.iconIdle.isEmpty()) {
-            console.log('Icons loaded from:', basePath);
+            console.log('Icons loaded successfully from:', basePath);
             break;
           }
-        } catch {
-          // Continue to next path
+        } catch (e) {
+          console.log('Failed to load from:', basePath, e);
         }
       }
 
       // Fallback to empty images if icons not found
       if (!this.iconIdle || this.iconIdle.isEmpty()) {
-        console.warn('Could not load tray icons, using default');
+        console.warn('Could not load tray icons, using default empty icons');
         this.iconIdle = nativeImage.createEmpty();
         this.iconRecording = nativeImage.createEmpty();
       }
@@ -104,7 +113,11 @@ class TrayManager {
   }
 
   setState(state: RecordingState): void {
-    if (!this.tray) return;
+    console.log('Tray setState:', state);
+    if (!this.tray) {
+      console.warn('Tray not initialized');
+      return;
+    }
 
     this.currentState = state;
 
