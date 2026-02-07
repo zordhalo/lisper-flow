@@ -27,6 +27,18 @@ public class TypingCommandQueue
         _logger.LogDebug("Enqueued correction: {Old} -> {New}", correction.OldText, correction.NewText);
     }
     
+    public void EnqueueCorrection(int position, int charsToDelete, string newText)
+    {
+        var correction = new CorrectionCommand
+        {
+            Position = position,
+            CharactersToDelete = charsToDelete,
+            NewText = newText
+        };
+        _channel.Writer.TryWrite(correction);
+        _logger.LogDebug("Enqueued correction: delete {Chars} chars, insert '{New}'", charsToDelete, newText);
+    }
+    
     public async Task<ITypingCommand> DequeueAsync(CancellationToken cancellationToken = default)
     {
         return await _channel.Reader.ReadAsync(cancellationToken);

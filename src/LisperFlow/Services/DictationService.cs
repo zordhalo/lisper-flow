@@ -562,6 +562,14 @@ public class DictationService : IDisposable
         
         // Use ProcessFinalTranscript which types remaining words then we reset
         var update = _transcriptSynchronizer.ProcessFinalTranscript(e.Text);
+        
+        // If there are characters to delete (correction needed), enqueue a correction first
+        if (update.CharsToDelete > 0)
+        {
+            _logger.LogDebug("Enqueuing correction: delete {Chars} chars", update.CharsToDelete);
+            _typingQueue.EnqueueCorrection(0, update.CharsToDelete, "");
+        }
+        
         foreach (var word in update.WordsToType)
         {
             _logger.LogDebug("Enqueuing word from final: '{Word}'", word);

@@ -13,6 +13,11 @@ public class TranscriptSynchronizer
     private readonly List<string> _typedWords = new();
     private readonly ILogger<TranscriptSynchronizer> _logger;
     
+    // Track last partial to detect stabilization
+    private string _lastPartial = "";
+    private int _partialStableCount = 0;
+    private const int MinStableCountBeforeTyping = 1; // Require 1 repeat before typing new words
+    
     public TranscriptSynchronizer(ILogger<TranscriptSynchronizer> logger)
     {
         _logger = logger;
@@ -34,6 +39,25 @@ public class TranscriptSynchronizer
         // Nothing new to type
         if (newWords.Length <= _typedWords.Count) return update;
         
+        // Track stability - only type if the partial has stabilized
+        if (newTranscript == _lastPartial)
+        {
+            _partialStableCount++;
+        }
+        else
+        {
+            _partialStableCount = 0;
+            _lastPartial = newTranscript;
+        }
+        
+        // Don't type from first partial - wait for at least one confirmation
+        // This prevents typing "Basic" when "Basically" is coming
+        if (_typedWords.Count == 0 && _partialStableCount < MinStableCountBeforeTyping)
+        {
+            _logger.LogTrace("Waiting for partial to stabilize before typing first word");
+            return update;
+        }
+        
         // Verify the prefix we already typed still matches (fuzzy)
         for (int i = 0; i < _typedWords.Count; i++)
         {
@@ -46,8 +70,17 @@ public class TranscriptSynchronizer
             }
         }
         
+        // For subsequent words, also wait for some stability before typing
+        // Only type words that have appeared in at least 1 consecutive partial
+        int wordsToConsider = newWords.Length;
+        if (_partialStableCount < MinStableCountBeforeTyping && newWords.Length > _typedWords.Count + 1)
+        {
+            // Only type up to one new word if not yet stable
+            wordsToConsider = _typedWords.Count + 1;
+        }
+        
         // Append new words
-        for (int i = _typedWords.Count; i < newWords.Length; i++)
+        for (int i = _typedWords.Count; i < wordsToConsider; i++)
         {
             update.WordsToType.Add(newWords[i]);
             _typedWords.Add(newWords[i]);
@@ -81,15 +114,39 @@ public class TranscriptSynchronizer
                 break;
         }
         
-        // Type everything after the matched prefix
-        for (int i = matchCount; i < finalWords.Length; i++)
+        // If there's a mismatch at the beginning, we need to correct what was typed
+        if (matchCount < _typedWords.Count && _typedWords.Count > 0)
         {
-            update.WordsToType.Add(finalWords[i]);
+            // Calculate how many characters to delete (all mismatched typed words + spaces)
+            int charsToDelete = 0;
+            for (int i = matchCount; i < _typedWords.Count; i++)
+            {
+                charsToDelete += _typedWords[i].Length + 1; // +1 for space
+            }
+            update.CharsToDelete = charsToDelete;
+            
+            _logger.LogDebug(
+                "Final transcript correction: deleting {Chars} chars from word {Start} to {End}",
+                charsToDelete, matchCount, _typedWords.Count - 1);
+            
+            // Type the correct words from where mismatch started
+            for (int i = matchCount; i < finalWords.Length; i++)
+            {
+                update.WordsToType.Add(finalWords[i]);
+            }
+        }
+        else
+        {
+            // No mismatch, just type remaining words
+            for (int i = matchCount; i < finalWords.Length; i++)
+            {
+                update.WordsToType.Add(finalWords[i]);
+            }
         }
         
         _logger.LogDebug(
-            "Final transcript: {Total} words, {Matched} already typed, {New} new",
-            finalWords.Length, matchCount, update.WordsToType.Count);
+            "Final transcript: {Total} words, {Matched} already typed, {New} new, {Delete} chars to delete",
+            finalWords.Length, matchCount, update.WordsToType.Count, update.CharsToDelete);
         
         return update;
     }
@@ -97,6 +154,8 @@ public class TranscriptSynchronizer
     public void Reset()
     {
         _typedWords.Clear();
+        _lastPartial = "";
+        _partialStableCount = 0;
     }
     
     /// <summary>
@@ -119,4 +178,5 @@ public class TranscriptSynchronizer
 public class TypingUpdate
 {
     public List<string> WordsToType { get; } = new();
+    public int CharsToDelete { get; set; } = 0;
 }
