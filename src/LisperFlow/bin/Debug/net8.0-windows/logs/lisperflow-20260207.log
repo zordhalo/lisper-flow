@@ -1,0 +1,207 @@
+2026-02-07 01:06:49.675 -05:00 [INF] Using default settings
+2026-02-07 01:06:49.924 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 01:06:50.101 -05:00 [INF] Starting dictation service...
+2026-02-07 01:06:50.102 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 01:06:50.117 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:06:50.152 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 01:06:50.160 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 01:06:50.160 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 01:06:50.162 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Win+Space): Win32 error 1409
+2026-02-07 01:06:50.165 -05:00 [WRN] Hotkey Ctrl+Win+Space already registered: Hotkey Ctrl+Win+Space is already registered by another application
+2026-02-07 01:06:50.165 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Win+Space): Win32 error 1409
+2026-02-07 01:06:50.166 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Shift+Win+Space): Win32 error 1409
+2026-02-07 01:06:50.166 -05:00 [INF] Registered hotkey: Dictation (Alt+Win+Space) with ID 4
+2026-02-07 01:06:50.166 -05:00 [INF] Using alternative hotkey: Alt+Win+Space
+2026-02-07 01:06:50.166 -05:00 [INF] Dictation service started successfully
+2026-02-07 01:06:50.166 -05:00 [INF] LisperFlow started successfully
+2026-02-07 01:07:55.583 -05:00 [INF] Using default settings
+2026-02-07 01:07:55.766 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 01:07:55.875 -05:00 [INF] Starting dictation service...
+2026-02-07 01:07:55.876 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 01:07:55.884 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:07:55.914 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 01:07:55.919 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 01:07:55.920 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 01:07:55.921 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Win+Space): Win32 error 1409
+2026-02-07 01:07:55.921 -05:00 [WRN] Hotkey Ctrl+Win+Space already registered: Hotkey Ctrl+Win+Space is already registered by another application
+2026-02-07 01:07:55.922 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Win+Space): Win32 error 1409
+2026-02-07 01:07:55.922 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Shift+Win+Space): Win32 error 1409
+2026-02-07 01:07:55.922 -05:00 [INF] Registered hotkey: Dictation (Alt+Win+Space) with ID 4
+2026-02-07 01:07:55.922 -05:00 [INF] Using alternative hotkey: Alt+Win+Space
+2026-02-07 01:07:55.922 -05:00 [INF] Dictation service started successfully
+2026-02-07 01:07:55.922 -05:00 [INF] LisperFlow started successfully
+2026-02-07 01:08:14.546 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:08:14.565 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 01:08:14.565 -05:00 [INF] Audio capture started
+2026-02-07 01:08:14.566 -05:00 [INF] Audio capture service started listening
+2026-02-07 01:08:14.566 -05:00 [INF] Recording started
+2026-02-07 01:08:14.575 -05:00 [DBG] Speech detected, starting segment with 1920 pre-roll samples
+2026-02-07 01:08:14.575 -05:00 [DBG] Speech detected
+2026-02-07 01:16:08.948 -05:00 [INF] Using default settings
+2026-02-07 01:16:09.179 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 01:16:09.318 -05:00 [INF] Starting dictation service...
+2026-02-07 01:16:09.319 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 01:16:09.331 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:16:09.372 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 01:16:09.382 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 01:16:09.382 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 01:16:09.385 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Win+Space): Win32 error 1409
+2026-02-07 01:16:09.385 -05:00 [WRN] Hotkey Ctrl+Win+Space already registered: Hotkey Ctrl+Win+Space is already registered by another application
+2026-02-07 01:16:09.386 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Win+Space): Win32 error 1409
+2026-02-07 01:16:09.386 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Shift+Win+Space): Win32 error 1409
+2026-02-07 01:16:09.387 -05:00 [INF] Registered hotkey: Dictation (Alt+Win+Space) with ID 4
+2026-02-07 01:16:09.387 -05:00 [INF] Using alternative hotkey: Alt+Win+Space
+2026-02-07 01:16:09.387 -05:00 [INF] Dictation service started successfully
+2026-02-07 01:16:09.388 -05:00 [INF] LisperFlow started successfully
+2026-02-07 01:19:45.400 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 01:19:45.400 -05:00 [INF] Stopping dictation service...
+2026-02-07 01:19:45.401 -05:00 [INF] Unregistered hotkey: Dictation with ID 4
+2026-02-07 01:19:45.401 -05:00 [INF] Dictation service stopped
+2026-02-07 01:19:45.402 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 01:19:45.403 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 01:19:45.403 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 01:19:45.405 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 01:19:45.405 -05:00 [DBG] DictationService disposed
+2026-02-07 01:20:25.824 -05:00 [INF] Using default settings
+2026-02-07 01:20:26.005 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 01:20:26.107 -05:00 [INF] Starting dictation service...
+2026-02-07 01:20:26.107 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 01:20:26.115 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:20:26.147 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 01:20:26.154 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 01:20:26.155 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 01:20:26.156 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Win+Space): Win32 error 1409
+2026-02-07 01:20:26.156 -05:00 [WRN] Hotkey Ctrl+Win+Space already registered: Hotkey Ctrl+Win+Space is already registered by another application
+2026-02-07 01:20:26.157 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Win+Space): Win32 error 1409
+2026-02-07 01:20:26.157 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Shift+Win+Space): Win32 error 1409
+2026-02-07 01:20:26.157 -05:00 [INF] Registered hotkey: Dictation (Alt+Win+Space) with ID 4
+2026-02-07 01:20:26.157 -05:00 [INF] Using alternative hotkey: Alt+Win+Space
+2026-02-07 01:20:26.157 -05:00 [INF] Dictation service started successfully
+2026-02-07 01:20:26.157 -05:00 [INF] LisperFlow started successfully
+2026-02-07 01:21:45.287 -05:00 [DBG] Hotkey pressed: Dictation (Alt+Win+Space)
+2026-02-07 01:21:45.287 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 01:21:45.289 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:21:45.306 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 01:21:45.306 -05:00 [INF] Audio capture started
+2026-02-07 01:21:45.306 -05:00 [INF] Audio capture service started listening
+2026-02-07 01:21:45.306 -05:00 [INF] Recording started
+2026-02-07 01:21:45.846 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 01:21:45.846 -05:00 [DBG] Speech detected
+2026-02-07 01:21:48.466 -05:00 [DBG] Speech segment complete: 2.92s, 46720 samples
+2026-02-07 01:21:48.468 -05:00 [DBG] Speech ended
+2026-02-07 01:21:49.140 -05:00 [DBG] Hotkey pressed: Dictation (Alt+Win+Space)
+2026-02-07 01:21:49.140 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 01:21:49.142 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 01:21:49.142 -05:00 [INF] Audio capture stopping
+2026-02-07 01:21:49.142 -05:00 [INF] Audio capture service stopped listening
+2026-02-07 01:21:49.142 -05:00 [WRN] No audio captured
+2026-02-07 01:21:49.147 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 01:21:49.147 -05:00 [INF] Audio capture stopped
+2026-02-07 01:22:20.347 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 01:22:20.347 -05:00 [INF] Stopping dictation service...
+2026-02-07 01:22:20.348 -05:00 [INF] Unregistered hotkey: Dictation with ID 4
+2026-02-07 01:22:20.348 -05:00 [INF] Dictation service stopped
+2026-02-07 01:22:20.352 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 01:22:20.352 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 01:22:20.352 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 01:22:20.354 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 01:22:20.355 -05:00 [DBG] DictationService disposed
+2026-02-07 01:22:51.790 -05:00 [INF] Using default settings
+2026-02-07 01:22:52.009 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 01:22:52.133 -05:00 [INF] Starting dictation service...
+2026-02-07 01:22:52.134 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 01:22:52.143 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:22:52.175 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 01:22:52.182 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 01:22:52.182 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 01:22:52.184 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Win+Space): Win32 error 1409
+2026-02-07 01:22:52.184 -05:00 [WRN] Hotkey Ctrl+Win+Space already registered: Hotkey Ctrl+Win+Space is already registered by another application
+2026-02-07 01:22:52.184 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Win+Space): Win32 error 1409
+2026-02-07 01:22:52.185 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Shift+Win+Space): Win32 error 1409
+2026-02-07 01:22:52.185 -05:00 [INF] Registered hotkey: Dictation (Alt+Win+Space) with ID 4
+2026-02-07 01:22:52.185 -05:00 [INF] Using alternative hotkey: Alt+Win+Space
+2026-02-07 01:22:52.185 -05:00 [INF] Dictation service started successfully
+2026-02-07 01:22:52.185 -05:00 [INF] LisperFlow started successfully
+2026-02-07 01:25:23.029 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 01:25:23.029 -05:00 [INF] Stopping dictation service...
+2026-02-07 01:25:23.030 -05:00 [INF] Unregistered hotkey: Dictation with ID 4
+2026-02-07 01:25:23.030 -05:00 [INF] Dictation service stopped
+2026-02-07 01:25:23.031 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 01:25:23.032 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 01:25:23.032 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 01:25:23.034 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 01:25:23.034 -05:00 [DBG] DictationService disposed
+2026-02-07 01:26:03.753 -05:00 [INF] Using default settings
+2026-02-07 01:26:03.934 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 01:26:04.038 -05:00 [INF] Starting dictation service...
+2026-02-07 01:26:04.038 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 01:26:04.046 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:26:04.084 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 01:26:04.091 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 01:26:04.092 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 01:26:04.094 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Win+Space): Win32 error 1409
+2026-02-07 01:26:04.095 -05:00 [WRN] Hotkey Ctrl+Win+Space already registered: Hotkey Ctrl+Win+Space is already registered by another application
+2026-02-07 01:26:04.095 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Win+Space): Win32 error 1409
+2026-02-07 01:26:04.095 -05:00 [ERR] Failed to register hotkey Dictation (Ctrl+Shift+Win+Space): Win32 error 1409
+2026-02-07 01:26:04.095 -05:00 [INF] Registered hotkey: Dictation (Alt+Win+Space) with ID 4
+2026-02-07 01:26:04.095 -05:00 [INF] Using alternative hotkey: Alt+Win+Space
+2026-02-07 01:26:04.096 -05:00 [INF] Dictation service started successfully
+2026-02-07 01:26:04.096 -05:00 [INF] LisperFlow started successfully
+2026-02-07 01:27:17.979 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 01:27:17.979 -05:00 [INF] Stopping dictation service...
+2026-02-07 01:27:17.981 -05:00 [INF] Unregistered hotkey: Dictation with ID 4
+2026-02-07 01:27:17.981 -05:00 [INF] Dictation service stopped
+2026-02-07 01:27:17.982 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 01:27:17.983 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 01:27:17.983 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 01:27:17.984 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 01:27:17.985 -05:00 [DBG] DictationService disposed
+2026-02-07 01:27:23.584 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 01:27:23.770 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 01:27:23.878 -05:00 [INF] Starting dictation service...
+2026-02-07 01:27:23.879 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 01:27:23.886 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:27:23.921 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 01:27:23.929 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 01:27:23.930 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 01:27:23.932 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 01:27:23.932 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 01:27:23.933 -05:00 [INF] Dictation service started successfully
+2026-02-07 01:27:23.933 -05:00 [INF] LisperFlow started successfully
+2026-02-07 01:27:26.660 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 01:27:26.660 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 01:27:26.662 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:27:26.677 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 01:27:26.677 -05:00 [INF] Audio capture started
+2026-02-07 01:27:26.677 -05:00 [INF] Audio capture service started listening
+2026-02-07 01:27:26.678 -05:00 [INF] Recording started
+2026-02-07 01:27:27.264 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 01:27:27.265 -05:00 [DBG] Speech detected
+2026-02-07 01:27:27.814 -05:00 [DBG] Speech segment complete: 0.85s, 13600 samples
+2026-02-07 01:27:27.815 -05:00 [DBG] Speech ended
+2026-02-07 01:27:27.913 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 01:27:27.914 -05:00 [DBG] Speech detected
+2026-02-07 01:27:28.563 -05:00 [DBG] Speech segment complete: 0.95s, 15200 samples
+2026-02-07 01:27:28.564 -05:00 [DBG] Speech ended
+2026-02-07 01:27:28.623 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 01:27:28.624 -05:00 [DBG] Speech detected
+2026-02-07 01:27:30.134 -05:00 [DBG] Speech segment complete: 1.81s, 28960 samples
+2026-02-07 01:27:30.134 -05:00 [DBG] Speech ended
+2026-02-07 01:27:31.935 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 01:27:31.935 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 01:27:31.937 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 01:27:31.937 -05:00 [INF] Audio capture stopping
+2026-02-07 01:27:31.937 -05:00 [INF] Returning PTT audio: 5.26s, 84160 samples
+2026-02-07 01:27:31.938 -05:00 [DBG] Processing 5.26s of audio
+2026-02-07 01:27:31.944 -05:00 [DBG] Sending 5.26s audio to OpenAI Whisper (168364 bytes)
+2026-02-07 01:27:31.945 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 01:27:31.945 -05:00 [INF] Audio capture stopped
+2026-02-07 01:27:33.517 -05:00 [INF] Transcription completed in 1576ms: Check, check, check, check, check, this is a check...
+2026-02-07 01:27:33.520 -05:00 [DBG] Focused element: Process=Antigravity, Title=lisper-flow - Antigravity - appsettings.json, Class=Chrome_WidgetWin_1
+2026-02-07 01:27:34.832 -05:00 [DBG] LLM generation completed in 1306ms, 15 tokens
+2026-02-07 01:27:34.833 -05:00 [DBG] Enhanced transcript: Check, check, check, check, check. This is a check...
+2026-02-07 01:27:34.834 -05:00 [DBG] Focused element: Process=Antigravity, Title=lisper-flow - Antigravity - appsettings.json, Class=Chrome_WidgetWin_1
+2026-02-07 01:27:34.834 -05:00 [DBG] Trying strategy: ClipboardPaste
+2026-02-07 01:27:35.031 -05:00 [DBG] Clipboard paste injection completed in 195ms
+2026-02-07 01:27:35.032 -05:00 [INF] Text injected using ClipboardPaste in 195ms to Antigravity
+2026-02-07 01:27:35.032 -05:00 [INF] Dictation complete: 51 chars injected via ClipboardPaste in 3093ms total
