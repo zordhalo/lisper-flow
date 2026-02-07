@@ -3358,3 +3358,937 @@ System.Net.WebSockets.WebSocketException (0x80004005): The server returned statu
 2026-02-07 04:00:35.641 -05:00 [INF] Audio capture stopped
 2026-02-07 04:00:35.839 -05:00 [INF] Real-time typing stopped
 2026-02-07 04:00:35.839 -05:00 [INF] Streaming dictation stopped
+2026-02-07 04:01:57.083 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 04:01:57.083 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 04:01:57.083 -05:00 [DBG] Focused element: Process=Cursor, Title=lisperflow-20260207.log - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 04:01:57.084 -05:00 [INF] Streaming target: Cursor - lisperflow-20260207.log - lisper-flow - Cursor ("4851992")
+2026-02-07 04:01:57.516 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 04:01:57.516 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 04:01:57.516 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 04:01:57.516 -05:00 [INF] Audio capture started
+2026-02-07 04:01:57.516 -05:00 [INF] Audio capture service started listening
+2026-02-07 04:01:57.516 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 04:01:57.516 -05:00 [INF] Streaming coordinator started
+2026-02-07 04:01:57.516 -05:00 [INF] Real-time typing started for window "4851992"
+2026-02-07 04:01:57.516 -05:00 [INF] Streaming dictation started
+2026-02-07 04:01:57.619 -05:00 [DBG] Speech detected, starting segment with 5760 pre-roll samples
+2026-02-07 04:01:57.620 -05:00 [DBG] Speech detected
+2026-02-07 04:01:58.576 -05:00 [DBG] Deepgram transcript confidence: 95.70 %
+2026-02-07 04:01:58.576 -05:00 [DBG] Deepgram partial transcript: Does this shed work
+2026-02-07 04:01:58.576 -05:00 [DBG] Streaming partial transcript: Does this shed work
+2026-02-07 04:01:59.578 -05:00 [DBG] Deepgram transcript confidence: 99.41 %
+2026-02-07 04:01:59.578 -05:00 [DBG] Deepgram partial transcript: Does this shed work normally in
+2026-02-07 04:01:59.578 -05:00 [DBG] Streaming partial transcript: Does this shed work normally in
+2026-02-07 04:02:00.790 -05:00 [DBG] Speech ended
+2026-02-07 04:02:00.880 -05:00 [DBG] Deepgram transcript confidence: 99.61 %
+2026-02-07 04:02:00.880 -05:00 [DBG] Deepgram final transcript: Does this should work normally in cursor?
+2026-02-07 04:02:00.880 -05:00 [INF] Streaming final transcript: Does this should work normally in cursor?
+2026-02-07 04:02:00.880 -05:00 [DBG] Final transcript: 7 words, 0 already typed, 7 new, 0 chars to delete
+2026-02-07 04:02:00.880 -05:00 [DBG] Enqueuing word from final: 'Does'
+2026-02-07 04:02:00.881 -05:00 [DBG] Enqueuing word from final: 'this'
+2026-02-07 04:02:00.881 -05:00 [DBG] Enqueuing word from final: 'should'
+2026-02-07 04:02:00.881 -05:00 [DBG] Enqueuing word from final: 'work'
+2026-02-07 04:02:00.881 -05:00 [DBG] Enqueuing word from final: 'normally'
+2026-02-07 04:02:00.881 -05:00 [DBG] Enqueuing word from final: 'in'
+2026-02-07 04:02:00.881 -05:00 [DBG] Enqueuing word from final: 'cursor?'
+2026-02-07 04:02:00.881 -05:00 [DBG] Typing word: 'Does' to window "4851992"
+2026-02-07 04:02:00.913 -05:00 [DBG] Typing word: 'this' to window "4851992"
+2026-02-07 04:02:00.944 -05:00 [DBG] Typing word: 'should' to window "4851992"
+2026-02-07 04:02:00.975 -05:00 [DBG] Typing word: 'work' to window "4851992"
+2026-02-07 04:02:01.005 -05:00 [DBG] Typing word: 'normally' to window "4851992"
+2026-02-07 04:02:01.036 -05:00 [DBG] Typing word: 'in' to window "4851992"
+2026-02-07 04:02:01.068 -05:00 [DBG] Typing word: 'cursor?' to window "4851992"
+2026-02-07 04:02:01.397 -05:00 [DBG] LLM generation completed in 516ms, 8 tokens
+2026-02-07 04:02:01.397 -05:00 [DBG] Streaming LLM enhancement ready (len 40)
+2026-02-07 04:02:05.130 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:02:05.130 -05:00 [DBG] Speech detected
+2026-02-07 04:02:05.884 -05:00 [DBG] Deepgram transcript confidence: 67.91 %
+2026-02-07 04:02:05.884 -05:00 [WRN] Low confidence (67.91 %): Like, fuck me
+2026-02-07 04:02:05.884 -05:00 [DBG] Deepgram partial transcript: Like, fuck me
+2026-02-07 04:02:05.884 -05:00 [DBG] Streaming partial transcript: Like, fuck me
+2026-02-07 04:02:06.993 -05:00 [DBG] Deepgram transcript confidence: 99.02 %
+2026-02-07 04:02:06.993 -05:00 [DBG] Deepgram partial transcript: Like, fuck me, bro. It wasn't working.
+2026-02-07 04:02:06.993 -05:00 [DBG] Streaming partial transcript: Like, fuck me, bro. It wasn't working.
+2026-02-07 04:02:07.991 -05:00 [DBG] Deepgram transcript confidence: 99.41 %
+2026-02-07 04:02:07.991 -05:00 [DBG] Deepgram partial transcript: Like, fuck me, bro. It wasn't working in notepad,
+2026-02-07 04:02:07.991 -05:00 [DBG] Streaming partial transcript: Like, fuck me, bro. It wasn't working in notepad,
+2026-02-07 04:02:09.093 -05:00 [DBG] Deepgram transcript confidence: 99.27 %
+2026-02-07 04:02:09.093 -05:00 [DBG] Deepgram final transcript: Like, fuck me, bro. It wasn't working in no
+2026-02-07 04:02:09.093 -05:00 [INF] Streaming final transcript: Like, fuck me, bro. It wasn't working in no
+2026-02-07 04:02:09.093 -05:00 [DBG] Final transcript: 9 words, 0 already typed, 9 new, 0 chars to delete
+2026-02-07 04:02:09.093 -05:00 [DBG] Enqueuing word from final: 'Like,'
+2026-02-07 04:02:09.093 -05:00 [DBG] Enqueuing word from final: 'fuck'
+2026-02-07 04:02:09.093 -05:00 [DBG] Enqueuing word from final: 'me,'
+2026-02-07 04:02:09.093 -05:00 [DBG] Enqueuing word from final: 'bro.'
+2026-02-07 04:02:09.093 -05:00 [DBG] Enqueuing word from final: 'It'
+2026-02-07 04:02:09.093 -05:00 [DBG] Enqueuing word from final: 'wasn't'
+2026-02-07 04:02:09.093 -05:00 [DBG] Enqueuing word from final: 'working'
+2026-02-07 04:02:09.093 -05:00 [DBG] Enqueuing word from final: 'in'
+2026-02-07 04:02:09.093 -05:00 [DBG] Enqueuing word from final: 'no'
+2026-02-07 04:02:09.093 -05:00 [DBG] Typing word: 'Like,' to window "4851992"
+2026-02-07 04:02:09.097 -05:00 [DBG] Deepgram transcript confidence: 98.66 %
+2026-02-07 04:02:09.097 -05:00 [DBG] Deepgram partial transcript: epad, but now it's working.
+2026-02-07 04:02:09.097 -05:00 [DBG] Streaming partial transcript: epad, but now it's working.
+2026-02-07 04:02:09.120 -05:00 [DBG] Typing word: 'fuck' to window "4851992"
+2026-02-07 04:02:09.152 -05:00 [DBG] Typing word: 'me,' to window "4851992"
+2026-02-07 04:02:09.183 -05:00 [DBG] Typing word: 'bro.' to window "4851992"
+2026-02-07 04:02:09.213 -05:00 [DBG] Typing word: 'It' to window "4851992"
+2026-02-07 04:02:09.246 -05:00 [DBG] Typing word: 'wasn't' to window "4851992"
+2026-02-07 04:02:09.276 -05:00 [DBG] Typing word: 'working' to window "4851992"
+2026-02-07 04:02:09.308 -05:00 [DBG] Typing word: 'in' to window "4851992"
+2026-02-07 04:02:09.339 -05:00 [DBG] Typing word: 'no' to window "4851992"
+2026-02-07 04:02:09.650 -05:00 [DBG] Speech ended
+2026-02-07 04:02:09.748 -05:00 [DBG] LLM generation completed in 655ms, 11 tokens
+2026-02-07 04:02:09.748 -05:00 [DBG] Streaming LLM enhancement ready (len 44)
+2026-02-07 04:02:09.891 -05:00 [DBG] Deepgram transcript confidence: 99.61 %
+2026-02-07 04:02:09.891 -05:00 [DBG] Deepgram final transcript: epad, but now it's working.
+2026-02-07 04:02:09.891 -05:00 [INF] Streaming final transcript: epad, but now it's working.
+2026-02-07 04:02:09.891 -05:00 [DBG] Final transcript: 5 words, 0 already typed, 5 new, 0 chars to delete
+2026-02-07 04:02:09.891 -05:00 [DBG] Enqueuing word from final: 'epad,'
+2026-02-07 04:02:09.891 -05:00 [DBG] Enqueuing word from final: 'but'
+2026-02-07 04:02:09.891 -05:00 [DBG] Enqueuing word from final: 'now'
+2026-02-07 04:02:09.891 -05:00 [DBG] Enqueuing word from final: 'it's'
+2026-02-07 04:02:09.891 -05:00 [DBG] Enqueuing word from final: 'working.'
+2026-02-07 04:02:09.891 -05:00 [DBG] Typing word: 'epad,' to window "4851992"
+2026-02-07 04:02:09.930 -05:00 [DBG] Typing word: 'but' to window "4851992"
+2026-02-07 04:02:09.960 -05:00 [DBG] Typing word: 'now' to window "4851992"
+2026-02-07 04:02:09.993 -05:00 [DBG] Typing word: 'it's' to window "4851992"
+2026-02-07 04:02:10.025 -05:00 [DBG] Typing word: 'working.' to window "4851992"
+2026-02-07 04:02:10.576 -05:00 [DBG] LLM generation completed in 684ms, 7 tokens
+2026-02-07 04:02:10.576 -05:00 [DBG] Streaming LLM enhancement ready (len 24)
+2026-02-07 04:02:13.650 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:02:13.650 -05:00 [DBG] Speech detected
+2026-02-07 04:02:14.150 -05:00 [DBG] Speech ended
+2026-02-07 04:02:15.340 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:02:15.340 -05:00 [DBG] Speech detected
+2026-02-07 04:02:15.921 -05:00 [DBG] Speech ended
+2026-02-07 04:02:16.385 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 04:02:16.385 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 04:02:16.386 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 04:02:16.386 -05:00 [INF] Audio capture stopping
+2026-02-07 04:02:16.386 -05:00 [WRN] No audio captured during recording
+2026-02-07 04:02:16.386 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 04:02:16.387 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 04:02:16.390 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 04:02:16.391 -05:00 [INF] Audio capture stopped
+2026-02-07 04:02:16.601 -05:00 [INF] Real-time typing stopped
+2026-02-07 04:02:16.601 -05:00 [INF] Streaming dictation stopped
+2026-02-07 04:06:01.902 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 04:06:01.902 -05:00 [INF] Stopping dictation service...
+2026-02-07 04:06:01.903 -05:00 [INF] Unregistered hotkey: Dictation with ID 1
+2026-02-07 04:06:01.903 -05:00 [INF] Dictation service stopped
+2026-02-07 04:06:01.906 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 04:06:01.906 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 04:06:01.906 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 04:06:01.908 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 04:06:01.908 -05:00 [DBG] DictationService disposed
+2026-02-07 04:06:11.835 -05:00 [INF] Loaded .env from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\.env
+2026-02-07 04:06:11.956 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 04:06:12.188 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 04:06:12.430 -05:00 [INF] Starting dictation service...
+2026-02-07 04:06:12.431 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 04:06:12.439 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 04:06:12.470 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 04:06:12.478 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 48000Hz, 16bit, 1ch)
+2026-02-07 04:06:12.478 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 04:06:12.481 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 04:06:12.481 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 04:06:12.481 -05:00 [INF] Dictation service started successfully
+2026-02-07 04:06:12.482 -05:00 [INF] LisperFlow started successfully
+2026-02-07 04:06:15.208 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 04:06:15.210 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 04:06:15.219 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 04:06:15.219 -05:00 [INF] Streaming target: Notepad - Untitled - Notepad ("2100962")
+2026-02-07 04:06:15.835 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 04:06:15.837 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 04:06:15.855 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 04:06:15.855 -05:00 [INF] Audio capture started
+2026-02-07 04:06:15.856 -05:00 [INF] Audio capture service started listening
+2026-02-07 04:06:15.856 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 04:06:15.856 -05:00 [INF] Streaming coordinator started
+2026-02-07 04:06:15.858 -05:00 [INF] Real-time typing started for window "2100962"
+2026-02-07 04:06:15.858 -05:00 [INF] Streaming dictation started
+2026-02-07 04:06:16.057 -05:00 [DBG] Speech detected, starting segment with 9600 pre-roll samples
+2026-02-07 04:06:16.058 -05:00 [DBG] Speech detected
+2026-02-07 04:06:16.953 -05:00 [DBG] Deepgram transcript confidence: 99.71 %
+2026-02-07 04:06:16.955 -05:00 [DBG] Deepgram partial transcript: Okay.
+2026-02-07 04:06:16.956 -05:00 [DBG] Streaming partial transcript: Okay.
+2026-02-07 04:06:17.935 -05:00 [DBG] Deepgram transcript confidence: 97.80 %
+2026-02-07 04:06:17.935 -05:00 [DBG] Deepgram partial transcript: Okay. This better
+2026-02-07 04:06:17.935 -05:00 [DBG] Streaming partial transcript: Okay. This better
+2026-02-07 04:06:18.708 -05:00 [DBG] Speech ended
+2026-02-07 04:06:18.841 -05:00 [DBG] Deepgram transcript confidence: 99.85 %
+2026-02-07 04:06:18.841 -05:00 [DBG] Deepgram final transcript: Okay. This better work.
+2026-02-07 04:06:18.842 -05:00 [INF] Streaming final transcript: Okay. This better work.
+2026-02-07 04:06:18.843 -05:00 [DBG] Final transcript: 4 words, 0 already typed, 4 new, 0 chars to delete
+2026-02-07 04:06:18.843 -05:00 [DBG] Enqueuing word from final: 'Okay.'
+2026-02-07 04:06:18.844 -05:00 [DBG] Enqueuing word from final: 'This'
+2026-02-07 04:06:18.844 -05:00 [DBG] Enqueuing word from final: 'better'
+2026-02-07 04:06:18.844 -05:00 [DBG] Enqueuing word from final: 'work.'
+2026-02-07 04:06:18.846 -05:00 [DBG] Typing word: 'Okay.' to window "2100962"
+2026-02-07 04:06:18.884 -05:00 [DBG] Typing word: 'This' to window "2100962"
+2026-02-07 04:06:18.914 -05:00 [DBG] Typing word: 'better' to window "2100962"
+2026-02-07 04:06:18.944 -05:00 [DBG] Typing word: 'work.' to window "2100962"
+2026-02-07 04:06:19.506 -05:00 [DBG] LLM generation completed in 657ms, 6 tokens
+2026-02-07 04:06:19.507 -05:00 [DBG] Streaming LLM enhancement ready (len 23)
+2026-02-07 04:06:21.488 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:06:21.488 -05:00 [DBG] Speech detected
+2026-02-07 04:06:21.939 -05:00 [DBG] Deepgram transcript confidence: 88.33 %
+2026-02-07 04:06:21.939 -05:00 [DBG] Deepgram partial transcript: That
+2026-02-07 04:06:21.939 -05:00 [DBG] Streaming partial transcript: That
+2026-02-07 04:06:22.558 -05:00 [DBG] Speech ended
+2026-02-07 04:06:22.641 -05:00 [DBG] Deepgram transcript confidence: 90.55 %
+2026-02-07 04:06:22.641 -05:00 [DBG] Deepgram final transcript: Better.
+2026-02-07 04:06:22.641 -05:00 [INF] Streaming final transcript: Better.
+2026-02-07 04:06:22.641 -05:00 [DBG] Final transcript: 1 words, 0 already typed, 1 new, 0 chars to delete
+2026-02-07 04:06:22.641 -05:00 [DBG] Enqueuing word from final: 'Better.'
+2026-02-07 04:06:22.641 -05:00 [DBG] Typing word: 'Better.' to window "2100962"
+2026-02-07 04:06:22.960 -05:00 [DBG] LLM generation completed in 319ms, 2 tokens
+2026-02-07 04:06:22.961 -05:00 [DBG] Streaming LLM enhancement ready (len 7)
+2026-02-07 04:06:23.438 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:06:23.438 -05:00 [DBG] Speech detected
+2026-02-07 04:06:23.635 -05:00 [DBG] Deepgram transcript confidence: 44.47 %
+2026-02-07 04:06:23.636 -05:00 [WRN] Low confidence (44.47 %): What?
+2026-02-07 04:06:23.636 -05:00 [DBG] Deepgram partial transcript: What?
+2026-02-07 04:06:23.636 -05:00 [DBG] Streaming partial transcript: What?
+2026-02-07 04:06:24.357 -05:00 [DBG] Speech ended
+2026-02-07 04:06:24.438 -05:00 [DBG] Deepgram transcript confidence: 99.27 %
+2026-02-07 04:06:24.438 -05:00 [DBG] Deepgram final transcript: Work.
+2026-02-07 04:06:24.438 -05:00 [INF] Streaming final transcript: Work.
+2026-02-07 04:06:24.438 -05:00 [DBG] Final transcript: 1 words, 0 already typed, 1 new, 0 chars to delete
+2026-02-07 04:06:24.438 -05:00 [DBG] Enqueuing word from final: 'Work.'
+2026-02-07 04:06:24.439 -05:00 [DBG] Typing word: 'Work.' to window "2100962"
+2026-02-07 04:06:24.986 -05:00 [DBG] LLM generation completed in 547ms, 2 tokens
+2026-02-07 04:06:24.986 -05:00 [DBG] Streaming LLM enhancement ready (len 5)
+2026-02-07 04:06:29.218 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:06:29.218 -05:00 [DBG] Speech detected
+2026-02-07 04:06:29.728 -05:00 [DBG] Speech ended
+2026-02-07 04:06:46.169 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:06:46.169 -05:00 [DBG] Speech detected
+2026-02-07 04:06:46.979 -05:00 [DBG] Deepgram transcript confidence: 88.99 %
+2026-02-07 04:06:46.979 -05:00 [DBG] Deepgram partial transcript: Man,
+2026-02-07 04:06:46.979 -05:00 [DBG] Streaming partial transcript: Man,
+2026-02-07 04:06:47.228 -05:00 [DBG] Speech ended
+2026-02-07 04:06:47.376 -05:00 [DBG] Deepgram transcript confidence: 86.35 %
+2026-02-07 04:06:47.376 -05:00 [DBG] Deepgram final transcript: Man,
+2026-02-07 04:06:47.376 -05:00 [INF] Streaming final transcript: Man,
+2026-02-07 04:06:47.376 -05:00 [DBG] Final transcript: 1 words, 0 already typed, 1 new, 0 chars to delete
+2026-02-07 04:06:47.376 -05:00 [DBG] Enqueuing word from final: 'Man,'
+2026-02-07 04:06:47.376 -05:00 [DBG] Target window lost focus — attempting to restore
+2026-02-07 04:06:47.495 -05:00 [DBG] Typing word: 'Man,' to window "2100962"
+2026-02-07 04:06:47.985 -05:00 [DBG] LLM generation completed in 608ms, 26 tokens
+2026-02-07 04:06:47.985 -05:00 [DBG] Streaming LLM enhancement ready (len 127)
+2026-02-07 04:06:48.338 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:06:48.338 -05:00 [DBG] Speech detected
+2026-02-07 04:06:48.381 -05:00 [DBG] Deepgram transcript confidence: 81.47 %
+2026-02-07 04:06:48.381 -05:00 [WRN] Low confidence (81.47 %): Man,
+2026-02-07 04:06:48.381 -05:00 [DBG] Deepgram partial transcript: Man,
+2026-02-07 04:06:48.381 -05:00 [DBG] Streaming partial transcript: Man,
+2026-02-07 04:06:48.381 -05:00 [DBG] Enqueuing word from partial: 'Man,'
+2026-02-07 04:06:48.382 -05:00 [DBG] Typing word: 'Man,' to window "2100962"
+2026-02-07 04:06:49.529 -05:00 [DBG] Speech ended
+2026-02-07 04:06:49.684 -05:00 [DBG] Deepgram transcript confidence: 99.90 %
+2026-02-07 04:06:49.685 -05:00 [DBG] Deepgram final transcript: what the heck?
+2026-02-07 04:06:49.685 -05:00 [INF] Streaming final transcript: what the heck?
+2026-02-07 04:06:49.685 -05:00 [DBG] Final transcript correction: deleting 5 chars from word 0 to 0
+2026-02-07 04:06:49.685 -05:00 [DBG] Final transcript: 3 words, 0 already typed, 3 new, 5 chars to delete
+2026-02-07 04:06:49.685 -05:00 [DBG] Enqueuing correction: delete 5 chars
+2026-02-07 04:06:49.685 -05:00 [DBG] Enqueued correction: delete 5 chars, insert ''
+2026-02-07 04:06:49.685 -05:00 [DBG] Enqueuing word from final: 'what'
+2026-02-07 04:06:49.685 -05:00 [DBG] Enqueuing word from final: 'the'
+2026-02-07 04:06:49.685 -05:00 [DBG] Enqueuing word from final: 'heck?'
+2026-02-07 04:06:49.686 -05:00 [DBG] Skipping correction outside tail window (pos 0, typed 47)
+2026-02-07 04:06:49.686 -05:00 [DBG] Typing word: 'what' to window "2100962"
+2026-02-07 04:06:49.723 -05:00 [DBG] Typing word: 'the' to window "2100962"
+2026-02-07 04:06:49.754 -05:00 [DBG] Typing word: 'heck?' to window "2100962"
+2026-02-07 04:06:50.085 -05:00 [DBG] LLM generation completed in 400ms, 4 tokens
+2026-02-07 04:06:50.085 -05:00 [DBG] Streaming LLM enhancement ready (len 14)
+2026-02-07 04:06:59.065 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 04:06:59.065 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 04:06:59.068 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 04:06:59.068 -05:00 [INF] Audio capture stopping
+2026-02-07 04:06:59.068 -05:00 [WRN] No audio captured during recording
+2026-02-07 04:06:59.068 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 04:06:59.070 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 04:06:59.070 -05:00 [INF] Audio capture stopped
+2026-02-07 04:06:59.072 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 04:06:59.281 -05:00 [INF] Real-time typing stopped
+2026-02-07 04:06:59.281 -05:00 [INF] Streaming dictation stopped
+2026-02-07 04:06:59.862 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 04:06:59.862 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 04:06:59.862 -05:00 [DBG] Focused element: Process=Cursor, Title=Untitled-1 - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 04:06:59.862 -05:00 [INF] Streaming target: Cursor - Untitled-1 - lisper-flow - Cursor ("4851992")
+2026-02-07 04:07:00.097 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 04:07:00.098 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 04:07:00.098 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 04:07:00.098 -05:00 [INF] Audio capture started
+2026-02-07 04:07:00.098 -05:00 [INF] Audio capture service started listening
+2026-02-07 04:07:00.098 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 04:07:00.098 -05:00 [INF] Streaming coordinator started
+2026-02-07 04:07:00.099 -05:00 [INF] Real-time typing started for window "4851992"
+2026-02-07 04:07:00.099 -05:00 [INF] Streaming dictation started
+2026-02-07 04:07:00.099 -05:00 [DBG] Speech detected, starting segment with 960 pre-roll samples
+2026-02-07 04:07:00.099 -05:00 [DBG] Speech detected
+2026-02-07 04:07:01.162 -05:00 [DBG] Deepgram transcript confidence: 75.59 %
+2026-02-07 04:07:01.162 -05:00 [WRN] Low confidence (75.59 %): Okay, Reese.
+2026-02-07 04:07:01.162 -05:00 [DBG] Deepgram partial transcript: Okay, Reese.
+2026-02-07 04:07:01.162 -05:00 [DBG] Streaming partial transcript: Okay, Reese.
+2026-02-07 04:07:02.157 -05:00 [DBG] Deepgram transcript confidence: 99.95 %
+2026-02-07 04:07:02.157 -05:00 [DBG] Deepgram partial transcript: Okay. Basically, I'm just
+2026-02-07 04:07:02.157 -05:00 [DBG] Streaming partial transcript: Okay. Basically, I'm just
+2026-02-07 04:07:02.439 -05:00 [DBG] Speech ended
+2026-02-07 04:07:02.559 -05:00 [DBG] Deepgram transcript confidence: 99.90 %
+2026-02-07 04:07:02.559 -05:00 [DBG] Deepgram final transcript: Okay. Basically, I'm just
+2026-02-07 04:07:02.559 -05:00 [INF] Streaming final transcript: Okay. Basically, I'm just
+2026-02-07 04:07:02.560 -05:00 [DBG] Final transcript: 4 words, 0 already typed, 4 new, 0 chars to delete
+2026-02-07 04:07:02.560 -05:00 [DBG] Enqueuing word from final: 'Okay.'
+2026-02-07 04:07:02.560 -05:00 [DBG] Enqueuing word from final: 'Basically,'
+2026-02-07 04:07:02.560 -05:00 [DBG] Enqueuing word from final: 'I'm'
+2026-02-07 04:07:02.560 -05:00 [DBG] Enqueuing word from final: 'just'
+2026-02-07 04:07:02.560 -05:00 [DBG] Typing word: 'Okay.' to window "4851992"
+2026-02-07 04:07:02.598 -05:00 [DBG] Typing word: 'Basically,' to window "4851992"
+2026-02-07 04:07:02.628 -05:00 [DBG] Typing word: 'I'm' to window "4851992"
+2026-02-07 04:07:02.660 -05:00 [DBG] Typing word: 'just' to window "4851992"
+2026-02-07 04:07:03.024 -05:00 [DBG] LLM generation completed in 464ms, 19 tokens
+2026-02-07 04:07:03.024 -05:00 [DBG] Streaming LLM enhancement ready (len 84)
+2026-02-07 04:07:04.129 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:07:04.129 -05:00 [DBG] Speech detected
+2026-02-07 04:07:04.559 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:07:04.559 -05:00 [DBG] Deepgram partial transcript: testing
+2026-02-07 04:07:04.559 -05:00 [DBG] Streaming partial transcript: testing
+2026-02-07 04:07:05.562 -05:00 [DBG] Deepgram transcript confidence: 92.60 %
+2026-02-07 04:07:05.562 -05:00 [DBG] Deepgram partial transcript: testing right now.
+2026-02-07 04:07:05.562 -05:00 [DBG] Streaming partial transcript: testing right now.
+2026-02-07 04:07:06.179 -05:00 [DBG] Speech ended
+2026-02-07 04:07:06.261 -05:00 [DBG] Deepgram transcript confidence: 94.07 %
+2026-02-07 04:07:06.261 -05:00 [DBG] Deepgram final transcript: testing right now.
+2026-02-07 04:07:06.261 -05:00 [INF] Streaming final transcript: testing right now.
+2026-02-07 04:07:06.261 -05:00 [DBG] Final transcript: 3 words, 0 already typed, 3 new, 0 chars to delete
+2026-02-07 04:07:06.261 -05:00 [DBG] Enqueuing word from final: 'testing'
+2026-02-07 04:07:06.261 -05:00 [DBG] Enqueuing word from final: 'right'
+2026-02-07 04:07:06.261 -05:00 [DBG] Enqueuing word from final: 'now.'
+2026-02-07 04:07:06.261 -05:00 [DBG] Typing word: 'testing' to window "4851992"
+2026-02-07 04:07:06.299 -05:00 [DBG] Typing word: 'right' to window "4851992"
+2026-02-07 04:07:06.329 -05:00 [DBG] Typing word: 'now.' to window "4851992"
+2026-02-07 04:07:06.719 -05:00 [DBG] LLM generation completed in 458ms, 5 tokens
+2026-02-07 04:07:06.719 -05:00 [DBG] Streaming LLM enhancement ready (len 23)
+2026-02-07 04:07:25.389 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:07:25.389 -05:00 [DBG] Speech detected
+2026-02-07 04:07:25.890 -05:00 [DBG] Speech ended
+2026-02-07 04:07:28.059 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:07:28.060 -05:00 [DBG] Speech detected
+2026-02-07 04:07:28.949 -05:00 [DBG] Speech ended
+2026-02-07 04:07:31.689 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:07:31.689 -05:00 [DBG] Speech detected
+2026-02-07 04:07:32.060 -05:00 [DBG] Deepgram transcript confidence: 84.59 %
+2026-02-07 04:07:32.060 -05:00 [WRN] Low confidence (84.59 %): Okay.
+2026-02-07 04:07:32.060 -05:00 [DBG] Deepgram partial transcript: Okay.
+2026-02-07 04:07:32.060 -05:00 [DBG] Streaming partial transcript: Okay.
+2026-02-07 04:07:33.059 -05:00 [DBG] Deepgram transcript confidence: 99.71 %
+2026-02-07 04:07:33.059 -05:00 [DBG] Deepgram partial transcript: Okay. I kind of got this
+2026-02-07 04:07:33.059 -05:00 [DBG] Streaming partial transcript: Okay. I kind of got this
+2026-02-07 04:07:34.309 -05:00 [DBG] Speech ended
+2026-02-07 04:07:34.360 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:07:34.360 -05:00 [DBG] Speech detected
+2026-02-07 04:07:34.365 -05:00 [DBG] Deepgram transcript confidence: 99.90 %
+2026-02-07 04:07:34.365 -05:00 [DBG] Deepgram final transcript: Okay. I kind of got this working.
+2026-02-07 04:07:34.365 -05:00 [INF] Streaming final transcript: Okay. I kind of got this working.
+2026-02-07 04:07:34.365 -05:00 [DBG] Final transcript: 7 words, 0 already typed, 7 new, 0 chars to delete
+2026-02-07 04:07:34.365 -05:00 [DBG] Enqueuing word from final: 'Okay.'
+2026-02-07 04:07:34.365 -05:00 [DBG] Enqueuing word from final: 'I'
+2026-02-07 04:07:34.365 -05:00 [DBG] Enqueuing word from final: 'kind'
+2026-02-07 04:07:34.365 -05:00 [DBG] Enqueuing word from final: 'of'
+2026-02-07 04:07:34.365 -05:00 [DBG] Enqueuing word from final: 'got'
+2026-02-07 04:07:34.365 -05:00 [DBG] Enqueuing word from final: 'this'
+2026-02-07 04:07:34.365 -05:00 [DBG] Enqueuing word from final: 'working.'
+2026-02-07 04:07:34.365 -05:00 [DBG] Typing word: 'Okay.' to window "4851992"
+2026-02-07 04:07:34.395 -05:00 [DBG] Typing word: 'I' to window "4851992"
+2026-02-07 04:07:34.426 -05:00 [DBG] Typing word: 'kind' to window "4851992"
+2026-02-07 04:07:34.457 -05:00 [DBG] Typing word: 'of' to window "4851992"
+2026-02-07 04:07:34.488 -05:00 [DBG] Typing word: 'got' to window "4851992"
+2026-02-07 04:07:34.519 -05:00 [DBG] Typing word: 'this' to window "4851992"
+2026-02-07 04:07:34.551 -05:00 [DBG] Typing word: 'working.' to window "4851992"
+2026-02-07 04:07:34.776 -05:00 [DBG] LLM generation completed in 411ms, 9 tokens
+2026-02-07 04:07:34.776 -05:00 [DBG] Streaming LLM enhancement ready (len 36)
+2026-02-07 04:07:35.363 -05:00 [DBG] Deepgram transcript confidence: 99.76 %
+2026-02-07 04:07:35.363 -05:00 [DBG] Deepgram partial transcript: Whisper flow
+2026-02-07 04:07:35.363 -05:00 [DBG] Streaming partial transcript: Whisper flow
+2026-02-07 04:07:36.368 -05:00 [DBG] Deepgram transcript confidence: 99.71 %
+2026-02-07 04:07:36.368 -05:00 [DBG] Deepgram partial transcript: Whisper flow is built out
+2026-02-07 04:07:36.368 -05:00 [DBG] Streaming partial transcript: Whisper flow is built out
+2026-02-07 04:07:37.367 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:07:37.367 -05:00 [DBG] Deepgram partial transcript: Whisper flow is built out on my computer
+2026-02-07 04:07:37.367 -05:00 [DBG] Streaming partial transcript: Whisper flow is built out on my computer
+2026-02-07 04:07:38.477 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:07:38.477 -05:00 [DBG] Deepgram partial transcript: Whisper flow is built out on my computer, and it
+2026-02-07 04:07:38.477 -05:00 [DBG] Streaming partial transcript: Whisper flow is built out on my computer, and it
+2026-02-07 04:07:39.373 -05:00 [DBG] Deepgram transcript confidence: 99.71 %
+2026-02-07 04:07:39.373 -05:00 [DBG] Deepgram partial transcript: Whisper flow is built out on my computer, and it's kind of run
+2026-02-07 04:07:39.373 -05:00 [DBG] Streaming partial transcript: Whisper flow is built out on my computer, and it's kind of run
+2026-02-07 04:07:40.474 -05:00 [DBG] Deepgram transcript confidence: 99.95 %
+2026-02-07 04:07:40.474 -05:00 [DBG] Deepgram partial transcript: Whisper flow is built out on my computer, and it's kind of running unoptimized.
+2026-02-07 04:07:40.474 -05:00 [DBG] Streaming partial transcript: Whisper flow is built out on my computer, and it's kind of running unoptimized.
+2026-02-07 04:07:40.840 -05:00 [DBG] Speech ended
+2026-02-07 04:07:40.878 -05:00 [DBG] Deepgram transcript confidence: 99.95 %
+2026-02-07 04:07:40.878 -05:00 [DBG] Deepgram final transcript: Whisper flow is built out on my computer, and it's kind of running unoptimized.
+2026-02-07 04:07:40.878 -05:00 [INF] Streaming final transcript: Whisper flow is built out on my computer, and it's kind of running unoptimized.
+2026-02-07 04:07:40.878 -05:00 [DBG] Final transcript: 14 words, 0 already typed, 14 new, 0 chars to delete
+2026-02-07 04:07:40.878 -05:00 [DBG] Enqueuing word from final: 'Whisper'
+2026-02-07 04:07:40.878 -05:00 [DBG] Enqueuing word from final: 'flow'
+2026-02-07 04:07:40.878 -05:00 [DBG] Enqueuing word from final: 'is'
+2026-02-07 04:07:40.878 -05:00 [DBG] Enqueuing word from final: 'built'
+2026-02-07 04:07:40.878 -05:00 [DBG] Enqueuing word from final: 'out'
+2026-02-07 04:07:40.878 -05:00 [DBG] Enqueuing word from final: 'on'
+2026-02-07 04:07:40.878 -05:00 [DBG] Enqueuing word from final: 'my'
+2026-02-07 04:07:40.878 -05:00 [DBG] Enqueuing word from final: 'computer,'
+2026-02-07 04:07:40.878 -05:00 [DBG] Enqueuing word from final: 'and'
+2026-02-07 04:07:40.878 -05:00 [DBG] Enqueuing word from final: 'it's'
+2026-02-07 04:07:40.878 -05:00 [DBG] Enqueuing word from final: 'kind'
+2026-02-07 04:07:40.878 -05:00 [DBG] Enqueuing word from final: 'of'
+2026-02-07 04:07:40.878 -05:00 [DBG] Enqueuing word from final: 'running'
+2026-02-07 04:07:40.878 -05:00 [DBG] Enqueuing word from final: 'unoptimized.'
+2026-02-07 04:07:40.879 -05:00 [DBG] Typing word: 'Whisper' to window "4851992"
+2026-02-07 04:07:40.918 -05:00 [DBG] Typing word: 'flow' to window "4851992"
+2026-02-07 04:07:40.948 -05:00 [DBG] Typing word: 'is' to window "4851992"
+2026-02-07 04:07:40.978 -05:00 [DBG] Typing word: 'built' to window "4851992"
+2026-02-07 04:07:41.010 -05:00 [DBG] Typing word: 'out' to window "4851992"
+2026-02-07 04:07:41.041 -05:00 [DBG] Typing word: 'on' to window "4851992"
+2026-02-07 04:07:41.074 -05:00 [DBG] Typing word: 'my' to window "4851992"
+2026-02-07 04:07:41.105 -05:00 [DBG] Typing word: 'computer,' to window "4851992"
+2026-02-07 04:07:41.136 -05:00 [DBG] Typing word: 'and' to window "4851992"
+2026-02-07 04:07:41.166 -05:00 [DBG] Typing word: 'it's' to window "4851992"
+2026-02-07 04:07:41.198 -05:00 [DBG] Typing word: 'kind' to window "4851992"
+2026-02-07 04:07:41.229 -05:00 [DBG] Typing word: 'of' to window "4851992"
+2026-02-07 04:07:41.260 -05:00 [DBG] Typing word: 'running' to window "4851992"
+2026-02-07 04:07:41.290 -05:00 [DBG] Typing word: 'unoptimized.' to window "4851992"
+2026-02-07 04:07:41.475 -05:00 [DBG] LLM generation completed in 596ms, 17 tokens
+2026-02-07 04:07:41.475 -05:00 [DBG] Streaming LLM enhancement ready (len 78)
+2026-02-07 04:07:43.690 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:07:43.690 -05:00 [DBG] Speech detected
+2026-02-07 04:07:44.220 -05:00 [DBG] Speech ended
+2026-02-07 04:07:45.120 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:07:45.120 -05:00 [DBG] Speech detected
+2026-02-07 04:07:45.958 -05:00 [DBG] Deepgram transcript confidence: 98.63 %
+2026-02-07 04:07:45.958 -05:00 [DBG] Deepgram partial transcript: Because
+2026-02-07 04:07:45.958 -05:00 [DBG] Streaming partial transcript: Because
+2026-02-07 04:07:46.500 -05:00 [DBG] Speech ended
+2026-02-07 04:07:46.555 -05:00 [DBG] Deepgram transcript confidence: 90.48 %
+2026-02-07 04:07:46.555 -05:00 [DBG] Deepgram final transcript: Because
+2026-02-07 04:07:46.555 -05:00 [INF] Streaming final transcript: Because
+2026-02-07 04:07:46.555 -05:00 [DBG] Final transcript: 1 words, 0 already typed, 1 new, 0 chars to delete
+2026-02-07 04:07:46.555 -05:00 [DBG] Enqueuing word from final: 'Because'
+2026-02-07 04:07:46.555 -05:00 [DBG] Typing word: 'Because' to window "4851992"
+2026-02-07 04:07:47.116 -05:00 [DBG] LLM generation completed in 560ms, 24 tokens
+2026-02-07 04:07:47.116 -05:00 [DBG] Streaming LLM enhancement ready (len 118)
+2026-02-07 04:07:48.050 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:07:48.050 -05:00 [DBG] Speech detected
+2026-02-07 04:07:48.550 -05:00 [DBG] Speech ended
+2026-02-07 04:07:49.010 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:07:49.010 -05:00 [DBG] Speech detected
+2026-02-07 04:07:49.656 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:07:49.656 -05:00 [DBG] Deepgram partial transcript: I didn't
+2026-02-07 04:07:49.656 -05:00 [DBG] Streaming partial transcript: I didn't
+2026-02-07 04:07:50.690 -05:00 [DBG] Speech ended
+2026-02-07 04:07:50.859 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:07:50.859 -05:00 [DBG] Deepgram final transcript: I didn't deal with
+2026-02-07 04:07:50.859 -05:00 [INF] Streaming final transcript: I didn't deal with
+2026-02-07 04:07:50.859 -05:00 [DBG] Final transcript: 4 words, 0 already typed, 4 new, 0 chars to delete
+2026-02-07 04:07:50.859 -05:00 [DBG] Enqueuing word from final: 'I'
+2026-02-07 04:07:50.859 -05:00 [DBG] Enqueuing word from final: 'didn't'
+2026-02-07 04:07:50.859 -05:00 [DBG] Enqueuing word from final: 'deal'
+2026-02-07 04:07:50.859 -05:00 [DBG] Enqueuing word from final: 'with'
+2026-02-07 04:07:50.859 -05:00 [DBG] Typing word: 'I' to window "4851992"
+2026-02-07 04:07:50.895 -05:00 [DBG] Typing word: 'didn't' to window "4851992"
+2026-02-07 04:07:50.926 -05:00 [DBG] Typing word: 'deal' to window "4851992"
+2026-02-07 04:07:50.958 -05:00 [DBG] Typing word: 'with' to window "4851992"
+2026-02-07 04:07:50.980 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:07:50.980 -05:00 [DBG] Speech detected
+2026-02-07 04:07:51.271 -05:00 [DBG] LLM generation completed in 411ms, 5 tokens
+2026-02-07 04:07:51.271 -05:00 [DBG] Streaming LLM enhancement ready (len 19)
+2026-02-07 04:07:51.864 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:07:51.864 -05:00 [DBG] Deepgram partial transcript: buying
+2026-02-07 04:07:51.864 -05:00 [DBG] Streaming partial transcript: buying
+2026-02-07 04:07:52.280 -05:00 [DBG] Speech ended
+2026-02-07 04:07:52.360 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:07:52.360 -05:00 [DBG] Deepgram final transcript: buying
+2026-02-07 04:07:52.360 -05:00 [INF] Streaming final transcript: buying
+2026-02-07 04:07:52.360 -05:00 [DBG] Final transcript: 1 words, 0 already typed, 1 new, 0 chars to delete
+2026-02-07 04:07:52.360 -05:00 [DBG] Enqueuing word from final: 'buying'
+2026-02-07 04:07:52.360 -05:00 [DBG] Typing word: 'buying' to window "4851992"
+2026-02-07 04:07:52.421 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:07:52.421 -05:00 [DBG] Speech detected
+2026-02-07 04:07:52.951 -05:00 [DBG] LLM generation completed in 590ms, 25 tokens
+2026-02-07 04:07:52.951 -05:00 [DBG] Streaming LLM enhancement ready (len 129)
+2026-02-07 04:07:53.360 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:07:53.360 -05:00 [DBG] Deepgram partial transcript: the
+2026-02-07 04:07:53.360 -05:00 [DBG] Streaming partial transcript: the
+2026-02-07 04:07:53.760 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:07:53.761 -05:00 [DBG] Deepgram partial transcript: the
+2026-02-07 04:07:53.761 -05:00 [DBG] Streaming partial transcript: the
+2026-02-07 04:07:53.761 -05:00 [DBG] Enqueuing word from partial: 'the'
+2026-02-07 04:07:53.761 -05:00 [DBG] Typing word: 'the' to window "4851992"
+2026-02-07 04:07:54.763 -05:00 [DBG] Deepgram transcript confidence: 98.22 %
+2026-02-07 04:07:54.763 -05:00 [DBG] Deepgram partial transcript: the, uh, voice credit
+2026-02-07 04:07:54.763 -05:00 [DBG] Streaming partial transcript: the, uh, voice credit
+2026-02-07 04:07:54.763 -05:00 [DBG] Enqueuing word from partial: 'uh,'
+2026-02-07 04:07:54.763 -05:00 [DBG] Typing word: 'uh,' to window "4851992"
+2026-02-07 04:07:55.768 -05:00 [DBG] Deepgram transcript confidence: 99.61 %
+2026-02-07 04:07:55.768 -05:00 [DBG] Deepgram partial transcript: the, uh, voice credits and, like, the other
+2026-02-07 04:07:55.768 -05:00 [DBG] Streaming partial transcript: the, uh, voice credits and, like, the other
+2026-02-07 04:07:55.768 -05:00 [DBG] Enqueuing word from partial: 'voice'
+2026-02-07 04:07:55.768 -05:00 [DBG] Typing word: 'voice' to window "4851992"
+2026-02-07 04:07:56.491 -05:00 [DBG] Speech ended
+2026-02-07 04:07:56.877 -05:00 [DBG] Deepgram transcript confidence: 99.90 %
+2026-02-07 04:07:56.877 -05:00 [DBG] Deepgram final transcript: the, uh, voice credits and, like, the other stuff.
+2026-02-07 04:07:56.877 -05:00 [INF] Streaming final transcript: the, uh, voice credits and, like, the other stuff.
+2026-02-07 04:07:56.877 -05:00 [DBG] Final transcript: 9 words, 3 already typed, 6 new, 0 chars to delete
+2026-02-07 04:07:56.877 -05:00 [DBG] Enqueuing word from final: 'credits'
+2026-02-07 04:07:56.877 -05:00 [DBG] Enqueuing word from final: 'and,'
+2026-02-07 04:07:56.877 -05:00 [DBG] Enqueuing word from final: 'like,'
+2026-02-07 04:07:56.877 -05:00 [DBG] Enqueuing word from final: 'the'
+2026-02-07 04:07:56.877 -05:00 [DBG] Enqueuing word from final: 'other'
+2026-02-07 04:07:56.877 -05:00 [DBG] Enqueuing word from final: 'stuff.'
+2026-02-07 04:07:56.878 -05:00 [DBG] Typing word: 'credits' to window "4851992"
+2026-02-07 04:07:56.912 -05:00 [DBG] Typing word: 'and,' to window "4851992"
+2026-02-07 04:07:56.944 -05:00 [DBG] Typing word: 'like,' to window "4851992"
+2026-02-07 04:07:56.975 -05:00 [DBG] Typing word: 'the' to window "4851992"
+2026-02-07 04:07:57.006 -05:00 [DBG] Typing word: 'other' to window "4851992"
+2026-02-07 04:07:57.037 -05:00 [DBG] Typing word: 'stuff.' to window "4851992"
+2026-02-07 04:07:57.301 -05:00 [DBG] LLM generation completed in 423ms, 7 tokens
+2026-02-07 04:07:57.301 -05:00 [DBG] Streaming LLM enhancement ready (len 36)
+2026-02-07 04:07:57.530 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:07:57.530 -05:00 [DBG] Speech detected
+2026-02-07 04:07:58.762 -05:00 [DBG] Deepgram transcript confidence: 92.09 %
+2026-02-07 04:07:58.762 -05:00 [DBG] Deepgram partial transcript: I
+2026-02-07 04:07:58.762 -05:00 [DBG] Streaming partial transcript: I
+2026-02-07 04:07:59.766 -05:00 [DBG] Deepgram transcript confidence: 99.56 %
+2026-02-07 04:07:59.766 -05:00 [DBG] Deepgram partial transcript: I think I'm
+2026-02-07 04:07:59.766 -05:00 [DBG] Streaming partial transcript: I think I'm
+2026-02-07 04:08:00.772 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:08:00.772 -05:00 [DBG] Deepgram partial transcript: I think I'm going to basic
+2026-02-07 04:08:00.772 -05:00 [DBG] Streaming partial transcript: I think I'm going to basic
+2026-02-07 04:08:00.772 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'I' — skipping until stabilised
+2026-02-07 04:08:01.560 -05:00 [DBG] Speech ended
+2026-02-07 04:08:01.768 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:08:01.768 -05:00 [DBG] Deepgram final transcript: I think I'm going to basically
+2026-02-07 04:08:01.768 -05:00 [INF] Streaming final transcript: I think I'm going to basically
+2026-02-07 04:08:01.768 -05:00 [DBG] Final transcript correction: deleting 14 chars from word 0 to 2
+2026-02-07 04:08:01.768 -05:00 [DBG] Final transcript: 6 words, 0 already typed, 6 new, 14 chars to delete
+2026-02-07 04:08:01.768 -05:00 [DBG] Enqueuing correction: delete 14 chars
+2026-02-07 04:08:01.768 -05:00 [DBG] Enqueued correction: delete 14 chars, insert ''
+2026-02-07 04:08:01.768 -05:00 [DBG] Enqueuing word from final: 'I'
+2026-02-07 04:08:01.768 -05:00 [DBG] Enqueuing word from final: 'think'
+2026-02-07 04:08:01.768 -05:00 [DBG] Enqueuing word from final: 'I'm'
+2026-02-07 04:08:01.768 -05:00 [DBG] Enqueuing word from final: 'going'
+2026-02-07 04:08:01.768 -05:00 [DBG] Enqueuing word from final: 'to'
+2026-02-07 04:08:01.768 -05:00 [DBG] Enqueuing word from final: 'basically'
+2026-02-07 04:08:01.769 -05:00 [DBG] Skipping correction outside tail window (pos 0, typed 242)
+2026-02-07 04:08:01.769 -05:00 [DBG] Typing word: 'I' to window "4851992"
+2026-02-07 04:08:01.796 -05:00 [DBG] Typing word: 'think' to window "4851992"
+2026-02-07 04:08:01.827 -05:00 [DBG] Typing word: 'I'm' to window "4851992"
+2026-02-07 04:08:01.859 -05:00 [DBG] Typing word: 'going' to window "4851992"
+2026-02-07 04:08:01.890 -05:00 [DBG] Typing word: 'to' to window "4851992"
+2026-02-07 04:08:01.922 -05:00 [DBG] Typing word: 'basically' to window "4851992"
+2026-02-07 04:08:02.204 -05:00 [DBG] LLM generation completed in 435ms, 7 tokens
+2026-02-07 04:08:02.204 -05:00 [DBG] Streaming LLM enhancement ready (len 35)
+2026-02-07 04:08:04.171 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:04.171 -05:00 [DBG] Speech detected
+2026-02-07 04:08:04.961 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:08:04.961 -05:00 [DBG] Deepgram partial transcript: gonna try
+2026-02-07 04:08:04.961 -05:00 [DBG] Streaming partial transcript: gonna try
+2026-02-07 04:08:05.963 -05:00 [DBG] Deepgram transcript confidence: 99.02 %
+2026-02-07 04:08:05.963 -05:00 [DBG] Deepgram partial transcript: gonna try to sell co
+2026-02-07 04:08:05.963 -05:00 [DBG] Streaming partial transcript: gonna try to sell co
+2026-02-07 04:08:05.963 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'gonna' — skipping until stabilised
+2026-02-07 04:08:07.067 -05:00 [DBG] Deepgram transcript confidence: 86.62 %
+2026-02-07 04:08:07.067 -05:00 [DBG] Deepgram partial transcript: gonna try to sell host Whisper Flow
+2026-02-07 04:08:07.067 -05:00 [DBG] Streaming partial transcript: gonna try to sell host Whisper Flow
+2026-02-07 04:08:07.067 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'gonna' — skipping until stabilised
+2026-02-07 04:08:07.620 -05:00 [DBG] Speech ended
+2026-02-07 04:08:07.666 -05:00 [DBG] Deepgram transcript confidence: 83.30 %
+2026-02-07 04:08:07.666 -05:00 [WRN] Low confidence (83.30 %): gonna try to sell host whisper flow.
+2026-02-07 04:08:07.666 -05:00 [DBG] Deepgram final transcript: gonna try to sell host whisper flow.
+2026-02-07 04:08:07.666 -05:00 [INF] Streaming final transcript: gonna try to sell host whisper flow.
+2026-02-07 04:08:07.666 -05:00 [DBG] Final transcript correction: deleting 14 chars from word 0 to 2
+2026-02-07 04:08:07.666 -05:00 [DBG] Final transcript: 7 words, 0 already typed, 7 new, 14 chars to delete
+2026-02-07 04:08:07.666 -05:00 [DBG] Enqueuing correction: delete 14 chars
+2026-02-07 04:08:07.666 -05:00 [DBG] Enqueued correction: delete 14 chars, insert ''
+2026-02-07 04:08:07.666 -05:00 [DBG] Enqueuing word from final: 'gonna'
+2026-02-07 04:08:07.666 -05:00 [DBG] Enqueuing word from final: 'try'
+2026-02-07 04:08:07.666 -05:00 [DBG] Enqueuing word from final: 'to'
+2026-02-07 04:08:07.666 -05:00 [DBG] Enqueuing word from final: 'sell'
+2026-02-07 04:08:07.666 -05:00 [DBG] Enqueuing word from final: 'host'
+2026-02-07 04:08:07.666 -05:00 [DBG] Enqueuing word from final: 'whisper'
+2026-02-07 04:08:07.666 -05:00 [DBG] Enqueuing word from final: 'flow.'
+2026-02-07 04:08:07.666 -05:00 [DBG] Skipping correction outside tail window (pos 0, typed 273)
+2026-02-07 04:08:07.666 -05:00 [DBG] Typing word: 'gonna' to window "4851992"
+2026-02-07 04:08:07.699 -05:00 [DBG] Typing word: 'try' to window "4851992"
+2026-02-07 04:08:07.730 -05:00 [DBG] Typing word: 'to' to window "4851992"
+2026-02-07 04:08:07.761 -05:00 [DBG] Typing word: 'sell' to window "4851992"
+2026-02-07 04:08:07.792 -05:00 [DBG] Typing word: 'host' to window "4851992"
+2026-02-07 04:08:07.824 -05:00 [DBG] Typing word: 'whisper' to window "4851992"
+2026-02-07 04:08:07.855 -05:00 [DBG] Typing word: 'flow.' to window "4851992"
+2026-02-07 04:08:08.088 -05:00 [DBG] LLM generation completed in 421ms, 10 tokens
+2026-02-07 04:08:08.088 -05:00 [DBG] Streaming LLM enhancement ready (len 43)
+2026-02-07 04:08:09.641 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:09.641 -05:00 [DBG] Speech detected
+2026-02-07 04:08:10.811 -05:00 [DBG] Speech ended
+2026-02-07 04:08:10.891 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:10.891 -05:00 [DBG] Speech detected
+2026-02-07 04:08:10.962 -05:00 [DBG] Deepgram transcript confidence: 99.51 %
+2026-02-07 04:08:10.962 -05:00 [DBG] Deepgram final transcript: When
+2026-02-07 04:08:10.962 -05:00 [INF] Streaming final transcript: When
+2026-02-07 04:08:10.962 -05:00 [DBG] Final transcript correction: deleting 14 chars from word 0 to 2
+2026-02-07 04:08:10.962 -05:00 [DBG] Final transcript: 1 words, 0 already typed, 1 new, 14 chars to delete
+2026-02-07 04:08:10.962 -05:00 [DBG] Enqueuing correction: delete 14 chars
+2026-02-07 04:08:10.962 -05:00 [DBG] Enqueued correction: delete 14 chars, insert ''
+2026-02-07 04:08:10.962 -05:00 [DBG] Enqueuing word from final: 'When'
+2026-02-07 04:08:10.963 -05:00 [DBG] Skipping correction outside tail window (pos 0, typed 310)
+2026-02-07 04:08:10.963 -05:00 [DBG] Typing word: 'When' to window "4851992"
+2026-02-07 04:08:11.553 -05:00 [DBG] LLM generation completed in 590ms, 27 tokens
+2026-02-07 04:08:11.553 -05:00 [DBG] Streaming LLM enhancement ready (len 127)
+2026-02-07 04:08:11.962 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:08:11.962 -05:00 [DBG] Deepgram partial transcript: know, I can just use
+2026-02-07 04:08:11.962 -05:00 [DBG] Streaming partial transcript: know, I can just use
+2026-02-07 04:08:11.962 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'know,' — skipping until stabilised
+2026-02-07 04:08:12.968 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:08:12.968 -05:00 [DBG] Deepgram partial transcript: know, I can just use my computer's graph
+2026-02-07 04:08:12.968 -05:00 [DBG] Streaming partial transcript: know, I can just use my computer's graph
+2026-02-07 04:08:12.968 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'know,' — skipping until stabilised
+2026-02-07 04:08:13.969 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:08:13.969 -05:00 [DBG] Deepgram partial transcript: know, I can just use my computer's graphics card
+2026-02-07 04:08:13.969 -05:00 [DBG] Streaming partial transcript: know, I can just use my computer's graphics card
+2026-02-07 04:08:13.969 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'know,' — skipping until stabilised
+2026-02-07 04:08:14.168 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:08:14.168 -05:00 [DBG] Deepgram partial transcript: know, I can just use my computer's graphics card to
+2026-02-07 04:08:14.168 -05:00 [DBG] Streaming partial transcript: know, I can just use my computer's graphics card to
+2026-02-07 04:08:14.168 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'know,' — skipping until stabilised
+2026-02-07 04:08:14.981 -05:00 [DBG] Speech ended
+2026-02-07 04:08:15.068 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:08:15.068 -05:00 [DBG] Deepgram final transcript: know, I can just use my computer's graphics card to
+2026-02-07 04:08:15.068 -05:00 [INF] Streaming final transcript: know, I can just use my computer's graphics card to
+2026-02-07 04:08:15.068 -05:00 [DBG] Final transcript correction: deleting 14 chars from word 0 to 2
+2026-02-07 04:08:15.068 -05:00 [DBG] Final transcript: 10 words, 0 already typed, 10 new, 14 chars to delete
+2026-02-07 04:08:15.068 -05:00 [DBG] Enqueuing correction: delete 14 chars
+2026-02-07 04:08:15.068 -05:00 [DBG] Enqueued correction: delete 14 chars, insert ''
+2026-02-07 04:08:15.068 -05:00 [DBG] Enqueuing word from final: 'know,'
+2026-02-07 04:08:15.068 -05:00 [DBG] Enqueuing word from final: 'I'
+2026-02-07 04:08:15.068 -05:00 [DBG] Enqueuing word from final: 'can'
+2026-02-07 04:08:15.068 -05:00 [DBG] Enqueuing word from final: 'just'
+2026-02-07 04:08:15.068 -05:00 [DBG] Enqueuing word from final: 'use'
+2026-02-07 04:08:15.068 -05:00 [DBG] Enqueuing word from final: 'my'
+2026-02-07 04:08:15.068 -05:00 [DBG] Enqueuing word from final: 'computer's'
+2026-02-07 04:08:15.068 -05:00 [DBG] Enqueuing word from final: 'graphics'
+2026-02-07 04:08:15.068 -05:00 [DBG] Enqueuing word from final: 'card'
+2026-02-07 04:08:15.068 -05:00 [DBG] Enqueuing word from final: 'to'
+2026-02-07 04:08:15.068 -05:00 [DBG] Skipping correction outside tail window (pos 0, typed 315)
+2026-02-07 04:08:15.068 -05:00 [DBG] Typing word: 'know,' to window "4851992"
+2026-02-07 04:08:15.103 -05:00 [DBG] Typing word: 'I' to window "4851992"
+2026-02-07 04:08:15.133 -05:00 [DBG] Typing word: 'can' to window "4851992"
+2026-02-07 04:08:15.165 -05:00 [DBG] Typing word: 'just' to window "4851992"
+2026-02-07 04:08:15.196 -05:00 [DBG] Typing word: 'use' to window "4851992"
+2026-02-07 04:08:15.227 -05:00 [DBG] Typing word: 'my' to window "4851992"
+2026-02-07 04:08:15.258 -05:00 [DBG] Typing word: 'computer's' to window "4851992"
+2026-02-07 04:08:15.288 -05:00 [DBG] Typing word: 'graphics' to window "4851992"
+2026-02-07 04:08:15.319 -05:00 [DBG] Typing word: 'card' to window "4851992"
+2026-02-07 04:08:15.351 -05:00 [DBG] Typing word: 'to' to window "4851992"
+2026-02-07 04:08:15.554 -05:00 [DBG] LLM generation completed in 486ms, 10 tokens
+2026-02-07 04:08:15.554 -05:00 [DBG] Streaming LLM enhancement ready (len 41)
+2026-02-07 04:08:16.071 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:16.071 -05:00 [DBG] Speech detected
+2026-02-07 04:08:16.921 -05:00 [DBG] Speech ended
+2026-02-07 04:08:17.211 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:17.211 -05:00 [DBG] Speech detected
+2026-02-07 04:08:18.058 -05:00 [DBG] Deepgram transcript confidence: 99.71 %
+2026-02-07 04:08:18.058 -05:00 [DBG] Deepgram partial transcript: basically prompt
+2026-02-07 04:08:18.058 -05:00 [DBG] Streaming partial transcript: basically prompt
+2026-02-07 04:08:19.361 -05:00 [DBG] Speech ended
+2026-02-07 04:08:19.465 -05:00 [DBG] Deepgram transcript confidence: 99.71 %
+2026-02-07 04:08:19.466 -05:00 [DBG] Deepgram partial transcript: basically process the audio.
+2026-02-07 04:08:19.466 -05:00 [DBG] Streaming partial transcript: basically process the audio.
+2026-02-07 04:08:19.466 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'basically' — skipping until stabilised
+2026-02-07 04:08:19.963 -05:00 [DBG] Deepgram transcript confidence: 99.61 %
+2026-02-07 04:08:19.963 -05:00 [DBG] Deepgram final transcript: basically process the audio.
+2026-02-07 04:08:19.963 -05:00 [INF] Streaming final transcript: basically process the audio.
+2026-02-07 04:08:19.963 -05:00 [DBG] Final transcript correction: deleting 14 chars from word 0 to 2
+2026-02-07 04:08:19.963 -05:00 [DBG] Final transcript: 4 words, 0 already typed, 4 new, 14 chars to delete
+2026-02-07 04:08:19.963 -05:00 [DBG] Enqueuing correction: delete 14 chars
+2026-02-07 04:08:19.963 -05:00 [DBG] Enqueued correction: delete 14 chars, insert ''
+2026-02-07 04:08:19.963 -05:00 [DBG] Enqueuing word from final: 'basically'
+2026-02-07 04:08:19.963 -05:00 [DBG] Enqueuing word from final: 'process'
+2026-02-07 04:08:19.963 -05:00 [DBG] Enqueuing word from final: 'the'
+2026-02-07 04:08:19.963 -05:00 [DBG] Enqueuing word from final: 'audio.'
+2026-02-07 04:08:19.964 -05:00 [DBG] Skipping correction outside tail window (pos 0, typed 367)
+2026-02-07 04:08:19.964 -05:00 [DBG] Typing word: 'basically' to window "4851992"
+2026-02-07 04:08:19.998 -05:00 [DBG] Typing word: 'process' to window "4851992"
+2026-02-07 04:08:20.029 -05:00 [DBG] Typing word: 'the' to window "4851992"
+2026-02-07 04:08:20.063 -05:00 [DBG] Typing word: 'audio.' to window "4851992"
+2026-02-07 04:08:20.281 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:20.281 -05:00 [DBG] Speech detected
+2026-02-07 04:08:20.365 -05:00 [DBG] LLM generation completed in 401ms, 7 tokens
+2026-02-07 04:08:20.365 -05:00 [DBG] Streaming LLM enhancement ready (len 31)
+2026-02-07 04:08:20.921 -05:00 [DBG] Speech ended
+2026-02-07 04:08:21.620 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:21.620 -05:00 [DBG] Speech detected
+2026-02-07 04:08:22.163 -05:00 [DBG] Deepgram transcript confidence: 80.76 %
+2026-02-07 04:08:22.163 -05:00 [WRN] Low confidence (80.76 %): But, yeah, I
+2026-02-07 04:08:22.163 -05:00 [DBG] Deepgram partial transcript: But, yeah, I
+2026-02-07 04:08:22.163 -05:00 [DBG] Streaming partial transcript: But, yeah, I
+2026-02-07 04:08:23.163 -05:00 [DBG] Deepgram transcript confidence: 98.36 %
+2026-02-07 04:08:23.163 -05:00 [DBG] Deepgram partial transcript: But, yeah, basic
+2026-02-07 04:08:23.163 -05:00 [DBG] Streaming partial transcript: But, yeah, basic
+2026-02-07 04:08:24.167 -05:00 [DBG] Deepgram transcript confidence: 92.19 %
+2026-02-07 04:08:24.167 -05:00 [DBG] Deepgram partial transcript: But, yeah, basic basic NBP
+2026-02-07 04:08:24.167 -05:00 [DBG] Streaming partial transcript: But, yeah, basic basic NBP
+2026-02-07 04:08:24.167 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'But,' — skipping until stabilised
+2026-02-07 04:08:25.121 -05:00 [DBG] Speech ended
+2026-02-07 04:08:25.367 -05:00 [DBG] Deepgram transcript confidence: 95.41 %
+2026-02-07 04:08:25.367 -05:00 [DBG] Deepgram partial transcript: But, yeah, basic basic MVP is working.
+2026-02-07 04:08:25.367 -05:00 [DBG] Streaming partial transcript: But, yeah, basic basic MVP is working.
+2026-02-07 04:08:25.367 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'But,' — skipping until stabilised
+2026-02-07 04:08:25.541 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:25.541 -05:00 [DBG] Speech detected
+2026-02-07 04:08:25.668 -05:00 [DBG] Deepgram transcript confidence: 95.36 %
+2026-02-07 04:08:25.668 -05:00 [DBG] Deepgram partial transcript: But, yeah, basic basic MVP is working.
+2026-02-07 04:08:25.668 -05:00 [DBG] Streaming partial transcript: But, yeah, basic basic MVP is working.
+2026-02-07 04:08:25.668 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'But,' — skipping until stabilised
+2026-02-07 04:08:26.121 -05:00 [DBG] Speech ended
+2026-02-07 04:08:26.170 -05:00 [DBG] Deepgram transcript confidence: 95.36 %
+2026-02-07 04:08:26.170 -05:00 [DBG] Deepgram final transcript: But, yeah, basic basic MVP is working.
+2026-02-07 04:08:26.170 -05:00 [INF] Streaming final transcript: But, yeah, basic basic MVP is working.
+2026-02-07 04:08:26.170 -05:00 [DBG] Final transcript correction: deleting 14 chars from word 0 to 2
+2026-02-07 04:08:26.170 -05:00 [DBG] Final transcript: 7 words, 0 already typed, 7 new, 14 chars to delete
+2026-02-07 04:08:26.170 -05:00 [DBG] Enqueuing correction: delete 14 chars
+2026-02-07 04:08:26.170 -05:00 [DBG] Enqueued correction: delete 14 chars, insert ''
+2026-02-07 04:08:26.170 -05:00 [DBG] Enqueuing word from final: 'But,'
+2026-02-07 04:08:26.170 -05:00 [DBG] Enqueuing word from final: 'yeah,'
+2026-02-07 04:08:26.170 -05:00 [DBG] Enqueuing word from final: 'basic'
+2026-02-07 04:08:26.170 -05:00 [DBG] Enqueuing word from final: 'basic'
+2026-02-07 04:08:26.170 -05:00 [DBG] Enqueuing word from final: 'MVP'
+2026-02-07 04:08:26.170 -05:00 [DBG] Enqueuing word from final: 'is'
+2026-02-07 04:08:26.170 -05:00 [DBG] Enqueuing word from final: 'working.'
+2026-02-07 04:08:26.170 -05:00 [DBG] Skipping correction outside tail window (pos 0, typed 396)
+2026-02-07 04:08:26.170 -05:00 [DBG] Typing word: 'But,' to window "4851992"
+2026-02-07 04:08:26.205 -05:00 [DBG] Typing word: 'yeah,' to window "4851992"
+2026-02-07 04:08:26.211 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:26.211 -05:00 [DBG] Speech detected
+2026-02-07 04:08:26.237 -05:00 [DBG] Typing word: 'basic' to window "4851992"
+2026-02-07 04:08:26.267 -05:00 [DBG] Typing word: 'basic' to window "4851992"
+2026-02-07 04:08:26.300 -05:00 [DBG] Typing word: 'MVP' to window "4851992"
+2026-02-07 04:08:26.330 -05:00 [DBG] Typing word: 'is' to window "4851992"
+2026-02-07 04:08:26.362 -05:00 [DBG] Typing word: 'working.' to window "4851992"
+2026-02-07 04:08:26.771 -05:00 [DBG] Speech ended
+2026-02-07 04:08:26.780 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:26.780 -05:00 [DBG] Speech detected
+2026-02-07 04:08:26.975 -05:00 [DBG] LLM generation completed in 805ms, 6 tokens
+2026-02-07 04:08:26.975 -05:00 [DBG] Streaming LLM enhancement ready (len 29)
+2026-02-07 04:08:27.268 -05:00 [DBG] Deepgram transcript confidence: 99.41 %
+2026-02-07 04:08:27.268 -05:00 [DBG] Deepgram partial transcript: And, you know,
+2026-02-07 04:08:27.268 -05:00 [DBG] Streaming partial transcript: And, you know,
+2026-02-07 04:08:28.268 -05:00 [DBG] Deepgram transcript confidence: 99.90 %
+2026-02-07 04:08:28.268 -05:00 [DBG] Deepgram partial transcript: And you know what the funny thing is?
+2026-02-07 04:08:28.268 -05:00 [DBG] Streaming partial transcript: And you know what the funny thing is?
+2026-02-07 04:08:28.268 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'And' — skipping until stabilised
+2026-02-07 04:08:28.751 -05:00 [DBG] Speech ended
+2026-02-07 04:08:28.870 -05:00 [DBG] Deepgram transcript confidence: 99.90 %
+2026-02-07 04:08:28.870 -05:00 [DBG] Deepgram final transcript: And you know what the funny thing is?
+2026-02-07 04:08:28.870 -05:00 [INF] Streaming final transcript: And you know what the funny thing is?
+2026-02-07 04:08:28.870 -05:00 [DBG] Final transcript correction: deleting 14 chars from word 0 to 2
+2026-02-07 04:08:28.870 -05:00 [DBG] Final transcript: 8 words, 0 already typed, 8 new, 14 chars to delete
+2026-02-07 04:08:28.870 -05:00 [DBG] Enqueuing correction: delete 14 chars
+2026-02-07 04:08:28.870 -05:00 [DBG] Enqueued correction: delete 14 chars, insert ''
+2026-02-07 04:08:28.870 -05:00 [DBG] Enqueuing word from final: 'And'
+2026-02-07 04:08:28.870 -05:00 [DBG] Enqueuing word from final: 'you'
+2026-02-07 04:08:28.870 -05:00 [DBG] Enqueuing word from final: 'know'
+2026-02-07 04:08:28.870 -05:00 [DBG] Enqueuing word from final: 'what'
+2026-02-07 04:08:28.870 -05:00 [DBG] Enqueuing word from final: 'the'
+2026-02-07 04:08:28.870 -05:00 [DBG] Enqueuing word from final: 'funny'
+2026-02-07 04:08:28.870 -05:00 [DBG] Enqueuing word from final: 'thing'
+2026-02-07 04:08:28.870 -05:00 [DBG] Enqueuing word from final: 'is?'
+2026-02-07 04:08:28.871 -05:00 [DBG] Skipping correction outside tail window (pos 0, typed 435)
+2026-02-07 04:08:28.871 -05:00 [DBG] Typing word: 'And' to window "4851992"
+2026-02-07 04:08:28.902 -05:00 [DBG] Typing word: 'you' to window "4851992"
+2026-02-07 04:08:28.933 -05:00 [DBG] Typing word: 'know' to window "4851992"
+2026-02-07 04:08:28.964 -05:00 [DBG] Typing word: 'what' to window "4851992"
+2026-02-07 04:08:28.996 -05:00 [DBG] Typing word: 'the' to window "4851992"
+2026-02-07 04:08:29.027 -05:00 [DBG] Typing word: 'funny' to window "4851992"
+2026-02-07 04:08:29.058 -05:00 [DBG] Typing word: 'thing' to window "4851992"
+2026-02-07 04:08:29.090 -05:00 [DBG] Typing word: 'is?' to window "4851992"
+2026-02-07 04:08:29.241 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:29.241 -05:00 [DBG] Speech detected
+2026-02-07 04:08:29.354 -05:00 [DBG] LLM generation completed in 483ms, 9 tokens
+2026-02-07 04:08:29.354 -05:00 [DBG] Streaming LLM enhancement ready (len 37)
+2026-02-07 04:08:29.862 -05:00 [DBG] Deepgram transcript confidence: 99.80 %
+2026-02-07 04:08:29.862 -05:00 [DBG] Deepgram partial transcript: They built
+2026-02-07 04:08:29.862 -05:00 [DBG] Streaming partial transcript: They built
+2026-02-07 04:08:30.863 -05:00 [DBG] Deepgram transcript confidence: 99.32 %
+2026-02-07 04:08:30.863 -05:00 [DBG] Deepgram partial transcript: They built theirs on top
+2026-02-07 04:08:30.863 -05:00 [DBG] Streaming partial transcript: They built theirs on top
+2026-02-07 04:08:30.863 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'They' — skipping until stabilised
+2026-02-07 04:08:31.911 -05:00 [DBG] Speech ended
+2026-02-07 04:08:32.168 -05:00 [DBG] Deepgram transcript confidence: 99.51 %
+2026-02-07 04:08:32.168 -05:00 [DBG] Deepgram final transcript: They built theirs on top of Chrome
+2026-02-07 04:08:32.168 -05:00 [INF] Streaming final transcript: They built theirs on top of Chrome
+2026-02-07 04:08:32.168 -05:00 [DBG] Final transcript correction: deleting 14 chars from word 0 to 2
+2026-02-07 04:08:32.168 -05:00 [DBG] Final transcript: 7 words, 0 already typed, 7 new, 14 chars to delete
+2026-02-07 04:08:32.168 -05:00 [DBG] Enqueuing correction: delete 14 chars
+2026-02-07 04:08:32.168 -05:00 [DBG] Enqueued correction: delete 14 chars, insert ''
+2026-02-07 04:08:32.168 -05:00 [DBG] Enqueuing word from final: 'They'
+2026-02-07 04:08:32.168 -05:00 [DBG] Enqueuing word from final: 'built'
+2026-02-07 04:08:32.168 -05:00 [DBG] Enqueuing word from final: 'theirs'
+2026-02-07 04:08:32.168 -05:00 [DBG] Enqueuing word from final: 'on'
+2026-02-07 04:08:32.168 -05:00 [DBG] Enqueuing word from final: 'top'
+2026-02-07 04:08:32.168 -05:00 [DBG] Enqueuing word from final: 'of'
+2026-02-07 04:08:32.168 -05:00 [DBG] Enqueuing word from final: 'Chrome'
+2026-02-07 04:08:32.168 -05:00 [DBG] Skipping correction outside tail window (pos 0, typed 473)
+2026-02-07 04:08:32.168 -05:00 [DBG] Typing word: 'They' to window "4851992"
+2026-02-07 04:08:32.209 -05:00 [DBG] Typing word: 'built' to window "4851992"
+2026-02-07 04:08:32.240 -05:00 [DBG] Typing word: 'theirs' to window "4851992"
+2026-02-07 04:08:32.271 -05:00 [DBG] Typing word: 'on' to window "4851992"
+2026-02-07 04:08:32.301 -05:00 [DBG] Typing word: 'top' to window "4851992"
+2026-02-07 04:08:32.332 -05:00 [DBG] Typing word: 'of' to window "4851992"
+2026-02-07 04:08:32.363 -05:00 [DBG] Typing word: 'Chrome' to window "4851992"
+2026-02-07 04:08:32.372 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:32.372 -05:00 [DBG] Speech detected
+2026-02-07 04:08:32.573 -05:00 [DBG] LLM generation completed in 405ms, 8 tokens
+2026-02-07 04:08:32.573 -05:00 [DBG] Streaming LLM enhancement ready (len 35)
+2026-02-07 04:08:33.164 -05:00 [DBG] Deepgram transcript confidence: 99.90 %
+2026-02-07 04:08:33.164 -05:00 [DBG] Deepgram partial transcript: This one's
+2026-02-07 04:08:33.164 -05:00 [DBG] Streaming partial transcript: This one's
+2026-02-07 04:08:34.167 -05:00 [DBG] Deepgram transcript confidence: 99.80 %
+2026-02-07 04:08:34.167 -05:00 [DBG] Deepgram partial transcript: This one's built like pure
+2026-02-07 04:08:34.167 -05:00 [DBG] Streaming partial transcript: This one's built like pure
+2026-02-07 04:08:34.167 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'This' — skipping until stabilised
+2026-02-07 04:08:34.867 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:08:34.867 -05:00 [DBG] Deepgram partial transcript: This one's built, like, purely
+2026-02-07 04:08:34.867 -05:00 [DBG] Streaming partial transcript: This one's built, like, purely
+2026-02-07 04:08:34.867 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'This' — skipping until stabilised
+2026-02-07 04:08:35.866 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 04:08:35.867 -05:00 [DBG] Deepgram partial transcript: This one's built, like, purely just in
+2026-02-07 04:08:35.867 -05:00 [DBG] Streaming partial transcript: This one's built, like, purely just in
+2026-02-07 04:08:35.867 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'This' — skipping until stabilised
+2026-02-07 04:08:36.871 -05:00 [DBG] Deepgram transcript confidence: 99.90 %
+2026-02-07 04:08:36.871 -05:00 [DBG] Deepgram partial transcript: This one's built, like, purely just in pure c
+2026-02-07 04:08:36.871 -05:00 [DBG] Streaming partial transcript: This one's built, like, purely just in pure c
+2026-02-07 04:08:36.871 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'This' — skipping until stabilised
+2026-02-07 04:08:37.170 -05:00 [DBG] Deepgram transcript confidence: 99.90 %
+2026-02-07 04:08:37.170 -05:00 [DBG] Deepgram final transcript: This one's built, like, purely just in pure c
+2026-02-07 04:08:37.170 -05:00 [INF] Streaming final transcript: This one's built, like, purely just in pure c
+2026-02-07 04:08:37.170 -05:00 [DBG] Final transcript correction: deleting 14 chars from word 0 to 2
+2026-02-07 04:08:37.170 -05:00 [DBG] Final transcript: 9 words, 0 already typed, 9 new, 14 chars to delete
+2026-02-07 04:08:37.170 -05:00 [DBG] Enqueuing correction: delete 14 chars
+2026-02-07 04:08:37.170 -05:00 [DBG] Enqueued correction: delete 14 chars, insert ''
+2026-02-07 04:08:37.170 -05:00 [DBG] Enqueuing word from final: 'This'
+2026-02-07 04:08:37.170 -05:00 [DBG] Enqueuing word from final: 'one's'
+2026-02-07 04:08:37.170 -05:00 [DBG] Enqueuing word from final: 'built,'
+2026-02-07 04:08:37.170 -05:00 [DBG] Enqueuing word from final: 'like,'
+2026-02-07 04:08:37.170 -05:00 [DBG] Enqueuing word from final: 'purely'
+2026-02-07 04:08:37.170 -05:00 [DBG] Enqueuing word from final: 'just'
+2026-02-07 04:08:37.170 -05:00 [DBG] Enqueuing word from final: 'in'
+2026-02-07 04:08:37.170 -05:00 [DBG] Enqueuing word from final: 'pure'
+2026-02-07 04:08:37.170 -05:00 [DBG] Enqueuing word from final: 'c'
+2026-02-07 04:08:37.171 -05:00 [DBG] Skipping correction outside tail window (pos 0, typed 508)
+2026-02-07 04:08:37.171 -05:00 [DBG] Typing word: 'This' to window "4851992"
+2026-02-07 04:08:37.203 -05:00 [DBG] Typing word: 'one's' to window "4851992"
+2026-02-07 04:08:37.233 -05:00 [DBG] Typing word: 'built,' to window "4851992"
+2026-02-07 04:08:37.264 -05:00 [DBG] Typing word: 'like,' to window "4851992"
+2026-02-07 04:08:37.295 -05:00 [DBG] Typing word: 'purely' to window "4851992"
+2026-02-07 04:08:37.326 -05:00 [DBG] Typing word: 'just' to window "4851992"
+2026-02-07 04:08:37.356 -05:00 [DBG] Typing word: 'in' to window "4851992"
+2026-02-07 04:08:37.387 -05:00 [DBG] Typing word: 'pure' to window "4851992"
+2026-02-07 04:08:37.419 -05:00 [DBG] Typing word: 'c' to window "4851992"
+2026-02-07 04:08:37.655 -05:00 [DBG] LLM generation completed in 484ms, 8 tokens
+2026-02-07 04:08:37.655 -05:00 [DBG] Streaming LLM enhancement ready (len 30)
+2026-02-07 04:08:37.751 -05:00 [DBG] Speech ended
+2026-02-07 04:08:37.967 -05:00 [DBG] Deepgram transcript confidence: 96.39 %
+2026-02-07 04:08:37.967 -05:00 [DBG] Deepgram final transcript: code.
+2026-02-07 04:08:37.967 -05:00 [INF] Streaming final transcript: code.
+2026-02-07 04:08:37.967 -05:00 [DBG] Final transcript correction: deleting 14 chars from word 0 to 2
+2026-02-07 04:08:37.967 -05:00 [DBG] Final transcript: 1 words, 0 already typed, 1 new, 14 chars to delete
+2026-02-07 04:08:37.967 -05:00 [DBG] Enqueuing correction: delete 14 chars
+2026-02-07 04:08:37.967 -05:00 [DBG] Enqueued correction: delete 14 chars, insert ''
+2026-02-07 04:08:37.967 -05:00 [DBG] Enqueuing word from final: 'code.'
+2026-02-07 04:08:37.967 -05:00 [DBG] Skipping correction outside tail window (pos 0, typed 554)
+2026-02-07 04:08:37.967 -05:00 [DBG] Typing word: 'code.' to window "4851992"
+2026-02-07 04:08:39.104 -05:00 [DBG] LLM generation completed in 1136ms, 31 tokens
+2026-02-07 04:08:39.104 -05:00 [DBG] Streaming LLM enhancement ready (len 152)
+2026-02-07 04:08:39.731 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:39.731 -05:00 [DBG] Speech detected
+2026-02-07 04:08:41.481 -05:00 [DBG] Speech ended
+2026-02-07 04:08:42.232 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:42.232 -05:00 [DBG] Speech detected
+2026-02-07 04:08:43.659 -05:00 [DBG] Deepgram transcript confidence: 83.11 %
+2026-02-07 04:08:43.660 -05:00 [WRN] Low confidence (83.11 %): It looks literally speech
+2026-02-07 04:08:43.660 -05:00 [DBG] Deepgram partial transcript: It looks literally speech
+2026-02-07 04:08:43.660 -05:00 [DBG] Streaming partial transcript: It looks literally speech
+2026-02-07 04:08:43.660 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'It' — skipping until stabilised
+2026-02-07 04:08:44.281 -05:00 [DBG] Speech ended
+2026-02-07 04:08:44.667 -05:00 [DBG] Deepgram transcript confidence: 91.46 %
+2026-02-07 04:08:44.667 -05:00 [DBG] Deepgram partial transcript: It looks literally c sharp.
+2026-02-07 04:08:44.667 -05:00 [DBG] Streaming partial transcript: It looks literally c sharp.
+2026-02-07 04:08:44.667 -05:00 [DBG] Partial diverged at word 0: typed 'the' vs partial 'It' — skipping until stabilised
+2026-02-07 04:08:45.264 -05:00 [DBG] Deepgram transcript confidence: 94.19 %
+2026-02-07 04:08:45.264 -05:00 [DBG] Deepgram final transcript: It looks literally c sharp.
+2026-02-07 04:08:45.264 -05:00 [INF] Streaming final transcript: It looks literally c sharp.
+2026-02-07 04:08:45.264 -05:00 [DBG] Final transcript correction: deleting 14 chars from word 0 to 2
+2026-02-07 04:08:45.264 -05:00 [DBG] Final transcript: 5 words, 0 already typed, 5 new, 14 chars to delete
+2026-02-07 04:08:45.264 -05:00 [DBG] Enqueuing correction: delete 14 chars
+2026-02-07 04:08:45.264 -05:00 [DBG] Enqueued correction: delete 14 chars, insert ''
+2026-02-07 04:08:45.264 -05:00 [DBG] Enqueuing word from final: 'It'
+2026-02-07 04:08:45.264 -05:00 [DBG] Enqueuing word from final: 'looks'
+2026-02-07 04:08:45.264 -05:00 [DBG] Enqueuing word from final: 'literally'
+2026-02-07 04:08:45.264 -05:00 [DBG] Enqueuing word from final: 'c'
+2026-02-07 04:08:45.264 -05:00 [DBG] Enqueuing word from final: 'sharp.'
+2026-02-07 04:08:45.264 -05:00 [DBG] Skipping correction outside tail window (pos 0, typed 560)
+2026-02-07 04:08:45.264 -05:00 [DBG] Typing word: 'It' to window "4851992"
+2026-02-07 04:08:45.289 -05:00 [DBG] Typing word: 'looks' to window "4851992"
+2026-02-07 04:08:45.321 -05:00 [DBG] Typing word: 'literally' to window "4851992"
+2026-02-07 04:08:45.351 -05:00 [DBG] Typing word: 'c' to window "4851992"
+2026-02-07 04:08:45.381 -05:00 [DBG] Typing word: 'sharp.' to window "4851992"
+2026-02-07 04:08:45.816 -05:00 [DBG] LLM generation completed in 552ms, 6 tokens
+2026-02-07 04:08:45.816 -05:00 [DBG] Streaming LLM enhancement ready (len 25)
+2026-02-07 04:08:47.192 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:47.192 -05:00 [DBG] Speech detected
+2026-02-07 04:08:47.752 -05:00 [DBG] Speech ended
+2026-02-07 04:08:47.853 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:08:47.853 -05:00 [DBG] Speech detected
+2026-02-07 04:08:48.271 -05:00 [DBG] Deepgram transcript confidence: 99.22 %
+2026-02-07 04:08:48.271 -05:00 [DBG] Deepgram partial transcript: So
+2026-02-07 04:08:48.271 -05:00 [DBG] Streaming partial transcript: So
+2026-02-07 04:08:48.572 -05:00 [DBG] Speech ended
+2026-02-07 04:08:48.772 -05:00 [DBG] Deepgram transcript confidence: 99.41 %
+2026-02-07 04:08:48.772 -05:00 [DBG] Deepgram partial transcript: So
+2026-02-07 04:08:48.772 -05:00 [DBG] Streaming partial transcript: So
+2026-02-07 04:08:49.171 -05:00 [DBG] Deepgram transcript confidence: 99.41 %
+2026-02-07 04:08:49.171 -05:00 [DBG] Deepgram partial transcript: So
+2026-02-07 04:08:49.171 -05:00 [DBG] Streaming partial transcript: So
+2026-02-07 04:08:50.278 -05:00 [DBG] Deepgram transcript confidence: 99.41 %
+2026-02-07 04:08:50.278 -05:00 [DBG] Deepgram final transcript: So
+2026-02-07 04:08:50.278 -05:00 [INF] Streaming final transcript: So
+2026-02-07 04:08:50.278 -05:00 [DBG] Final transcript correction: deleting 14 chars from word 0 to 2
+2026-02-07 04:08:50.278 -05:00 [DBG] Final transcript: 1 words, 0 already typed, 1 new, 14 chars to delete
+2026-02-07 04:08:50.278 -05:00 [DBG] Enqueuing correction: delete 14 chars
+2026-02-07 04:08:50.278 -05:00 [DBG] Enqueued correction: delete 14 chars, insert ''
+2026-02-07 04:08:50.278 -05:00 [DBG] Enqueuing word from final: 'So'
+2026-02-07 04:08:50.278 -05:00 [DBG] Skipping correction outside tail window (pos 0, typed 588)
+2026-02-07 04:08:50.278 -05:00 [DBG] Typing word: 'So' to window "4851992"
+2026-02-07 04:08:50.928 -05:00 [DBG] LLM generation completed in 649ms, 30 tokens
+2026-02-07 04:08:50.928 -05:00 [DBG] Streaming LLM enhancement ready (len 146)
+2026-02-07 04:09:21.833 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:09:21.833 -05:00 [DBG] Speech detected
+2026-02-07 04:09:22.683 -05:00 [DBG] Speech ended
+2026-02-07 04:10:46.255 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:10:46.255 -05:00 [DBG] Speech detected
+2026-02-07 04:10:46.785 -05:00 [DBG] Speech ended
+2026-02-07 04:11:18.505 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:11:18.505 -05:00 [DBG] Speech detected
+2026-02-07 04:11:19.006 -05:00 [DBG] Speech ended
+2026-02-07 04:11:20.686 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:11:20.686 -05:00 [DBG] Speech detected
+2026-02-07 04:11:21.196 -05:00 [DBG] Speech ended
+2026-02-07 04:11:23.857 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:11:23.857 -05:00 [DBG] Speech detected
+2026-02-07 04:11:25.066 -05:00 [DBG] Speech ended
+2026-02-07 04:11:34.487 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:11:34.487 -05:00 [DBG] Speech detected
+2026-02-07 04:11:35.947 -05:00 [DBG] Speech ended

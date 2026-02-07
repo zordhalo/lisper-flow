@@ -560,7 +560,7 @@ public class DictationService : IDisposable
     {
         _logger.LogInformation("Streaming final transcript: {Text}", e.Text);
         
-        // Use ProcessFinalTranscript which types remaining words then we reset
+        // Use ProcessFinalTranscript which types remaining words
         var update = _transcriptSynchronizer.ProcessFinalTranscript(e.Text);
         
         // If there are characters to delete (correction needed), enqueue a correction first
@@ -575,9 +575,6 @@ public class DictationService : IDisposable
             _logger.LogDebug("Enqueuing word from final: '{Word}'", word);
             _typingQueue.EnqueueWord(word);
         }
-        
-        // Reset for the next utterance
-        _transcriptSynchronizer.Reset();
         
         if (_settings.Streaming.ApplyLlmEnhancement.Equals("AfterFinalization", StringComparison.OrdinalIgnoreCase) &&
             _llmProvider?.IsAvailable == true)
