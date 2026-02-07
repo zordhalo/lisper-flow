@@ -164,7 +164,7 @@ namespace LisperFlow.UI {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/LisperFlow;V1.0.0.0;component/ui/settingswindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/LisperFlow;component/ui/settingswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\UI\SettingsWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

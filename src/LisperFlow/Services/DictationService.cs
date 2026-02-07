@@ -485,7 +485,13 @@ public class DictationService : IDisposable
                 throw new InvalidOperationException("Streaming provider is not configured.");
             }
             
-            _streamingTargetWindow = Hotkeys.Win32Interop.GetForegroundWindow();
+            var focusedElement = _focusDetector.GetFocusedElement();
+            _streamingTargetWindow = focusedElement?.WindowHandle ?? Hotkeys.Win32Interop.GetForegroundWindow();
+            _logger.LogInformation(
+                "Streaming target: {Process} - {Title} ({Handle})",
+                focusedElement?.ProcessName ?? "Unknown",
+                focusedElement?.WindowTitle ?? "",
+                _streamingTargetWindow);
             _transcriptSynchronizer.Reset();
             _typingQueue.Clear();
             

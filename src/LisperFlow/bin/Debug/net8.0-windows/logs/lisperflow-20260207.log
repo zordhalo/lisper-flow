@@ -961,3 +961,471 @@ System.InvalidOperationException: Real-time typing already started.
 2026-02-07 02:54:12.523 -05:00 [INF] Audio capture stopped
 2026-02-07 02:54:12.722 -05:00 [INF] Real-time typing stopped
 2026-02-07 02:54:12.722 -05:00 [INF] Streaming dictation stopped
+2026-02-07 02:55:40.368 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 02:55:40.368 -05:00 [INF] Stopping dictation service...
+2026-02-07 02:55:40.369 -05:00 [INF] Unregistered hotkey: Dictation with ID 1
+2026-02-07 02:55:40.369 -05:00 [INF] Dictation service stopped
+2026-02-07 02:55:40.373 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 02:55:40.374 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 02:55:40.374 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 02:55:40.376 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 02:55:40.377 -05:00 [DBG] DictationService disposed
+2026-02-07 02:55:48.756 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 02:55:48.966 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 02:55:49.086 -05:00 [INF] Starting dictation service...
+2026-02-07 02:55:49.087 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 02:55:49.095 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:55:49.126 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 02:55:49.132 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 02:55:49.133 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:55:49.134 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 02:55:49.135 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 02:55:49.135 -05:00 [INF] Dictation service started successfully
+2026-02-07 02:55:49.135 -05:00 [INF] LisperFlow started successfully
+2026-02-07 02:55:52.749 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:55:52.750 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:55:52.941 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 02:55:52.943 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:55:52.957 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 02:55:52.957 -05:00 [INF] Audio capture started
+2026-02-07 02:55:52.957 -05:00 [INF] Audio capture service started listening
+2026-02-07 02:55:52.957 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 02:55:52.957 -05:00 [INF] Streaming coordinator started
+2026-02-07 02:55:52.959 -05:00 [INF] Real-time typing started for window "2100962"
+2026-02-07 02:55:52.959 -05:00 [INF] Streaming dictation started
+2026-02-07 02:55:54.202 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:55:54.202 -05:00 [DBG] Speech detected
+2026-02-07 02:55:54.590 -05:00 [DBG] Deepgram partial transcript: Check
+2026-02-07 02:55:54.590 -05:00 [DBG] Streaming partial transcript: Check
+2026-02-07 02:55:54.593 -05:00 [WRN] SendInput only sent 0/10 inputs
+2026-02-07 02:55:55.042 -05:00 [DBG] Speech ended
+2026-02-07 02:55:57.581 -05:00 [DBG] Deepgram partial transcript: Check one two three check check to
+2026-02-07 02:55:57.581 -05:00 [DBG] Streaming partial transcript: Check one two three check check to
+2026-02-07 02:55:57.582 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:55:57.582 -05:00 [WRN] SendInput only sent 0/6 inputs
+2026-02-07 02:55:57.609 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:55:57.610 -05:00 [WRN] SendInput only sent 0/6 inputs
+2026-02-07 02:55:57.639 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:55:57.640 -05:00 [WRN] SendInput only sent 0/10 inputs
+2026-02-07 02:55:57.669 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:55:57.670 -05:00 [WRN] SendInput only sent 0/10 inputs
+2026-02-07 02:55:57.701 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:55:57.701 -05:00 [WRN] SendInput only sent 0/10 inputs
+2026-02-07 02:55:57.722 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:55:57.722 -05:00 [DBG] Speech detected
+2026-02-07 02:55:57.732 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:55:57.732 -05:00 [WRN] SendInput only sent 0/4 inputs
+2026-02-07 02:55:58.222 -05:00 [DBG] Speech ended
+2026-02-07 02:55:58.585 -05:00 [DBG] Deepgram partial transcript: Check123CheckCheckCheck123.
+2026-02-07 02:55:58.585 -05:00 [DBG] Streaming partial transcript: Check123CheckCheckCheck123.
+2026-02-07 02:55:58.585 -05:00 [DBG] Transcript correction detected: ' one two three check check to' -> '123CheckCheckCheck123.'
+2026-02-07 02:55:58.586 -05:00 [DBG] Enqueued correction:  one two three check check to -> 123CheckCheckCheck123.
+2026-02-07 02:55:59.040 -05:00 [WRN] SendInput only sent 0/44 inputs
+2026-02-07 02:55:59.593 -05:00 [DBG] Deepgram final transcript: +1 23123. Check check.
+2026-02-07 02:55:59.593 -05:00 [INF] Streaming final transcript: +1 23123. Check check.
+2026-02-07 02:55:59.594 -05:00 [DBG] Transcript correction detected: 'Check123CheckCheckCheck123' -> '+1 23123. Check check'
+2026-02-07 02:55:59.594 -05:00 [DBG] Enqueued correction: Check123CheckCheckCheck123 -> +1 23123. Check check
+2026-02-07 02:55:59.631 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:55:59.631 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:55:59.633 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 02:55:59.633 -05:00 [INF] Audio capture stopping
+2026-02-07 02:55:59.633 -05:00 [WRN] No audio captured during recording
+2026-02-07 02:55:59.634 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 02:55:59.636 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 02:55:59.646 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:55:59.646 -05:00 [INF] Audio capture stopped
+2026-02-07 02:55:59.850 -05:00 [INF] Real-time typing stopped
+2026-02-07 02:55:59.850 -05:00 [INF] Streaming dictation stopped
+2026-02-07 02:56:00.181 -05:00 [DBG] LLM generation completed in 585ms, 10 tokens
+2026-02-07 02:56:00.181 -05:00 [DBG] Streaming LLM enhancement ready (len 23)
+2026-02-07 02:56:21.364 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:56:21.364 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:56:21.495 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 02:56:21.496 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:56:21.496 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 02:56:21.496 -05:00 [INF] Audio capture started
+2026-02-07 02:56:21.496 -05:00 [INF] Audio capture service started listening
+2026-02-07 02:56:21.496 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 02:56:21.496 -05:00 [INF] Streaming coordinator started
+2026-02-07 02:56:21.501 -05:00 [INF] Real-time typing started for window "5836294"
+2026-02-07 02:56:21.501 -05:00 [INF] Streaming dictation started
+2026-02-07 02:56:22.042 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:56:22.043 -05:00 [DBG] Speech detected
+2026-02-07 02:56:22.522 -05:00 [DBG] Deepgram partial transcript: Check
+2026-02-07 02:56:22.522 -05:00 [DBG] Streaming partial transcript: Check
+2026-02-07 02:56:22.522 -05:00 [WRN] SendInput only sent 0/10 inputs
+2026-02-07 02:56:22.762 -05:00 [DBG] Speech ended
+2026-02-07 02:56:23.531 -05:00 [DBG] Deepgram partial transcript: Check one two three check check.
+2026-02-07 02:56:23.531 -05:00 [DBG] Streaming partial transcript: Check one two three check check.
+2026-02-07 02:56:23.531 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:56:23.531 -05:00 [WRN] SendInput only sent 0/6 inputs
+2026-02-07 02:56:23.558 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:56:23.558 -05:00 [WRN] SendInput only sent 0/6 inputs
+2026-02-07 02:56:23.589 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:56:23.589 -05:00 [WRN] SendInput only sent 0/10 inputs
+2026-02-07 02:56:23.620 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:56:23.620 -05:00 [WRN] SendInput only sent 0/10 inputs
+2026-02-07 02:56:23.628 -05:00 [DBG] Deepgram final transcript: Check one two three check check.
+2026-02-07 02:56:23.628 -05:00 [INF] Streaming final transcript: Check one two three check check.
+2026-02-07 02:56:23.651 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:56:23.651 -05:00 [WRN] SendInput only sent 0/12 inputs
+2026-02-07 02:56:23.814 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:56:23.814 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:56:23.814 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 02:56:23.814 -05:00 [INF] Audio capture stopping
+2026-02-07 02:56:23.814 -05:00 [WRN] No audio captured during recording
+2026-02-07 02:56:23.814 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 02:56:23.815 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 02:56:23.823 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:56:23.823 -05:00 [INF] Audio capture stopped
+2026-02-07 02:56:24.027 -05:00 [INF] Real-time typing stopped
+2026-02-07 02:56:24.027 -05:00 [INF] Streaming dictation stopped
+2026-02-07 02:56:24.619 -05:00 [DBG] LLM generation completed in 991ms, 11 tokens
+2026-02-07 02:56:24.620 -05:00 [DBG] Streaming LLM enhancement ready (len 36)
+2026-02-07 02:57:58.391 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 02:57:58.392 -05:00 [INF] Stopping dictation service...
+2026-02-07 02:57:58.393 -05:00 [INF] Unregistered hotkey: Dictation with ID 1
+2026-02-07 02:57:58.393 -05:00 [INF] Dictation service stopped
+2026-02-07 02:57:58.397 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 02:57:58.397 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 02:57:58.397 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 02:57:58.399 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 02:57:58.400 -05:00 [DBG] DictationService disposed
+2026-02-07 02:58:13.353 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 02:58:13.554 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 02:58:13.672 -05:00 [INF] Starting dictation service...
+2026-02-07 02:58:13.673 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 02:58:13.681 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:58:13.711 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 02:58:13.718 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 02:58:13.719 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:58:13.720 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 02:58:13.720 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 02:58:13.721 -05:00 [INF] Dictation service started successfully
+2026-02-07 02:58:13.721 -05:00 [INF] LisperFlow started successfully
+2026-02-07 02:58:18.960 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:58:18.961 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:58:18.965 -05:00 [DBG] Focused element: Process=Cursor, Title=lisperflow-20260207.log - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 02:58:18.965 -05:00 [INF] Streaming target: Cursor - lisperflow-20260207.log - lisper-flow - Cursor ("4851992")
+2026-02-07 02:58:19.285 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 02:58:19.287 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:58:19.303 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 02:58:19.303 -05:00 [INF] Audio capture started
+2026-02-07 02:58:19.303 -05:00 [INF] Audio capture service started listening
+2026-02-07 02:58:19.303 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 02:58:19.303 -05:00 [INF] Streaming coordinator started
+2026-02-07 02:58:19.306 -05:00 [INF] Real-time typing started for window "4851992"
+2026-02-07 02:58:19.306 -05:00 [INF] Streaming dictation started
+2026-02-07 02:58:19.877 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:58:19.877 -05:00 [DBG] Speech detected
+2026-02-07 02:58:20.666 -05:00 [DBG] Speech ended
+2026-02-07 02:58:20.785 -05:00 [DBG] Deepgram partial transcript: Check one two
+2026-02-07 02:58:20.785 -05:00 [DBG] Streaming partial transcript: Check one two
+2026-02-07 02:58:20.789 -05:00 [WRN] SendInput only sent 0/10 inputs (err 87: The parameter is incorrect.)
+2026-02-07 02:58:20.817 -05:00 [WRN] SendInput only sent 0/2 inputs (err 87: The parameter is incorrect.)
+2026-02-07 02:58:20.817 -05:00 [WRN] SendInput only sent 0/6 inputs (err 87: The parameter is incorrect.)
+2026-02-07 02:58:20.847 -05:00 [WRN] SendInput only sent 0/2 inputs (err 87: The parameter is incorrect.)
+2026-02-07 02:58:20.847 -05:00 [WRN] SendInput only sent 0/6 inputs (err 87: The parameter is incorrect.)
+2026-02-07 02:58:21.922 -05:00 [DBG] Deepgram partial transcript: Check one two three. Check check.
+2026-02-07 02:58:21.922 -05:00 [DBG] Streaming partial transcript: Check one two three. Check check.
+2026-02-07 02:58:21.922 -05:00 [WRN] SendInput only sent 0/2 inputs (err 87: The parameter is incorrect.)
+2026-02-07 02:58:21.922 -05:00 [WRN] SendInput only sent 0/12 inputs (err 87: The parameter is incorrect.)
+2026-02-07 02:58:21.951 -05:00 [WRN] SendInput only sent 0/2 inputs (err 87: The parameter is incorrect.)
+2026-02-07 02:58:21.951 -05:00 [WRN] SendInput only sent 0/10 inputs (err 87: The parameter is incorrect.)
+2026-02-07 02:58:21.981 -05:00 [WRN] SendInput only sent 0/2 inputs (err 87: The parameter is incorrect.)
+2026-02-07 02:58:21.982 -05:00 [WRN] SendInput only sent 0/12 inputs (err 87: The parameter is incorrect.)
+2026-02-07 02:58:22.010 -05:00 [DBG] Deepgram final transcript: Check one two three. Check check.
+2026-02-07 02:58:22.011 -05:00 [INF] Streaming final transcript: Check one two three. Check check.
+2026-02-07 02:58:22.554 -05:00 [DBG] LLM generation completed in 539ms, 11 tokens
+2026-02-07 02:58:22.555 -05:00 [DBG] Streaming LLM enhancement ready (len 36)
+2026-02-07 02:58:23.898 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:58:23.898 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:58:23.900 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 02:58:23.900 -05:00 [INF] Audio capture stopping
+2026-02-07 02:58:23.900 -05:00 [WRN] No audio captured during recording
+2026-02-07 02:58:23.900 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 02:58:23.902 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 02:58:23.907 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:58:23.907 -05:00 [INF] Audio capture stopped
+2026-02-07 02:58:24.109 -05:00 [INF] Real-time typing stopped
+2026-02-07 02:58:24.109 -05:00 [INF] Streaming dictation stopped
+2026-02-07 03:03:53.279 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 03:03:53.279 -05:00 [INF] Stopping dictation service...
+2026-02-07 03:03:53.280 -05:00 [INF] Unregistered hotkey: Dictation with ID 1
+2026-02-07 03:03:53.280 -05:00 [INF] Dictation service stopped
+2026-02-07 03:03:53.283 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 03:03:53.283 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 03:03:53.283 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 03:03:53.285 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 03:03:53.285 -05:00 [DBG] DictationService disposed
+2026-02-07 03:04:02.981 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 03:04:03.176 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 03:04:03.310 -05:00 [INF] Starting dictation service...
+2026-02-07 03:04:03.311 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 03:04:03.318 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:04:03.353 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 03:04:03.366 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 03:04:03.366 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:04:03.369 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 03:04:03.369 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 03:04:03.370 -05:00 [INF] Dictation service started successfully
+2026-02-07 03:04:03.370 -05:00 [INF] LisperFlow started successfully
+2026-02-07 03:04:04.343 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:04:04.343 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:04:04.347 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 03:04:04.347 -05:00 [INF] Streaming target: Notepad - Untitled - Notepad ("2100962")
+2026-02-07 03:04:04.529 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 03:04:04.531 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:04:04.547 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 03:04:04.547 -05:00 [INF] Audio capture started
+2026-02-07 03:04:04.547 -05:00 [INF] Audio capture service started listening
+2026-02-07 03:04:04.547 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 03:04:04.547 -05:00 [INF] Streaming coordinator started
+2026-02-07 03:04:04.549 -05:00 [INF] Real-time typing started for window "2100962"
+2026-02-07 03:04:04.549 -05:00 [INF] Streaming dictation started
+2026-02-07 03:04:05.157 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:04:05.157 -05:00 [DBG] Speech detected
+2026-02-07 03:04:05.598 -05:00 [DBG] Deepgram partial transcript: Check when
+2026-02-07 03:04:05.599 -05:00 [DBG] Streaming partial transcript: Check when
+2026-02-07 03:04:05.897 -05:00 [DBG] Speech ended
+2026-02-07 03:04:06.594 -05:00 [DBG] Deepgram partial transcript: Check one two three, check
+2026-02-07 03:04:06.594 -05:00 [DBG] Streaming partial transcript: Check one two three, check
+2026-02-07 03:04:06.594 -05:00 [DBG] Transcript correction detected: 'when' -> 'one two three, check'
+2026-02-07 03:04:06.594 -05:00 [DBG] Enqueued correction: when -> one two three, check
+2026-02-07 03:04:07.085 -05:00 [DBG] Deepgram final transcript: Check one two three check check.
+2026-02-07 03:04:07.085 -05:00 [INF] Streaming final transcript: Check one two three check check.
+2026-02-07 03:04:07.085 -05:00 [DBG] Transcript correction detected: ', check' -> ' check check.'
+2026-02-07 03:04:07.085 -05:00 [DBG] Enqueued correction: , check ->  check check.
+2026-02-07 03:04:07.819 -05:00 [DBG] LLM generation completed in 729ms, 11 tokens
+2026-02-07 03:04:07.819 -05:00 [DBG] Streaming LLM enhancement ready (len 36)
+2026-02-07 03:04:08.614 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:04:08.614 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:04:08.616 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 03:04:08.616 -05:00 [INF] Audio capture stopping
+2026-02-07 03:04:08.616 -05:00 [WRN] No audio captured during recording
+2026-02-07 03:04:08.616 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 03:04:08.617 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:04:08.617 -05:00 [INF] Audio capture stopped
+2026-02-07 03:04:08.619 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 03:04:08.825 -05:00 [INF] Real-time typing stopped
+2026-02-07 03:04:08.825 -05:00 [INF] Streaming dictation stopped
+2026-02-07 03:04:12.610 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:04:12.610 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:04:12.610 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 03:04:12.610 -05:00 [INF] Streaming target: Notepad - Untitled - Notepad ("2100962")
+2026-02-07 03:04:12.710 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 03:04:12.710 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:04:12.711 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 03:04:12.711 -05:00 [INF] Audio capture started
+2026-02-07 03:04:12.711 -05:00 [INF] Audio capture service started listening
+2026-02-07 03:04:12.711 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 03:04:12.711 -05:00 [INF] Streaming coordinator started
+2026-02-07 03:04:12.711 -05:00 [INF] Real-time typing started for window "2100962"
+2026-02-07 03:04:12.711 -05:00 [INF] Streaming dictation started
+2026-02-07 03:04:14.143 -05:00 [DBG] Deepgram partial transcript: This
+2026-02-07 03:04:14.143 -05:00 [DBG] Streaming partial transcript: This
+2026-02-07 03:04:14.236 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:04:14.237 -05:00 [DBG] Speech detected
+2026-02-07 03:04:15.142 -05:00 [DBG] Deepgram partial transcript: This is day one
+2026-02-07 03:04:15.142 -05:00 [DBG] Streaming partial transcript: This is day one
+2026-02-07 03:04:15.146 -05:00 [DBG] Speech ended
+2026-02-07 03:04:16.140 -05:00 [DBG] Deepgram final transcript: This is day one of
+2026-02-07 03:04:16.140 -05:00 [INF] Streaming final transcript: This is day one of
+2026-02-07 03:04:16.728 -05:00 [DBG] LLM generation completed in 587ms, 6 tokens
+2026-02-07 03:04:16.728 -05:00 [DBG] Streaming LLM enhancement ready (len 19)
+2026-02-07 03:04:18.026 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:04:18.026 -05:00 [DBG] Speech detected
+2026-02-07 03:04:18.036 -05:00 [DBG] Deepgram partial transcript: figuring out like
+2026-02-07 03:04:18.036 -05:00 [DBG] Streaming partial transcript: figuring out like
+2026-02-07 03:04:18.036 -05:00 [DBG] Transcript correction detected: 'This is day one of' -> 'figuring out like'
+2026-02-07 03:04:18.036 -05:00 [DBG] Enqueued correction: This is day one of -> figuring out like
+2026-02-07 03:04:19.037 -05:00 [DBG] Deepgram partial transcript: figuring out exactly what I'm gonna
+2026-02-07 03:04:19.037 -05:00 [DBG] Streaming partial transcript: figuring out exactly what I'm gonna
+2026-02-07 03:04:19.037 -05:00 [DBG] Transcript correction detected: 'like' -> 'exactly what I'm gonna'
+2026-02-07 03:04:19.037 -05:00 [DBG] Enqueued correction: like -> exactly what I'm gonna
+2026-02-07 03:04:19.949 -05:00 [DBG] Deepgram final transcript: figuring out exactly what I'm gonna be doing.
+2026-02-07 03:04:19.949 -05:00 [INF] Streaming final transcript: figuring out exactly what I'm gonna be doing.
+2026-02-07 03:04:20.867 -05:00 [DBG] Speech ended
+2026-02-07 03:04:21.106 -05:00 [DBG] LLM generation completed in 1157ms, 10 tokens
+2026-02-07 03:04:21.106 -05:00 [DBG] Streaming LLM enhancement ready (len 42)
+2026-02-07 03:04:21.580 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:04:21.580 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:04:21.581 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 03:04:21.581 -05:00 [INF] Audio capture stopping
+2026-02-07 03:04:21.581 -05:00 [WRN] No audio captured during recording
+2026-02-07 03:04:21.581 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 03:04:21.582 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 03:04:21.590 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:04:21.590 -05:00 [INF] Audio capture stopped
+2026-02-07 03:04:21.792 -05:00 [INF] Real-time typing stopped
+2026-02-07 03:04:21.792 -05:00 [INF] Streaming dictation stopped
+2026-02-07 03:04:24.090 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:04:24.090 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:04:24.091 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 03:04:24.091 -05:00 [INF] Streaming target: Notepad - Untitled - Notepad ("2100962")
+2026-02-07 03:04:24.324 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 03:04:24.324 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:04:24.324 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 03:04:24.324 -05:00 [INF] Audio capture started
+2026-02-07 03:04:24.324 -05:00 [INF] Audio capture service started listening
+2026-02-07 03:04:24.324 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 03:04:24.324 -05:00 [INF] Streaming coordinator started
+2026-02-07 03:04:24.324 -05:00 [INF] Real-time typing started for window "2100962"
+2026-02-07 03:04:24.324 -05:00 [INF] Streaming dictation started
+2026-02-07 03:04:25.187 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:04:25.187 -05:00 [DBG] Speech detected
+2026-02-07 03:04:25.986 -05:00 [DBG] Deepgram partial transcript: This is day
+2026-02-07 03:04:25.986 -05:00 [DBG] Streaming partial transcript: This is day
+2026-02-07 03:04:26.537 -05:00 [DBG] Speech ended
+2026-02-07 03:04:27.479 -05:00 [DBG] Deepgram partial transcript: This is d one
+2026-02-07 03:04:27.479 -05:00 [DBG] Streaming partial transcript: This is d one
+2026-02-07 03:04:27.479 -05:00 [DBG] Transcript correction detected: 'ay' -> ' one'
+2026-02-07 03:04:27.479 -05:00 [DBG] Enqueued correction: ay ->  one
+2026-02-07 03:04:28.487 -05:00 [DBG] Deepgram partial transcript: This is d one
+2026-02-07 03:04:28.488 -05:00 [DBG] Streaming partial transcript: This is d one
+2026-02-07 03:04:28.881 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:04:28.881 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:04:28.882 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 03:04:28.882 -05:00 [INF] Audio capture stopping
+2026-02-07 03:04:28.882 -05:00 [WRN] No audio captured during recording
+2026-02-07 03:04:28.882 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 03:04:28.883 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 03:04:28.887 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:04:28.887 -05:00 [INF] Audio capture stopped
+2026-02-07 03:04:29.098 -05:00 [INF] Real-time typing stopped
+2026-02-07 03:04:29.098 -05:00 [INF] Streaming dictation stopped
+2026-02-07 03:04:32.318 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:04:32.318 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:04:32.319 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 03:04:32.319 -05:00 [INF] Streaming target: Notepad - Untitled - Notepad ("2100962")
+2026-02-07 03:04:32.532 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 03:04:32.533 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:04:32.533 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 03:04:32.533 -05:00 [INF] Audio capture started
+2026-02-07 03:04:32.533 -05:00 [INF] Audio capture service started listening
+2026-02-07 03:04:32.533 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 03:04:32.533 -05:00 [INF] Streaming coordinator started
+2026-02-07 03:04:32.533 -05:00 [INF] Real-time typing started for window "2100962"
+2026-02-07 03:04:32.533 -05:00 [INF] Streaming dictation started
+2026-02-07 03:04:33.207 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:04:33.207 -05:00 [DBG] Speech detected
+2026-02-07 03:04:33.596 -05:00 [DBG] Deepgram partial transcript: This
+2026-02-07 03:04:33.596 -05:00 [DBG] Streaming partial transcript: This
+2026-02-07 03:04:34.567 -05:00 [DBG] Speech ended
+2026-02-07 03:04:34.595 -05:00 [DBG] Deepgram final transcript: This is day one.
+2026-02-07 03:04:34.595 -05:00 [INF] Streaming final transcript: This is day one.
+2026-02-07 03:04:34.981 -05:00 [DBG] LLM generation completed in 386ms, 5 tokens
+2026-02-07 03:04:34.981 -05:00 [DBG] Streaming LLM enhancement ready (len 16)
+2026-02-07 03:04:38.037 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:04:38.037 -05:00 [DBG] Speech detected
+2026-02-07 03:04:38.589 -05:00 [DBG] Deepgram partial transcript: A figure
+2026-02-07 03:04:38.589 -05:00 [DBG] Streaming partial transcript: A figure
+2026-02-07 03:04:38.589 -05:00 [DBG] Transcript correction detected: 'This is day one.' -> 'A figure'
+2026-02-07 03:04:38.590 -05:00 [DBG] Enqueued correction: This is day one. -> A figure
+2026-02-07 03:04:39.604 -05:00 [DBG] Deepgram partial transcript: I'm figuring out what I'm
+2026-02-07 03:04:39.604 -05:00 [DBG] Streaming partial transcript: I'm figuring out what I'm
+2026-02-07 03:04:39.604 -05:00 [DBG] Transcript correction detected: 'A figure' -> 'I'm figuring out what I'm'
+2026-02-07 03:04:39.604 -05:00 [DBG] Enqueued correction: A figure -> I'm figuring out what I'm
+2026-02-07 03:04:39.697 -05:00 [DBG] Speech ended
+2026-02-07 03:04:40.096 -05:00 [DBG] Deepgram final transcript: I'm figuring out what I'm doing.
+2026-02-07 03:04:40.096 -05:00 [INF] Streaming final transcript: I'm figuring out what I'm doing.
+2026-02-07 03:04:40.798 -05:00 [DBG] LLM generation completed in 701ms, 9 tokens
+2026-02-07 03:04:40.798 -05:00 [DBG] Streaming LLM enhancement ready (len 35)
+2026-02-07 03:04:42.071 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:04:42.071 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:04:42.071 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 03:04:42.071 -05:00 [INF] Audio capture stopping
+2026-02-07 03:04:42.071 -05:00 [WRN] No audio captured during recording
+2026-02-07 03:04:42.071 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 03:04:42.072 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 03:04:42.080 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:04:42.080 -05:00 [INF] Audio capture stopped
+2026-02-07 03:04:42.286 -05:00 [INF] Real-time typing stopped
+2026-02-07 03:04:42.286 -05:00 [INF] Streaming dictation stopped
+2026-02-07 03:04:48.094 -05:00 [DBG] Focused element: Process=LisperFlow, Title=, Class=HwndWrapper[LisperFlow;;f7c88765-1239-4647-8183-d7fce6428ea3]
+2026-02-07 03:04:48.094 -05:00 [INF] Streaming target: LisperFlow -  ("5772020")
+2026-02-07 03:04:48.565 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 03:04:48.566 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:04:48.566 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 03:04:48.566 -05:00 [INF] Audio capture started
+2026-02-07 03:04:48.566 -05:00 [INF] Audio capture service started listening
+2026-02-07 03:04:48.566 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 03:04:48.567 -05:00 [INF] Streaming coordinator started
+2026-02-07 03:04:48.567 -05:00 [INF] Real-time typing started for window "5772020"
+2026-02-07 03:04:48.567 -05:00 [INF] Streaming dictation started
+2026-02-07 03:04:49.458 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:04:49.458 -05:00 [DBG] Speech detected
+2026-02-07 03:04:49.641 -05:00 [DBG] Deepgram partial transcript: May
+2026-02-07 03:04:49.641 -05:00 [DBG] Streaming partial transcript: May
+2026-02-07 03:04:49.642 -05:00 [DBG] Target window not focused, waiting
+2026-02-07 03:04:50.636 -05:00 [DBG] Deepgram partial transcript: This is
+2026-02-07 03:04:50.636 -05:00 [DBG] Streaming partial transcript: This is
+2026-02-07 03:04:50.636 -05:00 [DBG] Transcript correction detected: 'May' -> 'This is'
+2026-02-07 03:04:50.637 -05:00 [DBG] Enqueued correction: May -> This is
+2026-02-07 03:04:50.637 -05:00 [DBG] Target window not focused, waiting
+2026-02-07 03:04:50.648 -05:00 [DBG] Speech ended
+2026-02-07 03:04:50.731 -05:00 [DBG] Deepgram final transcript: This is
+2026-02-07 03:04:50.731 -05:00 [INF] Streaming final transcript: This is
+2026-02-07 03:04:51.195 -05:00 [DBG] LLM generation completed in 464ms, 22 tokens
+2026-02-07 03:04:51.195 -05:00 [DBG] Streaming LLM enhancement ready (len 110)
+2026-02-07 03:04:51.368 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:04:51.368 -05:00 [DBG] Speech detected
+2026-02-07 03:04:51.728 -05:00 [DBG] Deepgram partial transcript: Day
+2026-02-07 03:04:51.728 -05:00 [DBG] Streaming partial transcript: Day
+2026-02-07 03:04:51.728 -05:00 [DBG] Transcript correction detected: 'This is' -> 'Day'
+2026-02-07 03:04:51.728 -05:00 [DBG] Enqueued correction: This is -> Day
+2026-02-07 03:04:51.728 -05:00 [DBG] Target window not focused, waiting
+2026-02-07 03:04:52.288 -05:00 [DBG] Speech ended
+2026-02-07 03:04:52.341 -05:00 [DBG] Deepgram final transcript: day one,
+2026-02-07 03:04:52.342 -05:00 [INF] Streaming final transcript: day one,
+2026-02-07 03:04:52.342 -05:00 [DBG] Transcript correction detected: 'Day' -> 'day one,'
+2026-02-07 03:04:52.342 -05:00 [DBG] Enqueued correction: Day -> day one,
+2026-02-07 03:04:52.342 -05:00 [DBG] Target window not focused, waiting
+2026-02-07 03:04:52.717 -05:00 [DBG] LLM generation completed in 375ms, 3 tokens
+2026-02-07 03:04:52.717 -05:00 [DBG] Streaming LLM enhancement ready (len 8)
+2026-02-07 03:04:54.107 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:04:54.107 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:04:54.108 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 03:04:54.108 -05:00 [INF] Audio capture stopping
+2026-02-07 03:04:54.108 -05:00 [WRN] No audio captured during recording
+2026-02-07 03:04:54.108 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 03:04:54.108 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:04:54.108 -05:00 [INF] Audio capture stopped
+2026-02-07 03:04:54.109 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 03:04:54.314 -05:00 [INF] Real-time typing stopped
+2026-02-07 03:04:54.314 -05:00 [INF] Streaming dictation stopped
+2026-02-07 03:04:55.737 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:04:55.737 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:04:55.737 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 03:04:55.737 -05:00 [INF] Streaming target: Notepad - Untitled - Notepad ("2100962")
+2026-02-07 03:04:55.959 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 03:04:55.960 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:04:55.960 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 03:04:55.960 -05:00 [INF] Audio capture started
+2026-02-07 03:04:55.960 -05:00 [INF] Audio capture service started listening
+2026-02-07 03:04:55.960 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 03:04:55.960 -05:00 [INF] Streaming coordinator started
+2026-02-07 03:04:55.960 -05:00 [INF] Real-time typing started for window "2100962"
+2026-02-07 03:04:55.960 -05:00 [INF] Streaming dictation started
+2026-02-07 03:04:56.278 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:04:56.278 -05:00 [DBG] Speech detected
+2026-02-07 03:04:57.027 -05:00 [DBG] Deepgram partial transcript: This is today
+2026-02-07 03:04:57.027 -05:00 [DBG] Streaming partial transcript: This is today
+2026-02-07 03:04:57.387 -05:00 [DBG] Speech ended
+2026-02-07 03:04:57.632 -05:00 [DBG] Deepgram final transcript: This is day one.
+2026-02-07 03:04:57.632 -05:00 [INF] Streaming final transcript: This is day one.
+2026-02-07 03:04:57.632 -05:00 [DBG] Transcript correction detected: 'today' -> 'day one.'
+2026-02-07 03:04:57.632 -05:00 [DBG] Enqueued correction: today -> day one.
+2026-02-07 03:04:58.528 -05:00 [DBG] LLM generation completed in 895ms, 5 tokens
+2026-02-07 03:04:58.528 -05:00 [DBG] Streaming LLM enhancement ready (len 16)
+2026-02-07 03:04:58.850 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:04:58.850 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:04:58.850 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 03:04:58.850 -05:00 [INF] Audio capture stopping
+2026-02-07 03:04:58.851 -05:00 [WRN] No audio captured during recording
+2026-02-07 03:04:58.851 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 03:04:58.852 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 03:04:58.862 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:04:58.862 -05:00 [INF] Audio capture stopped
+2026-02-07 03:04:59.067 -05:00 [INF] Real-time typing stopped
+2026-02-07 03:04:59.067 -05:00 [INF] Streaming dictation stopped

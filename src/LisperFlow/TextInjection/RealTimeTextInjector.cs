@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 using LisperFlow.Hotkeys;
 using Microsoft.Extensions.Logging;
@@ -66,9 +67,11 @@ public class RealTimeTextInjector : IDisposable
             try
             {
                 var command = await _commandQueue.DequeueAsync(cancellationToken);
+                _logger.LogTrace("Dequeued typing command: {Type}", command.GetType().Name);
                 
                 if (!IsTargetWindowFocused())
                 {
+                    _logger.LogDebug("Target window not focused, waiting");
                     await Task.Delay(100, cancellationToken);
                     continue;
                 }
@@ -98,6 +101,7 @@ public class RealTimeTextInjector : IDisposable
     {
         if (string.IsNullOrWhiteSpace(word)) return;
         
+        _logger.LogTrace("Typing word: {Word}", word);
         if (ShouldAddSpaceBefore(word))
         {
             TypeString(" ");
@@ -189,7 +193,14 @@ public class RealTimeTextInjector : IDisposable
             
             if (result != inputs.Count)
             {
-                _logger.LogWarning("SendInput only sent {Sent}/{Total} inputs", result, inputs.Count);
+                int error = Marshal.GetLastWin32Error();
+                var errorMessage = new Win32Exception(error).Message;
+                _logger.LogWarning(
+                    "SendInput only sent {Sent}/{Total} inputs (err {Error}: {Message})",
+                    result,
+                    inputs.Count,
+                    error,
+                    errorMessage);
             }
         }
     }
