@@ -117,3 +117,5 @@ D:\zDev\lisper-flow\src\LisperFlow\obj\Debug\net8.0-windows\refint\LisperFlow.dl
 D:\zDev\lisper-flow\src\LisperFlow\obj\Debug\net8.0-windows\LisperFlow.pdb
 D:\zDev\lisper-flow\src\LisperFlow\obj\Debug\net8.0-windows\LisperFlow.genruntimeconfig.cache
 D:\zDev\lisper-flow\src\LisperFlow\obj\Debug\net8.0-windows\ref\LisperFlow.dll
+D:\zDev\lisper-flow\src\LisperFlow\obj\Debug\net8.0-windows\UI\SettingsWindow.baml
+D:\zDev\lisper-flow\src\LisperFlow\obj\Debug\net8.0-windows\UI\SettingsWindow.g.cs

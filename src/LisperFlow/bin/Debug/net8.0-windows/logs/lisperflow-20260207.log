@@ -205,3 +205,205 @@
 2026-02-07 01:27:35.031 -05:00 [DBG] Clipboard paste injection completed in 195ms
 2026-02-07 01:27:35.032 -05:00 [INF] Text injected using ClipboardPaste in 195ms to Antigravity
 2026-02-07 01:27:35.032 -05:00 [INF] Dictation complete: 51 chars injected via ClipboardPaste in 3093ms total
+2026-02-07 01:33:59.318 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 01:33:59.319 -05:00 [INF] Stopping dictation service...
+2026-02-07 01:33:59.320 -05:00 [INF] Unregistered hotkey: Dictation with ID 1
+2026-02-07 01:33:59.320 -05:00 [INF] Dictation service stopped
+2026-02-07 01:33:59.324 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 01:33:59.324 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 01:33:59.324 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 01:33:59.326 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 01:33:59.326 -05:00 [DBG] DictationService disposed
+2026-02-07 01:37:11.099 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 01:37:11.285 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 01:37:11.389 -05:00 [INF] Starting dictation service...
+2026-02-07 01:37:11.390 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 01:37:11.396 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:37:11.432 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 01:37:11.438 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 01:37:11.439 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 01:37:11.440 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 01:37:11.440 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 01:37:11.440 -05:00 [INF] Dictation service started successfully
+2026-02-07 01:37:11.441 -05:00 [INF] LisperFlow started successfully
+2026-02-07 01:37:49.142 -05:00 [INF] Found 3 audio capture devices
+2026-02-07 01:37:55.922 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 01:37:55.922 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 01:37:55.925 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:37:55.946 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 01:37:55.946 -05:00 [INF] Audio capture started
+2026-02-07 01:37:55.946 -05:00 [INF] Audio capture service started listening
+2026-02-07 01:37:55.947 -05:00 [INF] Recording started
+2026-02-07 01:37:56.455 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 01:37:56.456 -05:00 [DBG] Speech detected
+2026-02-07 01:37:57.865 -05:00 [DBG] Speech segment complete: 1.71s, 27360 samples
+2026-02-07 01:37:57.866 -05:00 [DBG] Speech ended
+2026-02-07 01:37:58.411 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 01:37:58.411 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 01:37:58.413 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 01:37:58.413 -05:00 [INF] Audio capture stopping
+2026-02-07 01:37:58.414 -05:00 [INF] Returning PTT audio: 2.46s, 39360 samples
+2026-02-07 01:37:58.416 -05:00 [DBG] Processing 2.46s of audio
+2026-02-07 01:37:58.419 -05:00 [DBG] Sending 2.46s audio to OpenAI Whisper (78764 bytes)
+2026-02-07 01:37:58.419 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 01:37:58.419 -05:00 [INF] Audio capture stopped
+2026-02-07 01:37:59.878 -05:00 [INF] Transcription completed in 1460ms: test, test, test....
+2026-02-07 01:37:59.882 -05:00 [DBG] Focused element: Process=Antigravity, Title=lisper-flow - Antigravity - appsettings.json, Class=Chrome_WidgetWin_1
+2026-02-07 01:38:00.815 -05:00 [DBG] LLM generation completed in 931ms, 6 tokens
+2026-02-07 01:38:00.816 -05:00 [DBG] Enhanced transcript: Test, test, test.
+2026-02-07 01:38:00.817 -05:00 [DBG] Focused element: Process=LisperFlow, Title=LisperFlow Settings, Class=HwndWrapper[LisperFlow;;4ac4b647-3124-46e6-ab25-91ceea7f4d53]
+2026-02-07 01:38:00.817 -05:00 [DBG] Trying strategy: ClipboardPaste
+2026-02-07 01:38:01.023 -05:00 [DBG] Clipboard paste injection completed in 205ms
+2026-02-07 01:38:01.024 -05:00 [INF] Text injected using ClipboardPaste in 205ms to LisperFlow
+2026-02-07 01:38:01.024 -05:00 [INF] Dictation complete: 17 chars injected via ClipboardPaste in 2608ms total
+2026-02-07 01:38:15.297 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 01:38:15.298 -05:00 [INF] Stopping dictation service...
+2026-02-07 01:38:15.300 -05:00 [INF] Unregistered hotkey: Dictation with ID 1
+2026-02-07 01:38:15.301 -05:00 [INF] Dictation service stopped
+2026-02-07 01:38:15.304 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 01:38:15.305 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 01:38:15.305 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 01:38:15.309 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 01:38:15.310 -05:00 [DBG] DictationService disposed
+2026-02-07 01:38:18.749 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 01:38:18.941 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 01:38:19.035 -05:00 [INF] Starting dictation service...
+2026-02-07 01:38:19.035 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 01:38:19.046 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:38:19.049 -05:00 [ERR] Failed to initialize audio capture
+System.ArgumentException: Value does not fall within the expected range.
+   at NAudio.CoreAudioApi.Interfaces.IMMDeviceEnumerator.GetDevice(String id, IMMDevice& deviceName)
+   at NAudio.CoreAudioApi.MMDeviceEnumerator.GetDevice(String id)
+   at LisperFlow.AudioCapture.WasapiCaptureManager.<>c__DisplayClass20_0.<InitializeAsync>b__0() in D:\zDev\lisper-flow\src\LisperFlow\AudioCapture\WasapiCaptureManager.cs:line 116
+2026-02-07 01:38:19.107 -05:00 [DBG] Recording state changed to: "Error"
+2026-02-07 01:38:19.107 -05:00 [ERR] Recording error: Value does not fall within the expected range.
+2026-02-07 01:38:19.107 -05:00 [ERR] Failed to initialize audio capture
+2026-02-07 01:38:19.108 -05:00 [ERR] Failed to start LisperFlow
+2026-02-07 01:38:21.177 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 01:38:21.178 -05:00 [INF] Stopping dictation service...
+2026-02-07 01:38:21.180 -05:00 [INF] Dictation service stopped
+2026-02-07 01:38:21.181 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 01:38:21.182 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 01:38:21.182 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 01:38:21.193 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 01:38:21.193 -05:00 [DBG] DictationService disposed
+2026-02-07 01:38:24.279 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 01:38:24.459 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 01:38:24.555 -05:00 [INF] Starting dictation service...
+2026-02-07 01:38:24.556 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 01:38:24.563 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:38:24.566 -05:00 [ERR] Failed to initialize audio capture
+System.ArgumentException: Value does not fall within the expected range.
+   at NAudio.CoreAudioApi.Interfaces.IMMDeviceEnumerator.GetDevice(String id, IMMDevice& deviceName)
+   at NAudio.CoreAudioApi.MMDeviceEnumerator.GetDevice(String id)
+   at LisperFlow.AudioCapture.WasapiCaptureManager.<>c__DisplayClass20_0.<InitializeAsync>b__0() in D:\zDev\lisper-flow\src\LisperFlow\AudioCapture\WasapiCaptureManager.cs:line 116
+2026-02-07 01:38:24.574 -05:00 [DBG] Recording state changed to: "Error"
+2026-02-07 01:38:24.574 -05:00 [ERR] Recording error: Value does not fall within the expected range.
+2026-02-07 01:38:24.574 -05:00 [ERR] Failed to initialize audio capture
+2026-02-07 01:38:24.574 -05:00 [ERR] Failed to start LisperFlow
+2026-02-07 01:38:25.976 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 01:38:25.976 -05:00 [INF] Stopping dictation service...
+2026-02-07 01:38:25.978 -05:00 [INF] Dictation service stopped
+2026-02-07 01:38:25.978 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 01:38:25.979 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 01:38:25.979 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 01:38:25.985 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 01:38:25.986 -05:00 [DBG] DictationService disposed
+2026-02-07 01:39:31.630 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 01:39:31.833 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 01:39:31.934 -05:00 [INF] Starting dictation service...
+2026-02-07 01:39:31.934 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 01:39:31.940 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:39:31.976 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 01:39:31.982 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 01:39:31.983 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 01:39:31.984 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 01:39:31.984 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 01:39:31.985 -05:00 [INF] Dictation service started successfully
+2026-02-07 01:39:31.985 -05:00 [INF] LisperFlow started successfully
+2026-02-07 01:39:44.236 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 01:39:44.237 -05:00 [INF] Stopping dictation service...
+2026-02-07 01:39:44.237 -05:00 [INF] Unregistered hotkey: Dictation with ID 1
+2026-02-07 01:39:44.237 -05:00 [INF] Dictation service stopped
+2026-02-07 01:39:44.238 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 01:39:44.239 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 01:39:44.239 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 01:39:44.240 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 01:39:44.241 -05:00 [DBG] DictationService disposed
+2026-02-07 01:40:29.135 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 01:40:29.376 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 01:40:29.526 -05:00 [INF] Starting dictation service...
+2026-02-07 01:40:29.527 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 01:40:29.535 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:40:29.575 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 01:40:29.582 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 01:40:29.582 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 01:40:29.584 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 01:40:29.584 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 01:40:29.584 -05:00 [INF] Dictation service started successfully
+2026-02-07 01:40:29.585 -05:00 [INF] LisperFlow started successfully
+2026-02-07 01:40:31.890 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 01:40:31.891 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 01:40:31.892 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:40:31.910 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 01:40:31.910 -05:00 [INF] Audio capture started
+2026-02-07 01:40:31.911 -05:00 [INF] Audio capture service started listening
+2026-02-07 01:40:31.911 -05:00 [INF] Recording started
+2026-02-07 01:40:32.558 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 01:40:32.558 -05:00 [DBG] Speech detected
+2026-02-07 01:40:33.967 -05:00 [DBG] Speech segment complete: 1.70s, 27200 samples
+2026-02-07 01:40:33.969 -05:00 [DBG] Speech ended
+2026-02-07 01:40:34.007 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 01:40:34.007 -05:00 [DBG] Speech detected
+2026-02-07 01:40:34.658 -05:00 [DBG] Speech segment complete: 0.95s, 15200 samples
+2026-02-07 01:40:34.658 -05:00 [DBG] Speech ended
+2026-02-07 01:40:40.971 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 01:40:40.971 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 01:40:40.973 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 01:40:40.973 -05:00 [INF] Audio capture stopping
+2026-02-07 01:40:40.973 -05:00 [INF] Returning PTT audio: 9.05s, 144800 samples
+2026-02-07 01:40:40.974 -05:00 [DBG] Processing 9.05s of audio
+2026-02-07 01:40:40.986 -05:00 [DBG] Sending 9.05s audio to OpenAI Whisper (289644 bytes)
+2026-02-07 01:40:40.990 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 01:40:40.990 -05:00 [INF] Audio capture stopped
+2026-02-07 01:40:43.094 -05:00 [INF] Transcription completed in 2117ms: check, check, check, this is a check....
+2026-02-07 01:40:43.097 -05:00 [DBG] Focused element: Process=LisperFlow, Title=, Class=HwndWrapper[LisperFlow;;d0a26157-6e9c-402e-9ceb-3c766ff4fa61]
+2026-02-07 01:40:43.678 -05:00 [DBG] LLM generation completed in 578ms, 11 tokens
+2026-02-07 01:40:43.679 -05:00 [DBG] Enhanced transcript: Check, check, check. This is a check.
+2026-02-07 01:40:43.680 -05:00 [DBG] Focused element: Process=LisperFlow, Title=, Class=HwndWrapper[LisperFlow;;d0a26157-6e9c-402e-9ceb-3c766ff4fa61]
+2026-02-07 01:40:43.680 -05:00 [DBG] Trying strategy: ClipboardPaste
+2026-02-07 01:40:43.885 -05:00 [DBG] Clipboard paste injection completed in 203ms
+2026-02-07 01:40:43.885 -05:00 [INF] Text injected using ClipboardPaste in 203ms to LisperFlow
+2026-02-07 01:40:43.885 -05:00 [INF] Dictation complete: 37 chars injected via ClipboardPaste in 2910ms total
+2026-02-07 01:40:47.526 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 01:40:47.526 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 01:40:47.526 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 01:40:47.526 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 01:40:47.526 -05:00 [INF] Audio capture started
+2026-02-07 01:40:47.526 -05:00 [INF] Audio capture service started listening
+2026-02-07 01:40:47.527 -05:00 [INF] Recording started
+2026-02-07 01:40:48.128 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 01:40:48.128 -05:00 [DBG] Speech detected
+2026-02-07 01:40:49.378 -05:00 [DBG] Speech segment complete: 1.55s, 24800 samples
+2026-02-07 01:40:49.379 -05:00 [DBG] Speech ended
+2026-02-07 01:40:51.669 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 01:40:51.669 -05:00 [DBG] Speech detected
+2026-02-07 01:40:53.258 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 01:40:53.258 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 01:40:53.258 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 01:40:53.258 -05:00 [INF] Audio capture stopping
+2026-02-07 01:40:53.258 -05:00 [INF] Returning PTT audio: 5.74s, 91840 samples
+2026-02-07 01:40:53.258 -05:00 [DBG] Processing 5.74s of audio
+2026-02-07 01:40:53.259 -05:00 [DBG] Sending 5.74s audio to OpenAI Whisper (183724 bytes)
+2026-02-07 01:40:53.260 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 01:40:53.260 -05:00 [INF] Audio capture stopped
+2026-02-07 01:40:54.877 -05:00 [INF] Transcription completed in 1618ms: check, check, check, check, check, this is a check...
+2026-02-07 01:40:54.878 -05:00 [DBG] Focused element: Process=Antigravity, Title=lisper-flow - Antigravity - appsettings.json, Class=Chrome_WidgetWin_1
+2026-02-07 01:40:56.129 -05:00 [DBG] LLM generation completed in 1250ms, 15 tokens
+2026-02-07 01:40:56.129 -05:00 [DBG] Enhanced transcript: Check, check, check, check, check. This is a check...
+2026-02-07 01:40:56.129 -05:00 [DBG] Focused element: Process=Antigravity, Title=lisper-flow - Antigravity - appsettings.json, Class=Chrome_WidgetWin_1
+2026-02-07 01:40:56.129 -05:00 [DBG] Trying strategy: ClipboardPaste
+2026-02-07 01:40:56.326 -05:00 [DBG] Clipboard paste injection completed in 196ms
+2026-02-07 01:40:56.326 -05:00 [INF] Text injected using ClipboardPaste in 196ms to Antigravity
+2026-02-07 01:40:56.326 -05:00 [INF] Dictation complete: 51 chars injected via ClipboardPaste in 3067ms total
+2026-02-07 01:41:47.032 -05:00 [INF] Found 3 audio capture devices

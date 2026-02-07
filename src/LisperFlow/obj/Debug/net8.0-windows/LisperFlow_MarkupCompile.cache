@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\zDev\lisper-flow\src\LisperFlow\App.xaml
-11407045341
+2-404032739
 
-28-809226302
+31-1106838136
 2521693833825
-MainWindow.xaml;
+MainWindow.xaml;UI\SettingsWindow.xaml;
 
 False
 

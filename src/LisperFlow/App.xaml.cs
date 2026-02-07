@@ -25,6 +25,7 @@ public partial class App : Application
     private IServiceProvider? _serviceProvider;
     private TaskbarIcon? _taskbarIcon;
     private DictationService? _dictationService;
+    private AppSettings? _appSettings;
     
     protected override async void OnStartup(StartupEventArgs e)
     {
@@ -42,11 +43,11 @@ public partial class App : Application
         try
         {
             // Load settings
-            var settings = await LoadSettingsAsync();
+            _appSettings = await LoadSettingsAsync();
             
             // Build service container
             var services = new ServiceCollection();
-            ConfigureServices(services, settings);
+            ConfigureServices(services, _appSettings);
             _serviceProvider = services.BuildServiceProvider();
             
             // Get the dictation service
@@ -203,10 +204,7 @@ public partial class App : Application
         var settingsItem = new System.Windows.Controls.MenuItem { Header = "Settings..." };
         settingsItem.Click += (s, e) =>
         {
-            MessageBox.Show(
-                "Settings UI coming soon!\n\nCurrent config in appsettings.json",
-                "LisperFlow Settings",
-                MessageBoxButton.OK);
+            OpenSettingsWindow();
         };
         
         var exitItem = new System.Windows.Controls.MenuItem { Header = "Exit" };
@@ -261,5 +259,23 @@ public partial class App : Application
         
         Log.Information("Using default settings");
         return new AppSettings();
+    }
+    
+    private void OpenSettingsWindow()
+    {
+        if (_appSettings == null) return;
+        
+        var audioService = _serviceProvider?.GetService<AudioCaptureService>();
+        var settingsWindow = new SettingsWindow(_appSettings, audioService);
+        
+        if (settingsWindow.ShowDialog() == true)
+        {
+            // Settings saved - notify user that restart may be needed
+            MessageBox.Show(
+                "Settings saved successfully.\n\nSome changes may require restarting LisperFlow to take effect.",
+                "Settings Saved",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information);
+        }
     }
 }
