@@ -153,12 +153,36 @@ public class RealTimeTextInjector : IDisposable
         if (string.IsNullOrWhiteSpace(word)) return;
         
         _logger.LogDebug("Typing word: '{Word}' to window {Handle}", word, _targetWindowHandle);
-        if (ShouldAddSpaceBefore(word))
+        string textToType = ShouldAddSpaceBefore(word) ? " " + word : word;
+        
+        int typedChars = TypeString(textToType);
+        if (typedChars < textToType.Length)
         {
-            TypeString(" ");
+            _logger.LogWarning(
+                "Only typed {Typed}/{Total} chars for word '{Word}'",
+                typedChars,
+                textToType.Length,
+                word);
+            
+            if (!cancellationToken.IsCancellationRequested &&
+                await EnsureTargetWindowFocusedAsync(cancellationToken))
+            {
+                string remaining = textToType.Substring(typedChars);
+                if (!string.IsNullOrEmpty(remaining))
+                {
+                    int retryTyped = TypeString(remaining);
+                    if (retryTyped < remaining.Length)
+                    {
+                        _logger.LogWarning(
+                            "Retry only typed {Typed}/{Total} chars for word '{Word}'",
+                            retryTyped,
+                            remaining.Length,
+                            word);
+                    }
+                }
+            }
         }
         
-        TypeString(word);
         await Task.Delay(_typingDelayMs, cancellationToken);
     }
     
@@ -195,65 +219,211 @@ public class RealTimeTextInjector : IDisposable
         await Task.Delay(_typingDelayMs, cancellationToken);
     }
     
-    private void TypeString(string text)
+    private int TypeString(string text)
     {
-        if (string.IsNullOrEmpty(text)) return;
+        if (string.IsNullOrEmpty(text)) return 0;
         
-        var inputs = new List<Win32Interop.INPUT>();
+        var inputs = new List<Win32Interop.INPUT>(text.Length * 4);
+        var inputCountsPerChar = new List<int>(text.Length);
         
         foreach (char c in text)
         {
-            inputs.Add(new Win32Interop.INPUT
+            int inputsBefore = inputs.Count;
+            var (vkCode, needsShift) = CharToVirtualKey(c);
+            if (vkCode != 0)
             {
-                type = Win32Interop.INPUT_KEYBOARD,
-                Input = new Win32Interop.InputUnion
+                if (needsShift)
                 {
-                    ki = new Win32Interop.KEYBDINPUT
+                    inputs.Add(new Win32Interop.INPUT
                     {
-                        wVk = 0,
-                        wScan = c,
-                        dwFlags = Win32Interop.KEYEVENTF_UNICODE
-                    }
+                        type = Win32Interop.INPUT_KEYBOARD,
+                        Input = new Win32Interop.InputUnion
+                        {
+                            ki = new Win32Interop.KEYBDINPUT
+                            {
+                                wVk = 0x10,
+                                wScan = 0,
+                                dwFlags = 0
+                            }
+                        }
+                    });
                 }
-            });
-            
-            inputs.Add(new Win32Interop.INPUT
+                
+                inputs.Add(new Win32Interop.INPUT
+                {
+                    type = Win32Interop.INPUT_KEYBOARD,
+                    Input = new Win32Interop.InputUnion
+                    {
+                        ki = new Win32Interop.KEYBDINPUT
+                        {
+                            wVk = vkCode,
+                            wScan = 0,
+                            dwFlags = 0
+                        }
+                    }
+                });
+                
+                inputs.Add(new Win32Interop.INPUT
+                {
+                    type = Win32Interop.INPUT_KEYBOARD,
+                    Input = new Win32Interop.InputUnion
+                    {
+                        ki = new Win32Interop.KEYBDINPUT
+                        {
+                            wVk = vkCode,
+                            wScan = 0,
+                            dwFlags = Win32Interop.KEYEVENTF_KEYUP
+                        }
+                    }
+                });
+                
+                if (needsShift)
+                {
+                    inputs.Add(new Win32Interop.INPUT
+                    {
+                        type = Win32Interop.INPUT_KEYBOARD,
+                        Input = new Win32Interop.InputUnion
+                        {
+                            ki = new Win32Interop.KEYBDINPUT
+                            {
+                                wVk = 0x10,
+                                wScan = 0,
+                                dwFlags = Win32Interop.KEYEVENTF_KEYUP
+                            }
+                        }
+                    });
+                }
+            }
+            else
             {
-                type = Win32Interop.INPUT_KEYBOARD,
-                Input = new Win32Interop.InputUnion
+                inputs.Add(new Win32Interop.INPUT
                 {
-                    ki = new Win32Interop.KEYBDINPUT
+                    type = Win32Interop.INPUT_KEYBOARD,
+                    Input = new Win32Interop.InputUnion
                     {
-                        wVk = 0,
-                        wScan = c,
-                        dwFlags = Win32Interop.KEYEVENTF_UNICODE | Win32Interop.KEYEVENTF_KEYUP
+                        ki = new Win32Interop.KEYBDINPUT
+                        {
+                            wVk = 0,
+                            wScan = c,
+                            dwFlags = Win32Interop.KEYEVENTF_UNICODE
+                        }
                     }
-                }
-            });
+                });
+                
+                inputs.Add(new Win32Interop.INPUT
+                {
+                    type = Win32Interop.INPUT_KEYBOARD,
+                    Input = new Win32Interop.InputUnion
+                    {
+                        ki = new Win32Interop.KEYBDINPUT
+                        {
+                            wVk = 0,
+                            wScan = c,
+                            dwFlags = Win32Interop.KEYEVENTF_UNICODE | Win32Interop.KEYEVENTF_KEYUP
+                        }
+                    }
+                });
+            }
             
-            _typedCharacterCount++;
-            _lastTypedChar = c;
+            inputCountsPerChar.Add(inputs.Count - inputsBefore);
         }
         
-        if (inputs.Count > 0)
+        uint result = Win32Interop.SendInput(
+            (uint)inputs.Count,
+            inputs.ToArray(),
+            Marshal.SizeOf<Win32Interop.INPUT>());
+        
+        if (result != inputs.Count)
         {
-            uint result = Win32Interop.SendInput(
-                (uint)inputs.Count,
-                inputs.ToArray(),
-                Marshal.SizeOf<Win32Interop.INPUT>());
-            
-            if (result != inputs.Count)
-            {
-                int error = Marshal.GetLastWin32Error();
-                var errorMessage = new Win32Exception(error).Message;
-                _logger.LogWarning(
-                    "SendInput only sent {Sent}/{Total} inputs (err {Error}: {Message})",
-                    result,
-                    inputs.Count,
-                    error,
-                    errorMessage);
-            }
+            int error = Marshal.GetLastWin32Error();
+            var errorMessage = new Win32Exception(error).Message;
+            _logger.LogWarning(
+                "SendInput only sent {Sent}/{Total} inputs (err {Error}: {Message})",
+                result,
+                inputs.Count,
+                error,
+                errorMessage);
         }
+        
+        int sentInputs = (int)result;
+        int sentChars = 0;
+        int remainingInputs = sentInputs;
+        foreach (int perChar in inputCountsPerChar)
+        {
+            if (remainingInputs < perChar)
+            {
+                break;
+            }
+            
+            remainingInputs -= perChar;
+            sentChars++;
+        }
+        
+        if (sentChars > 0)
+        {
+            _typedCharacterCount += sentChars;
+            _lastTypedChar = text[sentChars - 1];
+        }
+        
+        if (sentInputs != inputs.Count)
+        {
+            _logger.LogWarning(
+                "SendInput returned partial count {Sent}/{Total} for text length {Length}",
+                sentInputs,
+                inputs.Count,
+                text.Length);
+        }
+        
+        return sentChars;
+    }
+
+    private static (ushort vkCode, bool needsShift) CharToVirtualKey(char c)
+    {
+        if (c >= 'a' && c <= 'z')
+            return ((ushort)(0x41 + (c - 'a')), false);
+        if (c >= 'A' && c <= 'Z')
+            return ((ushort)(0x41 + (c - 'A')), true);
+        
+        if (c >= '0' && c <= '9')
+            return ((ushort)(0x30 + (c - '0')), false);
+        
+        return c switch
+        {
+            ' ' => (0x20, false),
+            '!' => (0x31, true),
+            '@' => (0x32, true),
+            '#' => (0x33, true),
+            '$' => (0x34, true),
+            '%' => (0x35, true),
+            '^' => (0x36, true),
+            '&' => (0x37, true),
+            '*' => (0x38, true),
+            '(' => (0x39, true),
+            ')' => (0x30, true),
+            '-' => (0xBD, false),
+            '_' => (0xBD, true),
+            '=' => (0xBB, false),
+            '+' => (0xBB, true),
+            '[' => (0xDB, false),
+            '{' => (0xDB, true),
+            ']' => (0xDD, false),
+            '}' => (0xDD, true),
+            '\\' => (0xDC, false),
+            '|' => (0xDC, true),
+            ';' => (0xBA, false),
+            ':' => (0xBA, true),
+            '\'' => (0xDE, false),
+            '"' => (0xDE, true),
+            ',' => (0xBC, false),
+            '<' => (0xBC, true),
+            '.' => (0xBE, false),
+            '>' => (0xBE, true),
+            '/' => (0xBF, false),
+            '?' => (0xBF, true),
+            '`' => (0xC0, false),
+            '~' => (0xC0, true),
+            _ => (0, false)
+        };
     }
     
     private void SendBackspace()
