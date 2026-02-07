@@ -553,11 +553,7 @@ public class DictationService : IDisposable
         {
             _typingQueue.EnqueueWord(word);
         }
-        
-        if (update.Correction != null)
-        {
-            _typingQueue.EnqueueCorrection(update.Correction);
-        }
+        // Ignore corrections from partials - append only
     }
     
     private void OnFinalTranscriptReceived(object? sender, FinalTranscriptEventArgs e)
@@ -568,11 +564,8 @@ public class DictationService : IDisposable
         {
             _typingQueue.EnqueueWord(word);
         }
-        
-        if (update.Correction != null)
-        {
-            _typingQueue.EnqueueCorrection(update.Correction);
-        }
+        // Don't apply corrections - just commit and reset for next utterance
+        _transcriptSynchronizer.Reset();
         
         if (_settings.Streaming.ApplyLlmEnhancement.Equals("AfterFinalization", StringComparison.OrdinalIgnoreCase) &&
             _llmProvider?.IsAvailable == true)
