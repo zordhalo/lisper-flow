@@ -1,20 +1,20 @@
 ﻿LisperFlow
-
+1.0.0.0
 
 winexe
 C#
 .cs
-D:\zDev\lisper-flow\src\LisperFlow\obj\Debug\net8.0-windows\
+d:\zDev\lisper-flow\src\LisperFlow\obj\Debug\net8.0-windows\
 LisperFlow
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\zDev\lisper-flow\src\LisperFlow\App.xaml
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+d:\zDev\lisper-flow\src\LisperFlow\App.xaml
 2-404032739
 
-31-1106838136
+33540905695
 2521693833825
 MainWindow.xaml;UI\SettingsWindow.xaml;
 
-False
+True
 
