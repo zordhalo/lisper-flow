@@ -113,12 +113,29 @@ function hideOverlay(): void {
 function setupIpcHandlers(): void {
   // Settings handlers
   ipcMain.handle(IPC_CHANNELS.SETTINGS_GET, () => {
-    return configStore.getAll();
+    const config = configStore.getAll();
+    console.log('[IPC] SETTINGS_GET returning:', {
+      ...config,
+      deepgramApiKey: config.deepgramApiKey ? `***${config.deepgramApiKey.slice(-4)}` : '(empty)',
+      llmApiKey: config.llmApiKey ? `***${config.llmApiKey.slice(-4)}` : '(empty)',
+    });
+    return config;
   });
 
   ipcMain.handle(IPC_CHANNELS.SETTINGS_SET, (_, config: Partial<AppConfig>) => {
+    console.log('[IPC] SETTINGS_SET received:', {
+      ...config,
+      deepgramApiKey: config.deepgramApiKey ? `***${config.deepgramApiKey.slice(-4)}` : '(empty)',
+      llmApiKey: config.llmApiKey ? `***${config.llmApiKey.slice(-4)}` : '(empty)',
+    });
     configStore.setAll(config);
-    return configStore.getAll();
+    const savedConfig = configStore.getAll();
+    console.log('[IPC] SETTINGS_SET saved, returning:', {
+      ...savedConfig,
+      deepgramApiKey: savedConfig.deepgramApiKey ? `***${savedConfig.deepgramApiKey.slice(-4)}` : '(empty)',
+      llmApiKey: savedConfig.llmApiKey ? `***${savedConfig.llmApiKey.slice(-4)}` : '(empty)',
+    });
+    return savedConfig;
   });
 
   // Audio chunk handler
@@ -216,36 +233,62 @@ async function handleRecordingStop(): Promise<void> {
 }
 
 function setupHotkeyHandlers(): void {
+  console.log('Setting up hotkey handlers...');
+
   // Show overlay immediately on key press (before debounce)
   hotkeyHandler.on('keyPressed', () => {
+    console.log('>>> KEY PRESSED - showing overlay');
     showOverlay();
   });
 
   // Hide overlay if key released before recording started (quick tap)
   hotkeyHandler.on('keyReleased', () => {
+    console.log('>>> KEY RELEASED (quick tap) - hiding overlay');
     hideOverlay();
   });
 
-  hotkeyHandler.on('recordingStart', handleRecordingStart);
-  hotkeyHandler.on('recordingStop', handleRecordingStop);
+  hotkeyHandler.on('recordingStart', () => {
+    console.log('>>> RECORDING START event received');
+    handleRecordingStart();
+  });
+
+  hotkeyHandler.on('recordingStop', () => {
+    console.log('>>> RECORDING STOP event received');
+    handleRecordingStop();
+  });
+
   hotkeyHandler.start();
+  console.log('Hotkey handlers setup complete');
 }
 
 app.on('ready', () => {
+  console.log('=== APP READY ===');
+
+  console.log('Creating audio window...');
   createAudioWindow();
+
+  console.log('Creating settings window...');
   createSettingsWindow();
+
+  console.log('Creating overlay window...');
   createOverlayWindow();
 
+  console.log('Initializing tray...');
   trayManager.init(settingsWindow);
+
+  console.log('Setting up IPC handlers...');
   setupIpcHandlers();
+
+  console.log('Setting up hotkey handlers...');
   setupHotkeyHandlers();
 
   // Show settings on first run if no API keys configured
   if (!configStore.hasDeepgramKey()) {
+    console.log('No Deepgram key configured, showing settings');
     settingsWindow?.show();
   }
 
-  console.log('LisperFlow started');
+  console.log('=== LisperFlow started successfully ===');
 });
 
 app.on('window-all-closed', () => {

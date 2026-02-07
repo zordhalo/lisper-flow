@@ -22,16 +22,23 @@ class HotkeyHandler extends EventEmitter {
 
   start(): void {
     if (this.keyListener) {
+      console.log('[Hotkey] Listener already exists, skipping');
       return;
     }
 
-    this.keyListener = new GlobalKeyboardListener();
+    console.log('[Hotkey] Creating GlobalKeyboardListener...');
+    try {
+      this.keyListener = new GlobalKeyboardListener();
+      console.log('[Hotkey] GlobalKeyboardListener created successfully');
 
-    this.keyListener.addListener((event: IGlobalKeyEvent) => {
-      this.handleKeyEvent(event);
-    });
+      this.keyListener.addListener((event: IGlobalKeyEvent) => {
+        this.handleKeyEvent(event);
+      });
 
-    console.log('Hotkey listener started');
+      console.log('[Hotkey] Listener callback registered - Hotkey listener started');
+    } catch (error) {
+      console.error('[Hotkey] Failed to create GlobalKeyboardListener:', error);
+    }
   }
 
   stop(): void {
@@ -45,6 +52,11 @@ class HotkeyHandler extends EventEmitter {
   }
 
   private handleKeyEvent(event: IGlobalKeyEvent): void {
+    // Log all key events for debugging
+    if (event.name === 'LEFT CTRL') {
+      console.log(`[Hotkey] LEFT CTRL ${event.state}`);
+    }
+
     // Only listen for LEFT CTRL
     if (event.name !== 'LEFT CTRL') {
       return;

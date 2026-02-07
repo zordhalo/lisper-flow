@@ -1,5 +1,7 @@
 import './settings.css';
 
+console.log('[Settings] Script loaded');
+
 // Track current recording state for proper status restoration
 let currentRecordingState: 'idle' | 'recording' | 'processing' | 'error' = 'idle';
 
@@ -24,9 +26,14 @@ deepgramLink.addEventListener('click', (e) => {
 
 // Load settings on page load
 async function loadSettings(): Promise<void> {
+  console.log('[Settings] Loading settings...');
   try {
     const config = await window.electronAPI.getConfig();
-    console.log('Loaded config:', config);
+    console.log('[Settings] Loaded config:', {
+      ...config,
+      deepgramApiKey: config.deepgramApiKey ? '***' + config.deepgramApiKey.slice(-4) : '(empty)',
+      llmApiKey: config.llmApiKey ? '***' + config.llmApiKey.slice(-4) : '(empty)',
+    });
 
     deepgramApiKeyInput.value = config.deepgramApiKey || '';
     llmApiKeyInput.value = config.llmApiKey || '';
@@ -39,8 +46,10 @@ async function loadSettings(): Promise<void> {
       modePasteInput.checked = true;
       modeTypeInput.checked = false;
     }
+
+    console.log('[Settings] Form populated with values');
   } catch (error) {
-    console.error('Failed to load settings:', error);
+    console.error('[Settings] Failed to load settings:', error);
   }
 }
 
@@ -49,6 +58,15 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
   e.stopPropagation();
 
+  console.log('[Settings] Form submitted');
+  console.log('[Settings] Input values:', {
+    deepgramApiKey: deepgramApiKeyInput.value ? '***' + deepgramApiKeyInput.value.slice(-4) : '(empty)',
+    llmApiKey: llmApiKeyInput.value ? '***' + llmApiKeyInput.value.slice(-4) : '(empty)',
+    cleanupEnabled: cleanupEnabledInput.checked,
+    modePaste: modePasteInput.checked,
+    modeType: modeTypeInput.checked,
+  });
+
   const config = {
     deepgramApiKey: deepgramApiKeyInput.value.trim(),
     llmApiKey: llmApiKeyInput.value.trim(),
@@ -56,14 +74,28 @@ form.addEventListener('submit', async (e) => {
     insertionMode: modeTypeInput.checked ? 'type' as const : 'paste' as const,
   };
 
-  console.log('Saving config:', config);
+  console.log('[Settings] Config to save:', {
+    ...config,
+    deepgramApiKey: config.deepgramApiKey ? '***' + config.deepgramApiKey.slice(-4) : '(empty)',
+    llmApiKey: config.llmApiKey ? '***' + config.llmApiKey.slice(-4) : '(empty)',
+  });
 
   try {
     const savedConfig = await window.electronAPI.setConfig(config);
-    console.log('Saved config returned:', savedConfig);
+    console.log('[Settings] Config returned after save:', {
+      ...savedConfig,
+      deepgramApiKey: savedConfig.deepgramApiKey ? '***' + savedConfig.deepgramApiKey.slice(-4) : '(empty)',
+      llmApiKey: savedConfig.llmApiKey ? '***' + savedConfig.llmApiKey.slice(-4) : '(empty)',
+    });
     showStatus('Settings saved!', 'success');
+
+    // Log form values after save to verify they weren't cleared
+    console.log('[Settings] Form values after save:', {
+      deepgramApiKey: deepgramApiKeyInput.value ? '***' + deepgramApiKeyInput.value.slice(-4) : '(empty)',
+      llmApiKey: llmApiKeyInput.value ? '***' + llmApiKeyInput.value.slice(-4) : '(empty)',
+    });
   } catch (error) {
-    console.error('Failed to save settings:', error);
+    console.error('[Settings] Failed to save:', error);
     showStatus('Failed to save settings', 'error');
   }
 
@@ -145,4 +177,13 @@ window.electronAPI.onError((error) => {
 });
 
 // Initialize
+console.log('[Settings] Initializing...');
+console.log('[Settings] Form elements found:', {
+  form: !!form,
+  deepgramApiKeyInput: !!deepgramApiKeyInput,
+  llmApiKeyInput: !!llmApiKeyInput,
+  cleanupEnabledInput: !!cleanupEnabledInput,
+  modePasteInput: !!modePasteInput,
+  modeTypeInput: !!modeTypeInput,
+});
 loadSettings();
