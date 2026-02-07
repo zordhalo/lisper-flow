@@ -107,7 +107,7 @@ public class ClipboardPasteInjector : ITextInjectionStrategy
             _logger.LogDebug("Ctrl+V sent successfully");
             
             // Wait a bit for paste to complete
-            await Task.Delay(150, cancellationToken);
+            await Task.Delay(300, cancellationToken);
             
             // Restore original clipboard after a delay (fire and forget)
             _ = Task.Delay(500).ContinueWith(_ =>

@@ -229,7 +229,7 @@ public partial class SettingsWindow : Window
         }
     }
     
-    private async void DownloadWhisperModel_Click(object sender, RoutedEventArgs e)
+    private void DownloadWhisperModel_Click(object sender, RoutedEventArgs e)
     {
         var result = MessageBox.Show(
             "This will download the Whisper small model (~500MB) from Hugging Face.\n\n" +
@@ -256,7 +256,7 @@ public partial class SettingsWindow : Window
             MessageBoxImage.Information);
     }
     
-    private async void DownloadPhi3Model_Click(object sender, RoutedEventArgs e)
+    private void DownloadPhi3Model_Click(object sender, RoutedEventArgs e)
     {
         var result = MessageBox.Show(
             "This will open the Phi-3 Mini ONNX model page.\n\n" +

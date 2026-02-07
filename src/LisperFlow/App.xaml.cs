@@ -159,10 +159,8 @@ public partial class App : Application
                     settings.Llm.CloudModel,
                     sp.GetRequiredService<ILogger<OpenAIProvider>>()));
         }
-        else
-        {
-            services.AddSingleton<ILlmProvider?>(sp => null);
-        }
+        // else block removed to avoid CS8634
+
         
         // Text injection services
         services.AddSingleton<FocusedElementDetector>(sp => new FocusedElementDetector(
@@ -176,8 +174,18 @@ public partial class App : Application
         ));
         services.AddSingleton<PromptTemplateEngine>();
         
-        // Main orchestrator
-        services.AddSingleton<DictationService>();
+        // Main orchestrator - explicit factory to handle optional ILlmProvider
+        services.AddSingleton<DictationService>(sp => new DictationService(
+            sp.GetRequiredService<AudioCaptureService>(),
+            sp.GetRequiredService<HotkeyRegistrar>(),
+            sp.GetRequiredService<IAsrProvider>(),
+            sp.GetService<ILlmProvider>(), // Optional dependency
+            sp.GetRequiredService<InjectionStrategySelector>(),
+            sp.GetRequiredService<PromptTemplateEngine>(),
+            sp.GetRequiredService<FocusedElementDetector>(),
+            sp.GetRequiredService<AppSettings>(),
+            sp.GetRequiredService<ILogger<DictationService>>()
+        ));
         
         // UI
         services.AddSingleton<SystemTrayViewModel>();
