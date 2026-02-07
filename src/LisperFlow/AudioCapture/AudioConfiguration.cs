@@ -46,6 +46,11 @@ public class AudioConfiguration
     public int PreRollMs { get; set; } = 300;
     
     /// <summary>
+    /// Streaming audio chunk duration in milliseconds
+    /// </summary>
+    public int StreamingChunkDurationMs { get; set; } = 100;
+    
+    /// <summary>
     /// Gets the number of bytes per sample
     /// </summary>
     public int BytesPerSample => BitsPerSample / 8;
@@ -59,6 +64,11 @@ public class AudioConfiguration
     /// Gets the number of samples for pre-roll
     /// </summary>
     public int PreRollSamples => (SampleRate * PreRollMs) / 1000;
+    
+    /// <summary>
+    /// Gets the number of samples per streaming chunk
+    /// </summary>
+    public int StreamingChunkSamples => (SampleRate * StreamingChunkDurationMs) / 1000;
 }
 
 /// <summary>

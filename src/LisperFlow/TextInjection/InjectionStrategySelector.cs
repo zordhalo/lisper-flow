@@ -21,11 +21,11 @@ public class InjectionStrategySelector
         _elementDetector = elementDetector;
         _logger = logger;
         
-        // Order matters: most reliable/fastest first
+        // Order matters: SendInput first to avoid clipboard-only behavior
         _strategies = new List<ITextInjectionStrategy>
         {
-            new ClipboardPasteInjector(clipboardLogger), // Fast, universal
-            new SendInputInjector(sendInputLogger)        // Fallback, slower
+            new SendInputInjector(sendInputLogger),       // Direct typing
+            new ClipboardPasteInjector(clipboardLogger)   // Fallback
         };
     }
     

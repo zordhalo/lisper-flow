@@ -1,4 +1,6 @@
 using System.Buffers;
+using LisperFlow.Streaming;
+using LisperFlow.Streaming.Models;
 using Microsoft.Extensions.Logging;
 
 namespace LisperFlow.AudioCapture;
@@ -6,7 +8,7 @@ namespace LisperFlow.AudioCapture;
 /// <summary>
 /// Orchestrates audio capture, VAD, and buffering
 /// </summary>
-public class AudioCaptureService : IDisposable
+public class AudioCaptureService : IAudioStreamProvider, IDisposable
 {
     private readonly WasapiCaptureManager _captureManager;
     private readonly VoiceActivityDetector _vad;
@@ -20,6 +22,8 @@ public class AudioCaptureService : IDisposable
     private DateTime _lastSpeechTime;
     private readonly float[] _resampleBuffer;
     private bool _disposed;
+    private bool _streamingMode;
+    private readonly List<float> _streamingBuffer = new();
     
     // Speech segment collection (VAD-based)
     private readonly List<float> _currentSpeechSegment = new();
@@ -41,6 +45,8 @@ public class AudioCaptureService : IDisposable
     /// Event raised when speech ends (silence detected)
     /// </summary>
     public event EventHandler? SpeechEnded;
+    
+    public event EventHandler<AudioChunkEventArgs>? AudioChunkReady;
     
     /// <summary>
     /// Current recording state
@@ -109,6 +115,7 @@ public class AudioCaptureService : IDisposable
         _ringBuffer.Clear();
         _currentSpeechSegment.Clear();
         _pttBuffer.Clear();  // Clear PTT buffer too
+        _streamingBuffer.Clear();
         _isCapturing = true;
         _isSpeechActive = false;
         
@@ -158,6 +165,42 @@ public class AudioCaptureService : IDisposable
         return null;
     }
     
+    public async Task StartStreamingAsync(CancellationToken cancellationToken = default)
+    {
+        if (_isCapturing)
+        {
+            _logger.LogWarning("Audio capture already active; reusing for streaming");
+        }
+        
+        _streamingMode = true;
+        _streamingBuffer.Clear();
+        _vad.Reset();
+        
+        if (!_isCapturing)
+        {
+            await StartListeningAsync();
+        }
+        
+        _logger.LogInformation(
+            "Streaming audio capture started (chunk: {ChunkMs}ms)",
+            _config.StreamingChunkDurationMs);
+    }
+    
+    public async Task StopStreamingAsync(CancellationToken cancellationToken = default)
+    {
+        _streamingMode = false;
+        
+        // Emit any remaining samples as a final chunk
+        EmitStreamingChunk(final: true);
+        
+        if (_isCapturing)
+        {
+            await StopListeningAsync();
+        }
+        
+        _logger.LogInformation("Streaming audio capture stopped");
+    }
+    
     /// <summary>
     /// Get the current buffered audio (for push-to-talk mode)
     /// </summary>
@@ -183,16 +226,26 @@ public class AudioCaptureService : IDisposable
             // Add to ring buffer (for pre-roll)
             _ringBuffer.Write(samples);
             
-            // ALWAYS accumulate to PTT buffer during recording
-            _pttBuffer.AddRange(samples);
+            // Accumulate PTT buffer only in non-streaming mode
+            if (!_streamingMode)
+            {
+                _pttBuffer.AddRange(samples);
+            }
             
             // Check VAD on chunks (for continuous mode / events)
-            ProcessVad(samples.AsSpan());
+            ProcessVad(samples.AsSpan(), allowSegmentCompletion: !_streamingMode);
             
             // If speech is active, also accumulate to VAD segment
-            if (_isSpeechActive)
+            if (_isSpeechActive && !_streamingMode)
             {
                 _currentSpeechSegment.AddRange(samples);
+            }
+            
+            // Emit streaming chunks when enabled
+            if (_streamingMode)
+            {
+                _streamingBuffer.AddRange(samples);
+                EmitStreamingChunk();
             }
         }
         catch (Exception ex)
@@ -201,7 +254,7 @@ public class AudioCaptureService : IDisposable
         }
     }
     
-    private void ProcessVad(ReadOnlySpan<float> samples)
+    private void ProcessVad(ReadOnlySpan<float> samples, bool allowSegmentCompletion)
     {
         // Process in 512-sample chunks (Silero VAD optimal)
         const int chunkSize = 512;
@@ -242,7 +295,7 @@ public class AudioCaptureService : IDisposable
             {
                 _isSpeechActive = false;
                 
-                if (_currentSpeechSegment.Count > 0)
+                if (allowSegmentCompletion && _currentSpeechSegment.Count > 0)
                 {
                     var segment = _currentSpeechSegment.ToArray();
                     _currentSpeechSegment.Clear();
@@ -262,9 +315,38 @@ public class AudioCaptureService : IDisposable
                         });
                     }
                 }
+                else
+                {
+                    _currentSpeechSegment.Clear();
+                }
                 
                 SpeechEnded?.Invoke(this, EventArgs.Empty);
             }
+        }
+    }
+    
+    private void EmitStreamingChunk(bool final = false)
+    {
+        int chunkSamples = _config.StreamingChunkSamples;
+        if (chunkSamples <= 0) return;
+        
+        while (_streamingBuffer.Count >= chunkSamples || (final && _streamingBuffer.Count > 0))
+        {
+            int count = final ? _streamingBuffer.Count : chunkSamples;
+            var chunkSamplesArray = _streamingBuffer.GetRange(0, count).ToArray();
+            _streamingBuffer.RemoveRange(0, count);
+            
+            AudioChunkReady?.Invoke(this, new AudioChunkEventArgs
+            {
+                Chunk = new AudioChunk
+                {
+                    Samples = chunkSamplesArray,
+                    SampleRate = _config.SampleRate,
+                    Timestamp = DateTime.UtcNow
+                }
+            });
+            
+            if (final) break;
         }
     }
     

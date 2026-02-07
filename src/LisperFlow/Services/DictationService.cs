@@ -5,6 +5,8 @@ using LisperFlow.Configuration;
 using LisperFlow.Context;
 using LisperFlow.Hotkeys;
 using LisperFlow.LLM;
+using LisperFlow.Streaming;
+using LisperFlow.Streaming.Models;
 using LisperFlow.TextInjection;
 using Microsoft.Extensions.Logging;
 
@@ -25,10 +27,17 @@ public class DictationService : IDisposable
     private readonly FocusedElementDetector _focusDetector;
     private readonly AppSettings _settings;
     private readonly ILogger<DictationService> _logger;
+    private readonly IStreamingAsrProvider _streamingAsrProvider;
+    private readonly StreamingCoordinator _streamingCoordinator;
+    private readonly TranscriptSynchronizer _transcriptSynchronizer;
+    private readonly TypingCommandQueue _typingQueue;
+    private readonly RealTimeTextInjector _realTimeInjector;
     
     private DictationState _state = DictationState.Idle;
     private CancellationTokenSource? _currentCts;
     private bool _disposed;
+    private bool _isStreaming;
+    private IntPtr _streamingTargetWindow;
     
     /// <summary>
     /// Current dictation state
@@ -64,6 +73,11 @@ public class DictationService : IDisposable
         PromptTemplateEngine promptEngine,
         FocusedElementDetector focusDetector,
         AppSettings settings,
+        IStreamingAsrProvider streamingAsrProvider,
+        StreamingCoordinator streamingCoordinator,
+        TranscriptSynchronizer transcriptSynchronizer,
+        TypingCommandQueue typingQueue,
+        RealTimeTextInjector realTimeInjector,
         ILogger<DictationService> logger)
     {
         _audioService = audioService;
@@ -75,6 +89,11 @@ public class DictationService : IDisposable
         _focusDetector = focusDetector;
         _settings = settings;
         _logger = logger;
+        _streamingAsrProvider = streamingAsrProvider;
+        _streamingCoordinator = streamingCoordinator;
+        _transcriptSynchronizer = transcriptSynchronizer;
+        _typingQueue = typingQueue;
+        _realTimeInjector = realTimeInjector;
         
         // Wire up hotkey
         _hotkeyRegistrar.HotkeyPressed += OnHotkeyPressed;
@@ -82,6 +101,9 @@ public class DictationService : IDisposable
         // Wire up speech detection
         _audioService.SpeechStarted += OnSpeechStarted;
         _audioService.SpeechEnded += OnSpeechEnded;
+        
+        _streamingCoordinator.PartialTranscriptReceived += OnPartialTranscriptReceived;
+        _streamingCoordinator.FinalTranscriptReceived += OnFinalTranscriptReceived;
     }
     
     /// <summary>
@@ -166,6 +188,10 @@ public class DictationService : IDisposable
         {
             await _audioService.StopListeningAsync();
         }
+        else if (_state == DictationState.Streaming)
+        {
+            await StopStreamingAsync();
+        }
         
         _hotkeyRegistrar.UnregisterAll();
         SetState(DictationState.Idle);
@@ -185,6 +211,18 @@ public class DictationService : IDisposable
         else if (_state == DictationState.Ready)
         {
             await StartRecordingAsync();
+        }
+    }
+    
+    public async Task ToggleStreamingAsync()
+    {
+        if (_state == DictationState.Streaming)
+        {
+            await StopStreamingAsync();
+        }
+        else if (_state == DictationState.Ready)
+        {
+            await StartStreamingAsync();
         }
     }
     
@@ -361,7 +399,14 @@ public class DictationService : IDisposable
         // Toggle recording on UI thread
         System.Windows.Application.Current?.Dispatcher.BeginInvoke(async () =>
         {
-            await ToggleRecordingAsync();
+            if (_settings.Streaming.Enabled)
+            {
+                await ToggleStreamingAsync();
+            }
+            else
+            {
+                await ToggleRecordingAsync();
+            }
         });
     }
     
@@ -407,9 +452,13 @@ public class DictationService : IDisposable
         _hotkeyRegistrar.HotkeyPressed -= OnHotkeyPressed;
         _audioService.SpeechStarted -= OnSpeechStarted;
         _audioService.SpeechEnded -= OnSpeechEnded;
+        _streamingCoordinator.PartialTranscriptReceived -= OnPartialTranscriptReceived;
+        _streamingCoordinator.FinalTranscriptReceived -= OnFinalTranscriptReceived;
         
         _audioService.Dispose();
         _hotkeyRegistrar.Dispose();
+        _streamingCoordinator.Dispose();
+        _realTimeInjector.Dispose();
         
         if (_asrProvider is IDisposable disposableAsr)
             disposableAsr.Dispose();
@@ -417,7 +466,128 @@ public class DictationService : IDisposable
         if (_llmProvider is IDisposable disposableLlm)
             disposableLlm.Dispose();
         
+        if (_streamingAsrProvider is IDisposable disposableStreaming)
+            disposableStreaming.Dispose();
+        
         _logger.LogDebug("DictationService disposed");
+    }
+
+    private async Task StartStreamingAsync()
+    {
+        try
+        {
+            SetState(DictationState.Streaming);
+            _currentCts = new CancellationTokenSource();
+
+            // Ensure a streaming provider is configured before starting
+            if (string.IsNullOrWhiteSpace(_settings.Streaming.Provider))
+            {
+                throw new InvalidOperationException("Streaming provider is not configured.");
+            }
+            
+            _streamingTargetWindow = Hotkeys.Win32Interop.GetForegroundWindow();
+            _transcriptSynchronizer.Reset();
+            _typingQueue.Clear();
+            
+            // Start ASR streaming before typing to avoid dangling injector
+            await _streamingCoordinator.StartStreamingAsync(_currentCts.Token);
+            _realTimeInjector.Start(_streamingTargetWindow);
+            _isStreaming = true;
+            
+            _logger.LogInformation("Streaming dictation started");
+        }
+        catch (Exception ex)
+        {
+            try
+            {
+                await _realTimeInjector.StopAsync();
+            }
+            catch { }
+            
+            _logger.LogError(ex, "Failed to start streaming");
+            HandleError("Failed to start streaming", ex);
+            SetState(DictationState.Ready);
+        }
+    }
+    
+    private async Task StopStreamingAsync()
+    {
+        if (!_isStreaming) return;
+        
+        try
+        {
+            _currentCts?.Cancel();
+            await _streamingCoordinator.StopStreamingAsync();
+            await Task.Delay(200);
+            await _realTimeInjector.StopAsync();
+            
+            _transcriptSynchronizer.Reset();
+            _typingQueue.Clear();
+            
+            _isStreaming = false;
+            SetState(DictationState.Ready);
+            
+            _logger.LogInformation("Streaming dictation stopped");
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Failed to stop streaming");
+            HandleError("Failed to stop streaming", ex);
+            SetState(DictationState.Ready);
+        }
+    }
+    
+    private void OnPartialTranscriptReceived(object? sender, PartialTranscriptEventArgs e)
+    {
+        if (!_settings.Streaming.ShowPartialResults) return;
+        
+        _logger.LogDebug("Streaming partial transcript: {Text}", e.Text);
+        var update = _transcriptSynchronizer.ProcessPartialTranscript(e.Text);
+        foreach (var word in update.WordsToType)
+        {
+            _typingQueue.EnqueueWord(word);
+        }
+        
+        if (update.Correction != null)
+        {
+            _typingQueue.EnqueueCorrection(update.Correction);
+        }
+    }
+    
+    private void OnFinalTranscriptReceived(object? sender, FinalTranscriptEventArgs e)
+    {
+        _logger.LogInformation("Streaming final transcript: {Text}", e.Text);
+        var update = _transcriptSynchronizer.ProcessPartialTranscript(e.Text);
+        foreach (var word in update.WordsToType)
+        {
+            _typingQueue.EnqueueWord(word);
+        }
+        
+        if (update.Correction != null)
+        {
+            _typingQueue.EnqueueCorrection(update.Correction);
+        }
+        
+        if (_settings.Streaming.ApplyLlmEnhancement.Equals("AfterFinalization", StringComparison.OrdinalIgnoreCase) &&
+            _llmProvider?.IsAvailable == true)
+        {
+            _ = Task.Run(async () =>
+            {
+                try
+                {
+                    var prompt = "Fix grammar, punctuation, and filler words. Keep meaning.\n\nTranscript:\n" + e.Text;
+                    var result = await _llmProvider.GenerateAsync("You are a text enhancement assistant.", prompt);
+                    if (result.Success && !string.IsNullOrWhiteSpace(result.GeneratedText))
+                    {
+                        _logger.LogDebug("Streaming LLM enhancement ready (len {Len})", result.GeneratedText.Length);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogWarning(ex, "Streaming LLM enhancement failed");
+                }
+            });
+        }
     }
 }
 
@@ -429,6 +599,7 @@ public enum DictationState
     Idle,
     Ready,
     Recording,
+    Streaming,
     Transcribing,
     Enhancing,
     Injecting,

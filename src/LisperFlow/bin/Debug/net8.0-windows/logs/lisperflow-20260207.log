@@ -543,3 +543,421 @@ System.ArgumentException: Value does not fall within the expected range.
 2026-02-07 02:09:01.368 -05:00 [DBG] AudioCaptureService disposed
 2026-02-07 02:09:01.371 -05:00 [INF] Hotkey registrar disposed
 2026-02-07 02:09:01.372 -05:00 [DBG] DictationService disposed
+2026-02-07 02:42:47.793 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 02:42:48.498 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 02:42:48.744 -05:00 [INF] Starting dictation service...
+2026-02-07 02:42:48.745 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 02:42:48.988 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:42:49.016 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 02:42:49.021 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 02:42:49.022 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:42:49.023 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 02:42:49.023 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 02:42:49.023 -05:00 [INF] Dictation service started successfully
+2026-02-07 02:42:49.024 -05:00 [INF] LisperFlow started successfully
+2026-02-07 02:42:52.124 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:42:52.125 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:42:52.127 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:42:52.142 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 02:42:52.143 -05:00 [INF] Audio capture started
+2026-02-07 02:42:52.143 -05:00 [INF] Audio capture service started listening
+2026-02-07 02:42:52.143 -05:00 [INF] Recording started
+2026-02-07 02:42:52.679 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:42:52.680 -05:00 [DBG] Speech detected
+2026-02-07 02:42:55.259 -05:00 [DBG] Speech segment complete: 2.88s, 46080 samples
+2026-02-07 02:42:55.260 -05:00 [DBG] Speech ended
+2026-02-07 02:43:01.509 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:43:01.509 -05:00 [DBG] Speech detected
+2026-02-07 02:43:02.070 -05:00 [DBG] Speech segment complete: 0.86s, 13760 samples
+2026-02-07 02:43:02.070 -05:00 [DBG] Speech ended
+2026-02-07 02:43:02.221 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:43:02.221 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:43:02.223 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 02:43:02.223 -05:00 [INF] Audio capture stopping
+2026-02-07 02:43:02.223 -05:00 [INF] Returning PTT audio: 10.08s, 161280 samples
+2026-02-07 02:43:02.224 -05:00 [DBG] Processing 10.08s of audio
+2026-02-07 02:43:02.232 -05:00 [DBG] Sending 10.08s audio to OpenAI Whisper (322604 bytes)
+2026-02-07 02:43:02.235 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:43:02.235 -05:00 [INF] Audio capture stopped
+2026-02-07 02:43:03.633 -05:00 [INF] Transcription completed in 1407ms: This is a test right now. I'm testing This is a te...
+2026-02-07 02:43:03.636 -05:00 [DBG] Focused element: Process=Cursor, Title=README.md - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 02:43:04.936 -05:00 [DBG] LLM generation completed in 1297ms, 15 tokens
+2026-02-07 02:43:04.936 -05:00 [DBG] Enhanced transcript: This is a test right now. I'm testing. This is a t...
+2026-02-07 02:43:04.937 -05:00 [DBG] Focused element: Process=Cursor, Title=README.md - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 02:43:04.937 -05:00 [DBG] Trying strategy: ClipboardPaste
+2026-02-07 02:43:04.938 -05:00 [INF] Starting clipboard paste injection for 54 characters
+2026-02-07 02:43:04.944 -05:00 [DBG] Saved original clipboard content
+2026-02-07 02:43:04.972 -05:00 [DBG] Set text to clipboard
+2026-02-07 02:43:05.079 -05:00 [DBG] Clipboard verification: true
+2026-02-07 02:43:05.079 -05:00 [DBG] Sending Ctrl+V key combination
+2026-02-07 02:43:05.080 -05:00 [DBG] SendInput returned 0 (expected 4)
+2026-02-07 02:43:05.080 -05:00 [ERR] SendInput failed to inject Ctrl+V
+2026-02-07 02:43:05.081 -05:00 [WRN] Strategy ClipboardPaste failed: SendInput failed
+2026-02-07 02:43:05.081 -05:00 [DBG] Trying strategy: SendInput
+2026-02-07 02:43:05.923 -05:00 [DBG] SendInput injection completed: 54 chars in 841ms
+2026-02-07 02:43:05.924 -05:00 [INF] Text injected using SendInput in 841ms to Cursor
+2026-02-07 02:43:05.924 -05:00 [INF] Dictation complete: 54 chars injected via SendInput in 3699ms total
+2026-02-07 02:44:08.387 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 02:44:08.388 -05:00 [INF] Stopping dictation service...
+2026-02-07 02:44:08.388 -05:00 [INF] Unregistered hotkey: Dictation with ID 1
+2026-02-07 02:44:08.389 -05:00 [INF] Dictation service stopped
+2026-02-07 02:44:08.391 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 02:44:08.391 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 02:44:08.391 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 02:44:08.393 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 02:44:08.507 -05:00 [DBG] DictationService disposed
+2026-02-07 02:44:11.514 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 02:44:11.694 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 02:44:11.813 -05:00 [INF] Starting dictation service...
+2026-02-07 02:44:11.814 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 02:44:11.822 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:44:11.857 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 02:44:11.865 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 02:44:11.865 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:44:11.868 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 02:44:11.868 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 02:44:11.868 -05:00 [INF] Dictation service started successfully
+2026-02-07 02:44:11.869 -05:00 [INF] LisperFlow started successfully
+2026-02-07 02:44:13.532 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:44:13.532 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:44:13.534 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:44:13.548 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 02:44:13.548 -05:00 [INF] Audio capture started
+2026-02-07 02:44:13.548 -05:00 [INF] Audio capture service started listening
+2026-02-07 02:44:13.548 -05:00 [INF] Recording started
+2026-02-07 02:44:14.321 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:44:14.321 -05:00 [DBG] Speech detected
+2026-02-07 02:44:15.421 -05:00 [DBG] Speech segment complete: 1.40s, 22400 samples
+2026-02-07 02:44:15.423 -05:00 [DBG] Speech ended
+2026-02-07 02:44:15.691 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:44:15.691 -05:00 [DBG] Speech detected
+2026-02-07 02:44:16.841 -05:00 [DBG] Speech segment complete: 1.45s, 23200 samples
+2026-02-07 02:44:16.841 -05:00 [DBG] Speech ended
+2026-02-07 02:44:16.941 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:44:16.941 -05:00 [DBG] Speech detected
+2026-02-07 02:44:17.521 -05:00 [DBG] Speech segment complete: 0.88s, 14080 samples
+2026-02-07 02:44:17.521 -05:00 [DBG] Speech ended
+2026-02-07 02:44:18.051 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:44:18.051 -05:00 [DBG] Speech detected
+2026-02-07 02:44:19.406 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:44:19.406 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:44:19.407 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 02:44:19.408 -05:00 [INF] Audio capture stopping
+2026-02-07 02:44:19.408 -05:00 [INF] Returning PTT audio: 5.86s, 93760 samples
+2026-02-07 02:44:19.409 -05:00 [DBG] Processing 5.86s of audio
+2026-02-07 02:44:19.420 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:44:19.420 -05:00 [DBG] Sending 5.86s audio to OpenAI Whisper (187564 bytes)
+2026-02-07 02:44:19.420 -05:00 [INF] Audio capture stopped
+2026-02-07 02:44:20.802 -05:00 [INF] Transcription completed in 1391ms: this is a test 1 2 3 this is a test yeah...
+2026-02-07 02:44:20.805 -05:00 [DBG] Focused element: Process=Cursor, Title=appsettings.json - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 02:44:22.317 -05:00 [DBG] LLM generation completed in 1508ms, 21 tokens
+2026-02-07 02:44:22.317 -05:00 [DBG] Enhanced transcript: This is a test. 1, 2, 3. This is a test. Yeah.
+2026-02-07 02:44:22.318 -05:00 [DBG] Focused element: Process=LisperFlow, Title=, Class=HwndWrapper[LisperFlow;;2bb1bfcc-2021-4819-8426-237db4d170d8]
+2026-02-07 02:44:22.318 -05:00 [DBG] Trying strategy: ClipboardPaste
+2026-02-07 02:44:22.319 -05:00 [INF] Starting clipboard paste injection for 46 characters
+2026-02-07 02:44:22.324 -05:00 [DBG] Saved original clipboard content
+2026-02-07 02:44:22.345 -05:00 [DBG] Set text to clipboard
+2026-02-07 02:44:22.452 -05:00 [DBG] Clipboard verification: true
+2026-02-07 02:44:22.453 -05:00 [DBG] Sending Ctrl+V key combination
+2026-02-07 02:44:22.453 -05:00 [DBG] SendInput returned 0 (expected 4)
+2026-02-07 02:44:22.454 -05:00 [ERR] SendInput failed to inject Ctrl+V
+2026-02-07 02:44:22.454 -05:00 [WRN] Strategy ClipboardPaste failed: SendInput failed
+2026-02-07 02:44:22.454 -05:00 [DBG] Trying strategy: SendInput
+2026-02-07 02:44:23.017 -05:00 [DBG] SendInput injection completed: 46 chars in 561ms
+2026-02-07 02:44:23.017 -05:00 [INF] Text injected using SendInput in 561ms to LisperFlow
+2026-02-07 02:44:23.017 -05:00 [INF] Dictation complete: 46 chars injected via SendInput in 3608ms total
+2026-02-07 02:45:00.843 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 02:45:00.843 -05:00 [INF] Stopping dictation service...
+2026-02-07 02:45:00.844 -05:00 [INF] Unregistered hotkey: Dictation with ID 1
+2026-02-07 02:45:00.844 -05:00 [INF] Dictation service stopped
+2026-02-07 02:45:00.847 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 02:45:00.848 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 02:45:00.848 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 02:45:00.851 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 02:45:00.856 -05:00 [DBG] DictationService disposed
+2026-02-07 02:45:24.862 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 02:45:25.062 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 02:45:25.168 -05:00 [INF] Starting dictation service...
+2026-02-07 02:45:25.169 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 02:45:25.176 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:45:25.206 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 02:45:25.211 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 02:45:25.211 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:45:25.213 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 02:45:25.213 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 02:45:25.213 -05:00 [INF] Dictation service started successfully
+2026-02-07 02:45:25.213 -05:00 [INF] LisperFlow started successfully
+2026-02-07 02:45:27.133 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:45:27.133 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:45:27.136 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:45:27.150 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 02:45:27.150 -05:00 [INF] Audio capture started
+2026-02-07 02:45:27.150 -05:00 [INF] Audio capture service started listening
+2026-02-07 02:45:27.151 -05:00 [INF] Recording started
+2026-02-07 02:45:28.064 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:45:28.064 -05:00 [DBG] Speech detected
+2026-02-07 02:45:30.112 -05:00 [DBG] Speech segment complete: 2.35s, 37600 samples
+2026-02-07 02:45:30.114 -05:00 [DBG] Speech ended
+2026-02-07 02:45:34.115 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:45:34.115 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:45:34.118 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 02:45:34.119 -05:00 [INF] Audio capture stopping
+2026-02-07 02:45:34.119 -05:00 [INF] Returning PTT audio: 6.97s, 111520 samples
+2026-02-07 02:45:34.122 -05:00 [DBG] Processing 6.97s of audio
+2026-02-07 02:45:34.125 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:45:34.125 -05:00 [INF] Audio capture stopped
+2026-02-07 02:45:34.137 -05:00 [DBG] Sending 6.97s audio to OpenAI Whisper (223084 bytes)
+2026-02-07 02:45:35.597 -05:00 [INF] Transcription completed in 1473ms: this is a test one two three...
+2026-02-07 02:45:35.601 -05:00 [DBG] Focused element: Process=Cursor, Title=appsettings.json - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 02:45:36.310 -05:00 [DBG] LLM generation completed in 706ms, 11 tokens
+2026-02-07 02:45:36.311 -05:00 [DBG] Enhanced transcript: This is a test. One, two, three.
+2026-02-07 02:45:36.312 -05:00 [DBG] Focused element: Process=Cursor, Title=appsettings.json - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 02:45:36.313 -05:00 [DBG] Trying strategy: SendInput
+2026-02-07 02:45:36.815 -05:00 [DBG] SendInput injection completed: 32 chars in 501ms
+2026-02-07 02:45:36.816 -05:00 [INF] Text injected using SendInput in 501ms to Cursor
+2026-02-07 02:45:36.816 -05:00 [INF] Dictation complete: 32 chars injected via SendInput in 2694ms total
+2026-02-07 02:45:42.812 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:45:42.812 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:45:42.812 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:45:42.813 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 02:45:42.813 -05:00 [INF] Audio capture started
+2026-02-07 02:45:42.813 -05:00 [INF] Audio capture service started listening
+2026-02-07 02:45:42.813 -05:00 [INF] Recording started
+2026-02-07 02:45:44.163 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:45:44.164 -05:00 [DBG] Speech detected
+2026-02-07 02:45:44.664 -05:00 [DBG] Speech segment complete: 0.80s, 12800 samples
+2026-02-07 02:45:44.664 -05:00 [DBG] Speech ended
+2026-02-07 02:45:49.145 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:45:49.145 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:45:49.145 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 02:45:49.145 -05:00 [INF] Audio capture stopping
+2026-02-07 02:45:49.146 -05:00 [INF] Returning PTT audio: 6.35s, 101600 samples
+2026-02-07 02:45:49.146 -05:00 [DBG] Processing 6.35s of audio
+2026-02-07 02:45:49.147 -05:00 [DBG] Sending 6.35s audio to OpenAI Whisper (203244 bytes)
+2026-02-07 02:45:49.157 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:45:49.157 -05:00 [INF] Audio capture stopped
+2026-02-07 02:45:51.439 -05:00 [INF] Transcription completed in 2293ms: This is a test. 1, 2, 3....
+2026-02-07 02:45:51.440 -05:00 [DBG] Focused element: Process=Cursor, Title=appsettings.json - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 02:45:51.872 -05:00 [DBG] LLM generation completed in 432ms, 14 tokens
+2026-02-07 02:45:51.872 -05:00 [DBG] Enhanced transcript: This is a test. 1, 2, 3.
+2026-02-07 02:45:51.872 -05:00 [DBG] Focused element: Process=Cursor, Title=appsettings.json - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 02:45:51.872 -05:00 [DBG] Trying strategy: SendInput
+2026-02-07 02:45:52.240 -05:00 [DBG] SendInput injection completed: 24 chars in 367ms
+2026-02-07 02:45:52.240 -05:00 [INF] Text injected using SendInput in 367ms to Cursor
+2026-02-07 02:45:52.240 -05:00 [INF] Dictation complete: 24 chars injected via SendInput in 3094ms total
+2026-02-07 02:46:17.971 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:46:17.971 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:46:17.971 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:46:17.972 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 02:46:17.972 -05:00 [INF] Audio capture started
+2026-02-07 02:46:17.972 -05:00 [INF] Audio capture service started listening
+2026-02-07 02:46:17.972 -05:00 [INF] Recording started
+2026-02-07 02:46:18.725 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:46:18.725 -05:00 [DBG] Speech detected
+2026-02-07 02:46:19.805 -05:00 [DBG] Speech segment complete: 1.38s, 22080 samples
+2026-02-07 02:46:19.805 -05:00 [DBG] Speech ended
+2026-02-07 02:46:21.515 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:46:21.515 -05:00 [DBG] Speech detected
+2026-02-07 02:46:22.115 -05:00 [DBG] Speech segment complete: 0.90s, 14400 samples
+2026-02-07 02:46:22.115 -05:00 [DBG] Speech ended
+2026-02-07 02:46:22.129 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:46:22.129 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:46:22.129 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 02:46:22.129 -05:00 [INF] Audio capture stopping
+2026-02-07 02:46:22.129 -05:00 [INF] Returning PTT audio: 4.17s, 66720 samples
+2026-02-07 02:46:22.129 -05:00 [DBG] Processing 4.17s of audio
+2026-02-07 02:46:22.131 -05:00 [DBG] Sending 4.17s audio to OpenAI Whisper (133484 bytes)
+2026-02-07 02:46:22.135 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:46:22.135 -05:00 [INF] Audio capture stopped
+2026-02-07 02:46:23.945 -05:00 [INF] Transcription completed in 1815ms: this is a test one two three this is a test...
+2026-02-07 02:46:23.946 -05:00 [DBG] Focused element: Process=Cursor, Title=appsettings.json - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 02:46:24.538 -05:00 [DBG] LLM generation completed in 591ms, 16 tokens
+2026-02-07 02:46:24.538 -05:00 [DBG] Enhanced transcript: This is a test. One, two, three. This is a test.
+2026-02-07 02:46:24.538 -05:00 [DBG] Focused element: Process=Cursor, Title=appsettings.json - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 02:46:24.538 -05:00 [DBG] Trying strategy: SendInput
+2026-02-07 02:46:25.286 -05:00 [DBG] SendInput injection completed: 48 chars in 747ms
+2026-02-07 02:46:25.286 -05:00 [INF] Text injected using SendInput in 747ms to Cursor
+2026-02-07 02:46:25.286 -05:00 [INF] Dictation complete: 48 chars injected via SendInput in 3156ms total
+2026-02-07 02:46:50.164 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:46:50.164 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:46:50.164 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:46:50.165 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 02:46:50.165 -05:00 [INF] Audio capture started
+2026-02-07 02:46:50.165 -05:00 [INF] Audio capture service started listening
+2026-02-07 02:46:50.165 -05:00 [INF] Recording started
+2026-02-07 02:46:50.906 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:46:50.906 -05:00 [DBG] Speech detected
+2026-02-07 02:46:51.826 -05:00 [DBG] Speech segment complete: 1.22s, 19520 samples
+2026-02-07 02:46:51.826 -05:00 [DBG] Speech ended
+2026-02-07 02:46:53.056 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 02:46:53.056 -05:00 [DBG] Speech detected
+2026-02-07 02:46:53.596 -05:00 [DBG] Speech segment complete: 0.84s, 13440 samples
+2026-02-07 02:46:53.596 -05:00 [DBG] Speech ended
+2026-02-07 02:46:53.653 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:46:53.654 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:46:53.654 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 02:46:53.654 -05:00 [INF] Audio capture stopping
+2026-02-07 02:46:53.654 -05:00 [INF] Returning PTT audio: 3.50s, 56000 samples
+2026-02-07 02:46:53.654 -05:00 [DBG] Processing 3.50s of audio
+2026-02-07 02:46:53.655 -05:00 [DBG] Sending 3.50s audio to OpenAI Whisper (112044 bytes)
+2026-02-07 02:46:53.659 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:46:53.659 -05:00 [INF] Audio capture stopped
+2026-02-07 02:46:54.669 -05:00 [INF] Transcription completed in 1015ms: Test 1, 2, 3. This is a test....
+2026-02-07 02:46:54.670 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 02:46:55.886 -05:00 [DBG] LLM generation completed in 1216ms, 15 tokens
+2026-02-07 02:46:55.888 -05:00 [DBG] Enhanced transcript: Test 1, 2, 3. This is a test.
+2026-02-07 02:46:55.888 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 02:46:55.888 -05:00 [DBG] Trying strategy: SendInput
+2026-02-07 02:46:56.339 -05:00 [DBG] SendInput injection completed: 29 chars in 451ms
+2026-02-07 02:46:56.339 -05:00 [INF] Text injected using SendInput in 451ms to Notepad
+2026-02-07 02:46:56.340 -05:00 [INF] Dictation complete: 29 chars injected via SendInput in 2685ms total
+2026-02-07 02:50:05.588 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 02:50:05.589 -05:00 [INF] Stopping dictation service...
+2026-02-07 02:50:05.589 -05:00 [INF] Unregistered hotkey: Dictation with ID 1
+2026-02-07 02:50:05.589 -05:00 [INF] Dictation service stopped
+2026-02-07 02:50:05.592 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 02:50:05.593 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 02:50:05.593 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 02:50:05.595 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 02:50:05.598 -05:00 [DBG] DictationService disposed
+2026-02-07 02:50:13.484 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 02:50:13.755 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 02:50:13.861 -05:00 [INF] Starting dictation service...
+2026-02-07 02:50:13.862 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 02:50:13.868 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:50:13.902 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 02:50:13.908 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 02:50:13.909 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:50:13.912 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 02:50:13.912 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 02:50:13.912 -05:00 [INF] Dictation service started successfully
+2026-02-07 02:50:13.913 -05:00 [INF] LisperFlow started successfully
+2026-02-07 02:50:16.107 -05:00 [INF] Found 3 audio capture devices
+2026-02-07 02:50:24.281 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:50:24.282 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:50:24.285 -05:00 [INF] Real-time typing started for window "2100962"
+2026-02-07 02:50:24.287 -05:00 [ERR] Failed to start streaming
+System.InvalidOperationException: Azure Speech subscription key is not configured.
+   at LisperFlow.Streaming.AzureSpeechStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\AzureSpeechStreamProvider.cs:line 42
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 487
+2026-02-07 02:50:28.156 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:50:28.156 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:50:28.157 -05:00 [ERR] Failed to start streaming
+System.InvalidOperationException: Real-time typing already started.
+   at LisperFlow.TextInjection.RealTimeTextInjector.Start(IntPtr targetWindow) in D:\zDev\lisper-flow\src\LisperFlow\TextInjection\RealTimeTextInjector.cs:line 32
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 485
+2026-02-07 02:50:36.045 -05:00 [INF] Found 3 audio capture devices
+2026-02-07 02:50:38.565 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:50:38.566 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:50:38.566 -05:00 [ERR] Failed to start streaming
+System.InvalidOperationException: Real-time typing already started.
+   at LisperFlow.TextInjection.RealTimeTextInjector.Start(IntPtr targetWindow) in D:\zDev\lisper-flow\src\LisperFlow\TextInjection\RealTimeTextInjector.cs:line 32
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 485
+2026-02-07 02:50:41.673 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:50:41.673 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:50:41.673 -05:00 [ERR] Failed to start streaming
+System.InvalidOperationException: Real-time typing already started.
+   at LisperFlow.TextInjection.RealTimeTextInjector.Start(IntPtr targetWindow) in D:\zDev\lisper-flow\src\LisperFlow\TextInjection\RealTimeTextInjector.cs:line 32
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 485
+2026-02-07 02:52:29.689 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 02:52:29.690 -05:00 [INF] Stopping dictation service...
+2026-02-07 02:52:29.691 -05:00 [INF] Unregistered hotkey: Dictation with ID 1
+2026-02-07 02:52:29.691 -05:00 [INF] Dictation service stopped
+2026-02-07 02:52:29.692 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 02:52:29.693 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 02:52:29.693 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 02:52:29.697 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 02:53:54.077 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 02:53:54.275 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 02:53:54.384 -05:00 [INF] Starting dictation service...
+2026-02-07 02:53:54.385 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 02:53:54.392 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:53:54.425 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 02:53:54.430 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 16000Hz, 16bit, 1ch)
+2026-02-07 02:53:54.430 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:53:54.432 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 02:53:54.432 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 02:53:54.432 -05:00 [INF] Dictation service started successfully
+2026-02-07 02:53:54.432 -05:00 [INF] LisperFlow started successfully
+2026-02-07 02:53:58.240 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:53:58.241 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:53:58.846 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 02:53:58.847 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:53:58.862 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 02:53:58.862 -05:00 [INF] Audio capture started
+2026-02-07 02:53:58.862 -05:00 [INF] Audio capture service started listening
+2026-02-07 02:53:58.862 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 02:53:58.862 -05:00 [INF] Streaming coordinator started
+2026-02-07 02:53:58.864 -05:00 [INF] Real-time typing started for window "2100962"
+2026-02-07 02:53:58.864 -05:00 [INF] Streaming dictation started
+2026-02-07 02:53:58.879 -05:00 [DBG] Speech detected, starting segment with 320 pre-roll samples
+2026-02-07 02:53:58.879 -05:00 [DBG] Speech detected
+2026-02-07 02:53:59.809 -05:00 [DBG] Speech ended
+2026-02-07 02:54:00.064 -05:00 [WRN] SendInput only sent 0/4 inputs
+2026-02-07 02:54:00.090 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:54:00.090 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:54:00.121 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:54:00.121 -05:00 [WRN] SendInput only sent 0/8 inputs
+2026-02-07 02:54:00.480 -05:00 [DBG] LLM generation completed in 416ms, 5 tokens
+2026-02-07 02:54:00.481 -05:00 [DBG] Streaming LLM enhancement ready (len 15)
+2026-02-07 02:54:02.148 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:54:02.148 -05:00 [WRN] SendInput only sent 0/6 inputs
+2026-02-07 02:54:02.176 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:54:02.176 -05:00 [WRN] SendInput only sent 0/6 inputs
+2026-02-07 02:54:02.206 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:54:02.207 -05:00 [WRN] SendInput only sent 0/10 inputs
+2026-02-07 02:54:02.237 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:54:02.238 -05:00 [WRN] SendInput only sent 0/8 inputs
+2026-02-07 02:54:03.780 -05:00 [DBG] LLM generation completed in 1631ms, 11 tokens
+2026-02-07 02:54:03.780 -05:00 [DBG] Streaming LLM enhancement ready (len 32)
+2026-02-07 02:54:04.255 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:54:04.255 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:54:04.257 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 02:54:04.258 -05:00 [INF] Audio capture stopping
+2026-02-07 02:54:04.258 -05:00 [WRN] No audio captured during recording
+2026-02-07 02:54:04.258 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 02:54:04.259 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:54:04.259 -05:00 [INF] Audio capture stopped
+2026-02-07 02:54:04.260 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 02:54:04.472 -05:00 [INF] Real-time typing stopped
+2026-02-07 02:54:04.472 -05:00 [INF] Streaming dictation stopped
+2026-02-07 02:54:07.949 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:54:07.949 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:54:08.170 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 02:54:08.170 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 02:54:08.170 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 02:54:08.170 -05:00 [INF] Audio capture started
+2026-02-07 02:54:08.171 -05:00 [INF] Audio capture service started listening
+2026-02-07 02:54:08.171 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 02:54:08.171 -05:00 [INF] Streaming coordinator started
+2026-02-07 02:54:08.171 -05:00 [INF] Real-time typing started for window "2100962"
+2026-02-07 02:54:08.171 -05:00 [INF] Streaming dictation started
+2026-02-07 02:54:09.938 -05:00 [WRN] SendInput only sent 0/8 inputs
+2026-02-07 02:54:09.965 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:54:09.965 -05:00 [WRN] SendInput only sent 0/4 inputs
+2026-02-07 02:54:09.997 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:54:09.997 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:54:10.029 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:54:10.029 -05:00 [WRN] SendInput only sent 0/8 inputs
+2026-02-07 02:54:10.368 -05:00 [DBG] LLM generation completed in 429ms, 5 tokens
+2026-02-07 02:54:10.368 -05:00 [DBG] Streaming LLM enhancement ready (len 15)
+2026-02-07 02:54:11.940 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:54:11.940 -05:00 [WRN] SendInput only sent 0/6 inputs
+2026-02-07 02:54:11.973 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:54:11.973 -05:00 [WRN] SendInput only sent 0/6 inputs
+2026-02-07 02:54:12.004 -05:00 [WRN] SendInput only sent 0/2 inputs
+2026-02-07 02:54:12.004 -05:00 [WRN] SendInput only sent 0/10 inputs
+2026-02-07 02:54:12.490 -05:00 [DBG] LLM generation completed in 550ms, 11 tokens
+2026-02-07 02:54:12.490 -05:00 [DBG] Streaming LLM enhancement ready (len 32)
+2026-02-07 02:54:12.511 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 02:54:12.511 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 02:54:12.511 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 02:54:12.511 -05:00 [INF] Audio capture stopping
+2026-02-07 02:54:12.511 -05:00 [WRN] No audio captured during recording
+2026-02-07 02:54:12.511 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 02:54:12.512 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 02:54:12.523 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 02:54:12.523 -05:00 [INF] Audio capture stopped
+2026-02-07 02:54:12.722 -05:00 [INF] Real-time typing stopped
+2026-02-07 02:54:12.722 -05:00 [INF] Streaming dictation stopped

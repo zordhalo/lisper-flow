@@ -17,7 +17,7 @@ public partial class SystemTrayViewModel : ObservableObject
     private string _statusText = "Ready";
     
     [ObservableProperty]
-    private string _hotkeyDisplay = "Ctrl+Win+Space";
+    private string _hotkeyDisplay = "Ctrl+Space";
     
     [ObservableProperty]
     private Brush _statusColor = Brushes.Green;

@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using System.Text.Json;
 using System.Windows;
 using Hardcodet.Wpf.TaskbarNotification;
@@ -11,6 +11,7 @@ using LisperFlow.Services;
 using LisperFlow.TextInjection;
 using LisperFlow.TextInjection.Strategies;
 using LisperFlow.UI;
+using LisperFlow.Streaming;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
@@ -127,7 +128,8 @@ public partial class App : Application
             SampleRate = settings.Audio.SampleRate,
             VadThreshold = settings.Audio.VadThreshold,
             BufferSeconds = settings.Audio.BufferSeconds,
-            PreRollMs = settings.Audio.PreRollMs
+            PreRollMs = settings.Audio.PreRollMs,
+            StreamingChunkDurationMs = settings.Streaming.ChunkDurationMs
         };
         services.AddSingleton(audioConfig);
         
@@ -138,17 +140,38 @@ public partial class App : Application
             sp.GetRequiredService<ILogger<WasapiCaptureManager>>(),
             sp.GetRequiredService<ILogger<VoiceActivityDetector>>()
         ));
+        services.AddSingleton<IAudioStreamProvider>(sp => sp.GetRequiredService<AudioCaptureService>());
         
         // Hotkey services - factory method
         services.AddSingleton<HotkeyRegistrar>(sp => new HotkeyRegistrar(
             sp.GetRequiredService<ILogger<HotkeyRegistrar>>()
         ));
         
-        // ASR providers
+        // ASR providers (batch)
         services.AddSingleton<IAsrProvider>(sp =>
             new OpenAIWhisperProvider(
                 settings.Asr.OpenAiApiKey ?? "",
                 sp.GetRequiredService<ILogger<OpenAIWhisperProvider>>()));
+        
+        // Streaming ASR providers
+        services.AddSingleton<IStreamingAsrProvider>(sp =>
+        {
+            string provider = settings.Streaming.Provider ?? "AzureSpeech";
+            if (provider.Equals("Deepgram", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DeepgramStreamProvider(
+                    settings.Deepgram.ApiKey ?? "",
+                    settings.Deepgram.Language,
+                    sp.GetRequiredService<ILogger<DeepgramStreamProvider>>());
+            }
+            
+            return new AzureSpeechStreamProvider(
+                settings.AzureSpeech.SubscriptionKey ?? "",
+                settings.AzureSpeech.Region,
+                settings.AzureSpeech.Language,
+                settings.AzureSpeech.EnableProfanityFilter,
+                sp.GetRequiredService<ILogger<AzureSpeechStreamProvider>>());
+        });
         
         // LLM providers
         if (settings.Llm.EnableEnhancement && !string.IsNullOrEmpty(settings.Llm.OpenAiApiKey))
@@ -174,6 +197,16 @@ public partial class App : Application
         ));
         services.AddSingleton<PromptTemplateEngine>();
         
+        // Streaming text injection services
+        services.AddSingleton<TypingCommandQueue>();
+        services.AddSingleton<RealTimeTextInjector>(sp => new RealTimeTextInjector(
+            sp.GetRequiredService<TypingCommandQueue>(),
+            settings.Streaming.TypingDelayMs,
+            sp.GetRequiredService<ILogger<RealTimeTextInjector>>()
+        ));
+        services.AddSingleton<TranscriptSynchronizer>();
+        services.AddSingleton<StreamingCoordinator>();
+        
         // Main orchestrator - explicit factory to handle optional ILlmProvider
         services.AddSingleton<DictationService>(sp => new DictationService(
             sp.GetRequiredService<AudioCaptureService>(),
@@ -184,6 +217,11 @@ public partial class App : Application
             sp.GetRequiredService<PromptTemplateEngine>(),
             sp.GetRequiredService<FocusedElementDetector>(),
             sp.GetRequiredService<AppSettings>(),
+            sp.GetRequiredService<IStreamingAsrProvider>(),
+            sp.GetRequiredService<StreamingCoordinator>(),
+            sp.GetRequiredService<TranscriptSynchronizer>(),
+            sp.GetRequiredService<TypingCommandQueue>(),
+            sp.GetRequiredService<RealTimeTextInjector>(),
             sp.GetRequiredService<ILogger<DictationService>>()
         ));
         
@@ -202,11 +240,20 @@ public partial class App : Application
         // Create context menu
         var contextMenu = new System.Windows.Controls.ContextMenu();
         
-        var recordItem = new System.Windows.Controls.MenuItem { Header = "Toggle Recording (Ctrl+Win+Space)" };
+        var recordItem = new System.Windows.Controls.MenuItem { Header = "Toggle Recording (Ctrl+Space)" };
         recordItem.Click += async (s, e) =>
         {
             if (_dictationService != null)
-                await _dictationService.ToggleRecordingAsync();
+            {
+                if (_appSettings?.Streaming.Enabled == true)
+                {
+                    await _dictationService.ToggleStreamingAsync();
+                }
+                else
+                {
+                    await _dictationService.ToggleRecordingAsync();
+                }
+            }
         };
         
         var settingsItem = new System.Windows.Controls.MenuItem { Header = "Settings..." };

@@ -9,6 +9,9 @@ public class AppSettings
     public HotkeySettings Hotkey { get; set; } = new();
     public AsrSettings Asr { get; set; } = new();
     public LlmSettings Llm { get; set; } = new();
+    public StreamingSettings Streaming { get; set; } = new();
+    public AzureSpeechSettings AzureSpeech { get; set; } = new();
+    public DeepgramSettings Deepgram { get; set; } = new();
     public PrivacySettings Privacy { get; set; } = new();
 }
 
@@ -60,7 +63,7 @@ public class HotkeySettings
     /// <summary>
     /// Whether Windows key modifier is required
     /// </summary>
-    public bool UseWin { get; set; } = true;
+    public bool UseWin { get; set; } = false;
     
     /// <summary>
     /// Virtual key code for the main key (default: Space = 0x20)
@@ -127,6 +130,75 @@ public class LlmSettings
     /// Use GPU acceleration via DirectML
     /// </summary>
     public bool UseGpu { get; set; } = true;
+}
+
+public class StreamingSettings
+{
+    /// <summary>
+    /// Enable streaming dictation mode
+    /// </summary>
+    public bool Enabled { get; set; } = false;
+    
+    /// <summary>
+    /// Streaming ASR provider (e.g., "AzureSpeech", "Deepgram")
+    /// </summary>
+    public string Provider { get; set; } = "AzureSpeech";
+    
+    /// <summary>
+    /// Audio chunk duration for streaming (milliseconds)
+    /// </summary>
+    public int ChunkDurationMs { get; set; } = 100;
+    
+    /// <summary>
+    /// Per-word typing delay (milliseconds)
+    /// </summary>
+    public int TypingDelayMs { get; set; } = 25;
+    
+    /// <summary>
+    /// Whether partial results should be emitted/typed
+    /// </summary>
+    public bool ShowPartialResults { get; set; } = true;
+    
+    /// <summary>
+    /// When to apply LLM enhancement: "AfterFinalization" or "Disabled"
+    /// </summary>
+    public string ApplyLlmEnhancement { get; set; } = "AfterFinalization";
+}
+
+public class AzureSpeechSettings
+{
+    /// <summary>
+    /// Azure Speech subscription key
+    /// </summary>
+    public string? SubscriptionKey { get; set; }
+    
+    /// <summary>
+    /// Azure Speech region (e.g., "eastus")
+    /// </summary>
+    public string Region { get; set; } = "eastus";
+    
+    /// <summary>
+    /// Recognition language (e.g., "en-US")
+    /// </summary>
+    public string Language { get; set; } = "en-US";
+    
+    /// <summary>
+    /// Whether to enable profanity filtering
+    /// </summary>
+    public bool EnableProfanityFilter { get; set; } = false;
+}
+
+public class DeepgramSettings
+{
+    /// <summary>
+    /// Deepgram API key
+    /// </summary>
+    public string? ApiKey { get; set; }
+    
+    /// <summary>
+    /// Recognition language (e.g., "en")
+    /// </summary>
+    public string Language { get; set; } = "en";
 }
 
 public class PrivacySettings
