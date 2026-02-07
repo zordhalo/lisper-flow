@@ -4292,3 +4292,6 @@ System.Net.WebSockets.WebSocketException (0x80004005): The server returned statu
 2026-02-07 04:11:34.487 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
 2026-02-07 04:11:34.487 -05:00 [DBG] Speech detected
 2026-02-07 04:11:35.947 -05:00 [DBG] Speech ended
+2026-02-07 04:11:55.487 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 04:11:55.487 -05:00 [DBG] Speech detected
+2026-02-07 04:11:56.557 -05:00 [DBG] Speech ended
