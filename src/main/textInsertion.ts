@@ -36,9 +36,9 @@ async function insertViaPaste(text: string): Promise<void> {
   // Write text to clipboard
   clipboard.writeText(text);
 
-  // Simulate Ctrl+V
+  // Simulate Ctrl+V - release in same order as pressed
   await keyboard.pressKey(Key.LeftControl, Key.V);
-  await keyboard.releaseKey(Key.V, Key.LeftControl);
+  await keyboard.releaseKey(Key.LeftControl, Key.V);
 
   // Optional: restore previous clipboard content after a delay
   // await delay(100);

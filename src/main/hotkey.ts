@@ -54,44 +54,24 @@ class HotkeyHandler extends EventEmitter {
       if (!this.isCtrlPressed) {
         this.isCtrlPressed = true;
         this.lastKeyDownTime = now;
+
+        // Schedule recording start after debounce threshold (only once on key down)
+        setTimeout(() => {
+          if (this.isCtrlPressed && !this.isRecording) {
+            this.isRecording = true;
+            this.emit('recordingStart');
+          }
+        }, DEBOUNCE_THRESHOLD_MS);
       }
     } else if (event.state === 'UP') {
       if (this.isCtrlPressed) {
         this.isCtrlPressed = false;
-        const holdDuration = now - this.lastKeyDownTime;
-
-        // Debounce: ignore quick taps
-        if (holdDuration < DEBOUNCE_THRESHOLD_MS) {
-          if (this.isRecording) {
-            // If we were recording (from a previous longer hold), stop it
-            this.isRecording = false;
-            this.emit('recordingStop');
-          }
-          return;
-        }
 
         // If we were recording, stop
         if (this.isRecording) {
           this.isRecording = false;
           this.emit('recordingStop');
         }
-      }
-    }
-
-    // Start recording after debounce threshold while key is held
-    if (this.isCtrlPressed && !this.isRecording) {
-      const holdDuration = Date.now() - this.lastKeyDownTime;
-      if (holdDuration >= DEBOUNCE_THRESHOLD_MS) {
-        this.isRecording = true;
-        this.emit('recordingStart');
-      } else {
-        // Check again after the threshold
-        setTimeout(() => {
-          if (this.isCtrlPressed && !this.isRecording) {
-            this.isRecording = true;
-            this.emit('recordingStart');
-          }
-        }, DEBOUNCE_THRESHOLD_MS - holdDuration);
       }
     }
   }

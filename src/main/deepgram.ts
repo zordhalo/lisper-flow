@@ -25,8 +25,7 @@ class DeepgramHandler {
       language: config.language,
       smart_format: config.smartFormat,
       punctuate: config.punctuate,
-      encoding: 'opus',
-      sample_rate: 48000,
+      // Don't specify encoding - let Deepgram auto-detect WebM/Opus container format
     });
 
     return new Promise((resolve, reject) => {
