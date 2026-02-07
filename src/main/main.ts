@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow, ipcMain, screen } from 'electron';
 import * as path from 'path';
 import { hotkeyHandler } from './hotkey';
 import { deepgramHandler } from './deepgram';
@@ -13,9 +13,12 @@ declare const AUDIO_WINDOW_WEBPACK_ENTRY: string;
 declare const AUDIO_WINDOW_PRELOAD_WEBPACK_ENTRY: string;
 declare const SETTINGS_WINDOW_WEBPACK_ENTRY: string;
 declare const SETTINGS_WINDOW_PRELOAD_WEBPACK_ENTRY: string;
+declare const OVERLAY_WINDOW_WEBPACK_ENTRY: string;
+declare const OVERLAY_WINDOW_PRELOAD_WEBPACK_ENTRY: string;
 
 let audioWindow: BrowserWindow | null = null;
 let settingsWindow: BrowserWindow | null = null;
+let overlayWindow: BrowserWindow | null = null;
 let isQuitting = false;
 
 function createAudioWindow(): void {
@@ -64,6 +67,49 @@ function createSettingsWindow(): void {
   });
 }
 
+function createOverlayWindow(): void {
+  const primaryDisplay = screen.getPrimaryDisplay();
+  const { width } = primaryDisplay.workAreaSize;
+
+  overlayWindow = new BrowserWindow({
+    width: 80,
+    height: 80,
+    x: width - 100, // 20px from right edge
+    y: 20, // 20px from top
+    transparent: true,
+    frame: false,
+    alwaysOnTop: true,
+    skipTaskbar: true,
+    resizable: false,
+    focusable: false,
+    show: false,
+    webPreferences: {
+      preload: OVERLAY_WINDOW_PRELOAD_WEBPACK_ENTRY,
+      nodeIntegration: false,
+      contextIsolation: true,
+    },
+  });
+
+  overlayWindow.loadURL(OVERLAY_WINDOW_WEBPACK_ENTRY);
+  overlayWindow.setIgnoreMouseEvents(true);
+
+  overlayWindow.on('closed', () => {
+    overlayWindow = null;
+  });
+}
+
+function showOverlay(): void {
+  if (overlayWindow && !overlayWindow.isDestroyed()) {
+    overlayWindow.show();
+  }
+}
+
+function hideOverlay(): void {
+  if (overlayWindow && !overlayWindow.isDestroyed()) {
+    overlayWindow.hide();
+  }
+}
+
 function setupIpcHandlers(): void {
   // Settings handlers
   ipcMain.handle(IPC_CHANNELS.SETTINGS_GET, () => {
@@ -88,6 +134,7 @@ async function handleRecordingStart(): Promise<void> {
   // Check for API key
   if (!configStore.hasDeepgramKey()) {
     trayManager.showError('Deepgram API key not configured');
+    hideOverlay();
     settingsWindow?.webContents.send(IPC_CHANNELS.RECORDING_STATE_CHANGED, 'error');
     settingsWindow?.show();
     return;
@@ -118,6 +165,9 @@ async function handleRecordingStart(): Promise<void> {
 
 async function handleRecordingStop(): Promise<void> {
   console.log('Recording stopped');
+
+  // Hide overlay when recording stops
+  hideOverlay();
 
   trayManager.setState(RecordingState.Processing);
 
@@ -166,6 +216,16 @@ async function handleRecordingStop(): Promise<void> {
 }
 
 function setupHotkeyHandlers(): void {
+  // Show overlay immediately on key press (before debounce)
+  hotkeyHandler.on('keyPressed', () => {
+    showOverlay();
+  });
+
+  // Hide overlay if key released before recording started (quick tap)
+  hotkeyHandler.on('keyReleased', () => {
+    hideOverlay();
+  });
+
   hotkeyHandler.on('recordingStart', handleRecordingStart);
   hotkeyHandler.on('recordingStop', handleRecordingStop);
   hotkeyHandler.start();
@@ -174,6 +234,7 @@ function setupHotkeyHandlers(): void {
 app.on('ready', () => {
   createAudioWindow();
   createSettingsWindow();
+  createOverlayWindow();
 
   trayManager.init(settingsWindow);
   setupIpcHandlers();
@@ -195,6 +256,12 @@ app.on('before-quit', () => {
   isQuitting = true;
   hotkeyHandler.stop();
   trayManager.destroy();
+
+  // Clean up overlay window
+  if (overlayWindow && !overlayWindow.isDestroyed()) {
+    overlayWindow.close();
+    overlayWindow = null;
+  }
 });
 
 app.on('activate', () => {

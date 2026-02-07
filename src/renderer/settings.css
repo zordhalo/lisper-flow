@@ -1,3 +1,44 @@
+/* ============================================
+   LisperFlow - Modern Glassmorphism Theme
+   Inspired by Wispr Flow design language
+   ============================================ */
+
+/* === CSS Variables === */
+:root {
+  /* Base Layers */
+  --bg-primary: #0F0F1E;
+  --bg-secondary: rgba(25, 25, 45, 0.85);
+  --surface-glass: rgba(255, 255, 255, 0.05);
+  --surface-glass-hover: rgba(255, 255, 255, 0.08);
+  
+  /* Accent Colors */
+  --accent-primary: #8B7FF4;
+  --accent-primary-hover: #A99BF7;
+  --accent-glow: rgba(139, 127, 244, 0.15);
+  --accent-success: #6DD5A5;
+  --accent-recording: #FF8B94;
+  --accent-processing: #FFB86C;
+  --accent-error: #ef4444;
+  
+  /* Text Colors */
+  --text-primary: #fff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.45);
+  --text-placeholder: rgba(255, 255, 255, 0.3);
+  
+  /* Border Radius */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  
+  /* Easing */
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* === Reset & Base === */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,204 +46,442 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-  background: #1a1a2e;
-  color: #eee;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   line-height: 1.6;
+  letter-spacing: -0.01em;
+  min-height: 100vh;
+  position: relative;
 }
 
+/* Subtle animated gradient background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 20% 30%, rgba(139, 127, 244, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(109, 213, 165, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 90%, rgba(255, 139, 148, 0.04) 0%, transparent 50%);
+  animation: gradient-shift 15s ease infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* === Container === */
 .container {
-  max-width: 450px;
+  max-width: 480px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 32px;
 }
 
+/* === Typography === */
 h1 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
   text-align: center;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 h2 {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  color: #aaa;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
 }
 
+/* === Status Bar (Glass Panel) === */
 .status-bar {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 15px;
-  background: #16213e;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  gap: 14px;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  margin-bottom: 28px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s var(--ease-smooth);
 }
 
+.status-bar:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* === Status Indicator (Glow Effect) === */
 .status-indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #4ade80;
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+  background: var(--accent-success);
   flex-shrink: 0;
+  position: relative;
+  transition: all 0.4s var(--ease-smooth);
+  box-shadow: 
+    0 0 16px rgba(109, 213, 165, 0.4),
+    0 0 32px rgba(109, 213, 165, 0.2);
 }
 
 .status-indicator.recording {
-  background: #f87171;
-  animation: pulse 1s infinite;
+  background: var(--accent-recording);
+  box-shadow: 
+    0 0 20px rgba(255, 139, 148, 0.6),
+    0 0 40px rgba(255, 139, 148, 0.3);
+  animation: pulse-glow 1.2s ease-in-out infinite;
 }
 
 .status-indicator.processing {
-  background: #fbbf24;
-  animation: pulse 0.5s infinite;
+  background: var(--accent-processing);
+  box-shadow: 
+    0 0 18px rgba(255, 184, 108, 0.5),
+    0 0 36px rgba(255, 184, 108, 0.25);
+  animation: pulse-glow 0.8s ease-in-out infinite;
 }
 
 .status-indicator.error {
-  background: #ef4444;
+  background: var(--accent-error);
+  box-shadow: 
+    0 0 16px rgba(239, 68, 68, 0.5),
+    0 0 32px rgba(239, 68, 68, 0.25);
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+@keyframes pulse-glow {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
 }
 
 #statusText {
-  font-size: 0.9rem;
-  color: #aaa;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
+/* === Form Groups === */
 .form-group {
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 6px;
+  font-size: 13px;
   font-weight: 500;
-  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
 }
 
+/* === Glass Input Fields === */
 .form-group input[type="password"],
 .form-group input[type="text"] {
   width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #333;
-  border-radius: 6px;
-  background: #0f0f23;
-  color: #fff;
-  font-size: 0.9rem;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.3s var(--ease-smooth);
+}
+
+.form-group input[type="password"]::placeholder,
+.form-group input[type="text"]::placeholder {
+  color: var(--text-placeholder);
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: #6366f1;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(139, 127, 244, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 
+    0 0 0 4px rgba(139, 127, 244, 0.1),
+    0 8px 24px rgba(139, 127, 244, 0.15);
 }
 
+/* === Helper Text & Links === */
 .form-group small {
   display: block;
-  margin-top: 5px;
-  color: #666;
-  font-size: 0.8rem;
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .form-group small a {
-  color: #818cf8;
+  color: var(--accent-primary);
   text-decoration: none;
+  border-bottom: 1px solid rgba(139, 127, 244, 0.3);
+  transition: all 0.2s var(--ease-smooth);
 }
 
 .form-group small a:hover {
-  text-decoration: underline;
+  color: var(--accent-primary-hover);
+  border-bottom-color: rgba(139, 127, 244, 0.6);
 }
 
+/* === Custom Checkbox === */
 .checkbox-group label {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   cursor: pointer;
+  font-weight: normal;
+  text-transform: none;
+  font-size: 0.95rem;
+  color: var(--text-primary);
 }
 
 .checkbox-group input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  accent-color: #6366f1;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.3s var(--ease-smooth);
+  position: relative;
 }
 
+.checkbox-group input[type="checkbox"]:checked {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-hover));
+  border-color: var(--accent-primary);
+  box-shadow: 0 4px 12px rgba(139, 127, 244, 0.3);
+}
+
+.checkbox-group input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox-group input[type="checkbox"]:hover {
+  border-color: rgba(139, 127, 244, 0.4);
+}
+
+/* === Radio Group === */
 .radio-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-top: 8px;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .radio-group label {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   cursor: pointer;
   font-weight: normal;
+  text-transform: none;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: all 0.3s var(--ease-smooth);
+}
+
+.radio-group label:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.06);
 }
 
 .radio-group input[type="radio"] {
-  width: 16px;
-  height: 16px;
-  accent-color: #6366f1;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.3s var(--ease-smooth);
+  position: relative;
 }
 
+.radio-group input[type="radio"]:checked {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-hover));
+  border-color: var(--accent-primary);
+  box-shadow: 0 4px 12px rgba(139, 127, 244, 0.3);
+}
+
+.radio-group input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: var(--radius-full);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radio-group input[type="radio"]:hover {
+  border-color: rgba(139, 127, 244, 0.4);
+}
+
+/* === Save Button (Glass with Gradient) === */
 .save-button {
   width: 100%;
-  padding: 12px;
-  background: #6366f1;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, 
+    rgba(139, 127, 244, 0.9) 0%,
+    rgba(139, 127, 244, 0.7) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-primary);
+  border: 1px solid rgba(139, 127, 244, 0.3);
+  border-radius: var(--radius-md);
   font-size: 1rem;
   font-weight: 500;
+  font-family: inherit;
   cursor: pointer;
-  transition: background 0.2s;
+  box-shadow: 
+    0 4px 16px rgba(139, 127, 244, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s var(--ease-smooth);
 }
 
 .save-button:hover {
-  background: #4f46e5;
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, 
+    rgba(139, 127, 244, 1) 0%,
+    rgba(139, 127, 244, 0.85) 100%);
+  box-shadow: 
+    0 8px 28px rgba(139, 127, 244, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .save-button:active {
-  background: #4338ca;
+  transform: translateY(0);
+  box-shadow: 
+    0 2px 12px rgba(139, 127, 244, 0.2),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* === Transcript Section === */
 .transcript-section {
-  margin-top: 25px;
-  padding-top: 20px;
-  border-top: 1px solid #333;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+/* === Glass Transcript Box === */
 .transcript-box {
-  background: #0f0f23;
-  border: 1px solid #333;
-  border-radius: 6px;
-  padding: 12px;
-  min-height: 80px;
-  max-height: 150px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  min-height: 100px;
+  max-height: 180px;
   overflow-y: auto;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  box-shadow: 
+    inset 0 2px 8px rgba(0, 0, 0, 0.2),
+    0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom Scrollbar */
+.transcript-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.transcript-box::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 4px;
+}
+
+.transcript-box::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+}
+
+.transcript-box::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .transcript-box .placeholder {
-  color: #555;
+  color: var(--text-placeholder);
   font-style: italic;
 }
 
 .transcript-box .partial {
-  color: #888;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
 }
 
 .transcript-box .final {
-  color: #4ade80;
+  color: var(--accent-success);
+  font-weight: 500;
 }
 
+/* === Footer === */
 .footer {
-  margin-top: 20px;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   text-align: center;
-  color: #555;
-  font-size: 0.8rem;
+}
+
+.footer p {
+  color: var(--text-placeholder);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+/* === Fallback for backdrop-filter === */
+@supports not (backdrop-filter: blur(20px)) {
+  .status-bar,
+  .form-group input[type="password"],
+  .form-group input[type="text"],
+  .transcript-box,
+  .save-button {
+    background: rgba(25, 25, 45, 0.95);
+  }
 }

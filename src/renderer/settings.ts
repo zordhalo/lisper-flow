@@ -1,5 +1,8 @@
 import './settings.css';
 
+// Track current recording state for proper status restoration
+let currentRecordingState: 'idle' | 'recording' | 'processing' | 'error' = 'idle';
+
 // DOM Elements
 const form = document.getElementById('settingsForm') as HTMLFormElement;
 const deepgramApiKeyInput = document.getElementById('deepgramApiKey') as HTMLInputElement;
@@ -68,18 +71,19 @@ form.addEventListener('submit', async (e) => {
 });
 
 function showStatus(message: string, type: 'success' | 'error'): void {
-  const originalText = statusText.textContent;
   statusText.textContent = message;
-  statusText.style.color = type === 'success' ? '#4ade80' : '#f87171';
+  statusText.style.color = type === 'success' ? 'var(--accent-success, #4ade80)' : 'var(--accent-error, #f87171)';
 
   setTimeout(() => {
-    statusText.textContent = originalText;
-    statusText.style.color = '';
+    // Restore to current recording state, not stale text
+    updateRecordingState(currentRecordingState);
   }, 2000);
 }
 
 function updateRecordingState(state: 'idle' | 'recording' | 'processing' | 'error'): void {
+  currentRecordingState = state; // Track current state
   statusIndicator.className = 'status-indicator';
+  statusText.style.color = ''; // Reset color
 
   switch (state) {
     case 'recording':

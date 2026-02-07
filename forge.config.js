@@ -46,6 +46,14 @@ module.exports = {
                 js: './src/preload/preload.ts',
               },
             },
+            {
+              html: './src/renderer/overlay.html',
+              js: './src/renderer/overlay.ts',
+              name: 'overlay_window',
+              preload: {
+                js: './src/preload/preload.ts',
+              },
+            },
           ],
         },
       },

@@ -1,7 +1,14 @@
 // Audio capture module for hidden window
+// Uses raw Linear16 PCM audio for Deepgram streaming
 
-let mediaRecorder: MediaRecorder | null = null;
 let audioStream: MediaStream | null = null;
+let audioContext: AudioContext | null = null;
+let sourceNode: MediaStreamAudioSourceNode | null = null;
+let processorNode: ScriptProcessorNode | null = null;
+let isRecording = false;
+
+const SAMPLE_RATE = 16000;
+const BUFFER_SIZE = 4096;
 
 async function initAudio(): Promise<void> {
   try {
@@ -11,6 +18,7 @@ async function initAudio(): Promise<void> {
         echoCancellation: true,
         noiseSuppression: true,
         autoGainControl: true,
+        sampleRate: SAMPLE_RATE,
       },
     });
     console.log('Audio stream initialized');
@@ -25,46 +33,70 @@ function startRecording(): void {
     return;
   }
 
+  if (isRecording) {
+    console.log('Already recording');
+    return;
+  }
+
   try {
-    // Use webm/opus format - Deepgram accepts this directly
-    const mimeType = 'audio/webm;codecs=opus';
+    // Create AudioContext with target sample rate
+    audioContext = new AudioContext({ sampleRate: SAMPLE_RATE });
 
-    if (!MediaRecorder.isTypeSupported(mimeType)) {
-      console.error('MIME type not supported:', mimeType);
-      return;
-    }
+    // Create source from microphone stream
+    sourceNode = audioContext.createMediaStreamSource(audioStream);
 
-    mediaRecorder = new MediaRecorder(audioStream, {
-      mimeType,
-      audioBitsPerSecond: 128000,
-    });
+    // Create ScriptProcessor for raw PCM capture
+    // Note: ScriptProcessor is deprecated but AudioWorklet requires more setup
+    processorNode = audioContext.createScriptProcessor(BUFFER_SIZE, 1, 1);
 
-    mediaRecorder.ondataavailable = async (event) => {
-      if (event.data.size > 0) {
-        // Convert Blob to ArrayBuffer and send to main process
-        const arrayBuffer = await event.data.arrayBuffer();
-        window.electronAPI.sendAudioChunk(arrayBuffer);
+    processorNode.onaudioprocess = (event: AudioProcessingEvent) => {
+      if (!isRecording) return;
+
+      const inputData = event.inputBuffer.getChannelData(0);
+
+      // Convert Float32Array (-1.0 to 1.0) to Int16Array (Linear16 PCM)
+      const pcmData = new Int16Array(inputData.length);
+      for (let i = 0; i < inputData.length; i++) {
+        // Clamp and convert to 16-bit signed integer
+        const sample = Math.max(-1, Math.min(1, inputData[i]));
+        pcmData[i] = sample < 0 ? sample * 0x8000 : sample * 0x7fff;
       }
+
+      // Send PCM data to main process
+      window.electronAPI.sendAudioChunk(pcmData.buffer);
     };
 
-    mediaRecorder.onerror = (event) => {
-      console.error('MediaRecorder error:', event);
-    };
+    // Connect: microphone -> processor -> destination (required for processing)
+    sourceNode.connect(processorNode);
+    processorNode.connect(audioContext.destination);
 
-    // Start recording with 100ms timeslices for streaming
-    mediaRecorder.start(100);
-    console.log('Recording started');
+    isRecording = true;
+    console.log('Recording started (Linear16 PCM)');
   } catch (error) {
     console.error('Failed to start recording:', error);
+    stopRecording();
   }
 }
 
 function stopRecording(): void {
-  if (mediaRecorder && mediaRecorder.state !== 'inactive') {
-    mediaRecorder.stop();
-    console.log('Recording stopped');
+  isRecording = false;
+
+  if (processorNode) {
+    processorNode.disconnect();
+    processorNode = null;
   }
-  mediaRecorder = null;
+
+  if (sourceNode) {
+    sourceNode.disconnect();
+    sourceNode = null;
+  }
+
+  if (audioContext) {
+    audioContext.close().catch(console.error);
+    audioContext = null;
+  }
+
+  console.log('Recording stopped');
 }
 
 // Set up IPC listeners

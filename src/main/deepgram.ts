@@ -25,7 +25,9 @@ class DeepgramHandler {
       language: config.language,
       smart_format: config.smartFormat,
       punctuate: config.punctuate,
-      // Don't specify encoding - let Deepgram auto-detect WebM/Opus container format
+      encoding: 'linear16',
+      sample_rate: 16000,
+      channels: 1,
     });
 
     return new Promise((resolve, reject) => {
@@ -80,13 +82,26 @@ class DeepgramHandler {
   }
 
   sendAudio(audioData: Buffer): void {
-    if (this.connection && this.connection.getReadyState() === 1) {
-      // Convert Buffer to ArrayBuffer for Deepgram WebSocket
+    if (!this.connection) {
+      console.error('Cannot send audio: No Deepgram connection');
+      return;
+    }
+
+    const readyState = this.connection.getReadyState();
+    if (readyState !== 1) {
+      console.warn(`Cannot send audio: Connection state is ${readyState} (need 1)`);
+      return;
+    }
+
+    try {
+      // Create a proper ArrayBuffer copy from Buffer
       const arrayBuffer = audioData.buffer.slice(
         audioData.byteOffset,
         audioData.byteOffset + audioData.byteLength
-      );
+      ) as ArrayBuffer;
       this.connection.send(arrayBuffer);
+    } catch (error) {
+      console.error('Error sending audio to Deepgram:', error);
     }
   }
 

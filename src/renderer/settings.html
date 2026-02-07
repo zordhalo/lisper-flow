@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com">
   <title>LisperFlow Settings</title>
-  <link rel="stylesheet" href="settings.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <div class="container">
     <h1>LisperFlow Settings</h1>
@@ -18,25 +23,15 @@
     <form id="settingsForm">
       <div class="form-group">
         <label for="deepgramApiKey">Deepgram API Key</label>
-        <input
-          type="password"
-          id="deepgramApiKey"
-          name="deepgramApiKey"
-          placeholder="Enter your Deepgram API key"
-          autocomplete="off"
-        >
+        <input type="password" id="deepgramApiKey" name="deepgramApiKey" placeholder="Enter your Deepgram API key"
+          autocomplete="off">
         <small>Get your API key at <a href="#" id="deepgramLink">console.deepgram.com</a></small>
       </div>
 
       <div class="form-group">
         <label for="llmApiKey">OpenAI API Key (Optional)</label>
-        <input
-          type="password"
-          id="llmApiKey"
-          name="llmApiKey"
-          placeholder="Enter your OpenAI API key"
-          autocomplete="off"
-        >
+        <input type="password" id="llmApiKey" name="llmApiKey" placeholder="Enter your OpenAI API key"
+          autocomplete="off">
         <small>Required for AI transcript cleanup</small>
       </div>
 
@@ -78,4 +73,5 @@
     </div>
   </div>
 </body>
+
 </html>

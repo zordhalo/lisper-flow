@@ -1,9 +1,11 @@
 import { GlobalKeyboardListener, IGlobalKeyEvent } from 'node-global-key-listener';
 import { EventEmitter } from 'events';
 
-const DEBOUNCE_THRESHOLD_MS = 100;
+const DEBOUNCE_THRESHOLD_MS = 50; // Reduced for better responsiveness
 
 export interface HotkeyEvents {
+  keyPressed: () => void; // Immediate feedback on key press
+  keyReleased: () => void; // Key released without recording (quick tap)
   recordingStart: () => void;
   recordingStop: () => void;
 }
@@ -55,6 +57,9 @@ class HotkeyHandler extends EventEmitter {
         this.isCtrlPressed = true;
         this.lastKeyDownTime = now;
 
+        // Emit immediate feedback event (before actual recording starts)
+        this.emit('keyPressed');
+
         // Schedule recording start after debounce threshold (only once on key down)
         setTimeout(() => {
           if (this.isCtrlPressed && !this.isRecording) {
@@ -71,6 +76,9 @@ class HotkeyHandler extends EventEmitter {
         if (this.isRecording) {
           this.isRecording = false;
           this.emit('recordingStop');
+        } else {
+          // Key released before recording started (quick tap)
+          this.emit('keyReleased');
         }
       }
     }

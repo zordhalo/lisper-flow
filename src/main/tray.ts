@@ -18,51 +18,55 @@ class TrayManager {
 
   private loadIcons(): void {
     try {
-      // Try different possible paths for the icons
-      const possiblePaths = [
-        path.join(__dirname, '../../assets'),
-        path.join(__dirname, '../../../assets'),
-        path.join(__dirname, '../../../../assets'),
-        path.join(app.getAppPath(), 'assets'),
-        path.join(app.getAppPath(), '../assets'),
-        path.join(process.resourcesPath || '', 'assets'),
-        path.resolve('./assets'),
-      ];
+      // Determine the correct assets path based on environment
+      let assetsPath: string;
 
-      console.log('Looking for icons in paths:', possiblePaths);
-      console.log('__dirname:', __dirname);
-      console.log('app.getAppPath():', app.getAppPath());
-
-      for (const basePath of possiblePaths) {
-        const idlePath = path.join(basePath, 'icon.png');
-        const recordingPath = path.join(basePath, 'icon-recording.png');
-
-        console.log('Trying icon path:', idlePath);
-
-        try {
-          this.iconIdle = nativeImage.createFromPath(idlePath);
-          this.iconRecording = nativeImage.createFromPath(recordingPath);
-
-          if (!this.iconIdle.isEmpty()) {
-            console.log('Icons loaded successfully from:', basePath);
-            break;
-          }
-        } catch (e) {
-          console.log('Failed to load from:', basePath, e);
-        }
+      if (app.isPackaged) {
+        // In production, assets are in resources/assets (from extraResource)
+        assetsPath = path.join(process.resourcesPath, 'assets');
+      } else {
+        // In development, assets are in project root
+        assetsPath = path.join(app.getAppPath(), 'assets');
       }
 
-      // Fallback to empty images if icons not found
-      if (!this.iconIdle || this.iconIdle.isEmpty()) {
-        console.warn('Could not load tray icons, using default empty icons');
-        this.iconIdle = nativeImage.createEmpty();
-        this.iconRecording = nativeImage.createEmpty();
+      const idlePath = path.join(assetsPath, 'icon.png');
+      const recordingPath = path.join(assetsPath, 'icon-recording.png');
+
+      this.iconIdle = nativeImage.createFromPath(idlePath);
+      this.iconRecording = nativeImage.createFromPath(recordingPath);
+
+      if (!this.iconIdle.isEmpty()) {
+        console.log('Icons loaded from:', assetsPath);
+      } else {
+        console.warn('Icons are empty, using fallback');
+        this.createFallbackIcons();
       }
     } catch (error) {
       console.error('Error loading tray icons:', error);
-      this.iconIdle = nativeImage.createEmpty();
-      this.iconRecording = nativeImage.createEmpty();
+      this.createFallbackIcons();
     }
+  }
+
+  private createFallbackIcons(): void {
+    // Create simple colored icons as fallback (16x16 solid squares)
+    const createColoredIcon = (r: number, g: number, b: number): Electron.NativeImage => {
+      // Create a simple 16x16 PNG with a solid color
+      const size = 16;
+      const channels = 4; // RGBA
+      const buffer = Buffer.alloc(size * size * channels);
+
+      for (let i = 0; i < size * size; i++) {
+        buffer[i * channels] = r;
+        buffer[i * channels + 1] = g;
+        buffer[i * channels + 2] = b;
+        buffer[i * channels + 3] = 255;
+      }
+
+      return nativeImage.createFromBuffer(buffer, { width: size, height: size });
+    };
+
+    this.iconIdle = createColoredIcon(107, 114, 128); // Gray
+    this.iconRecording = createColoredIcon(239, 68, 68); // Red
   }
 
   private createTray(): void {
