@@ -1,0 +1,43 @@
+{
+  "name": "lisper-flow",
+  "version": "1.0.0",
+  "description": "Windows-first voice dictation app with Deepgram and optional LLM cleanup",
+  "main": ".webpack/main",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "voice",
+    "dictation",
+    "speech-to-text",
+    "deepgram",
+    "electron"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@deepgram/sdk": "^3.9.0",
+    "@nut-tree-fork/nut-js": "^4.2.2",
+    "electron-store": "^8.2.0",
+    "node-global-key-listener": "^0.2.0",
+    "openai": "^4.77.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.6.0",
+    "@electron-forge/maker-squirrel": "^7.6.0",
+    "@electron-forge/maker-zip": "^7.6.0",
+    "@electron-forge/plugin-webpack": "^7.6.0",
+    "@types/node": "^20.11.0",
+    "@vercel/webpack-asset-relocator-loader": "^1.7.3",
+    "css-loader": "^6.10.0",
+    "electron": "^28.2.0",
+    "fork-ts-checker-webpack-plugin": "^9.0.2",
+    "node-loader": "^2.0.0",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3"
+  }
+}

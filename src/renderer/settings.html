@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+  <title>LisperFlow Settings</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="container">
+    <h1>LisperFlow Settings</h1>
+
+    <div class="status-bar" id="statusBar">
+      <span class="status-indicator" id="statusIndicator"></span>
+      <span id="statusText">Idle - Hold Left Ctrl to dictate</span>
+    </div>
+
+    <form id="settingsForm">
+      <div class="form-group">
+        <label for="deepgramApiKey">Deepgram API Key</label>
+        <input
+          type="password"
+          id="deepgramApiKey"
+          name="deepgramApiKey"
+          placeholder="Enter your Deepgram API key"
+          autocomplete="off"
+        >
+        <small>Get your API key at <a href="#" id="deepgramLink">console.deepgram.com</a></small>
+      </div>
+
+      <div class="form-group">
+        <label for="llmApiKey">OpenAI API Key (Optional)</label>
+        <input
+          type="password"
+          id="llmApiKey"
+          name="llmApiKey"
+          placeholder="Enter your OpenAI API key"
+          autocomplete="off"
+        >
+        <small>Required for AI transcript cleanup</small>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <label>
+          <input type="checkbox" id="cleanupEnabled" name="cleanupEnabled">
+          Enable AI Cleanup
+        </label>
+        <small>Uses GPT-4o-mini to clean up transcripts (removes fillers, fixes grammar)</small>
+      </div>
+
+      <div class="form-group">
+        <label>Text Insertion Mode</label>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="insertionMode" value="paste" id="modePaste">
+            Paste (Ctrl+V)
+          </label>
+          <label>
+            <input type="radio" name="insertionMode" value="type" id="modeType">
+            Type (character by character)
+          </label>
+        </div>
+        <small>Paste is faster; Type works in more applications</small>
+      </div>
+
+      <button type="submit" class="save-button">Save Settings</button>
+    </form>
+
+    <div class="transcript-section">
+      <h2>Recent Transcript</h2>
+      <div class="transcript-box" id="transcriptBox">
+        <p class="placeholder">Your transcribed text will appear here...</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>LisperFlow v1.0.0</p>
+    </div>
+  </div>
+</body>
+</html>
