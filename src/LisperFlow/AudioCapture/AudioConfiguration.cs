@@ -6,9 +6,9 @@ namespace LisperFlow.AudioCapture;
 public class AudioConfiguration
 {
     /// <summary>
-    /// Sample rate in Hz (default: 16000 for Whisper)
+    /// Sample rate in Hz (default: 48000 for streaming accuracy)
     /// </summary>
-    public int SampleRate { get; set; } = 16000;
+    public int SampleRate { get; set; } = 48000;
     
     /// <summary>
     /// Bits per sample (default: 16)
@@ -33,7 +33,7 @@ public class AudioConfiguration
     /// <summary>
     /// Voice Activity Detection threshold (0.0 to 1.0)
     /// </summary>
-    public float VadThreshold { get; set; } = 0.5f;
+    public float VadThreshold { get; set; } = 0.4f;
     
     /// <summary>
     /// Ring buffer capacity in seconds
@@ -43,7 +43,7 @@ public class AudioConfiguration
     /// <summary>
     /// Pre-roll milliseconds to capture before VAD triggers
     /// </summary>
-    public int PreRollMs { get; set; } = 300;
+    public int PreRollMs { get; set; } = 500;
     
     /// <summary>
     /// Streaming audio chunk duration in milliseconds

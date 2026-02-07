@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace LisperFlow.Configuration;
 
 /// <summary>
@@ -23,14 +25,14 @@ public class AudioSettings
     public string? DeviceId { get; set; }
     
     /// <summary>
-    /// Sample rate in Hz (default: 16000 for Whisper)
+    /// Sample rate in Hz (default: 48000 for streaming accuracy)
     /// </summary>
-    public int SampleRate { get; set; } = 16000;
+    public int SampleRate { get; set; } = 48000;
     
     /// <summary>
     /// Voice Activity Detection threshold (0.0 to 1.0)
     /// </summary>
-    public float VadThreshold { get; set; } = 0.5f;
+    public float VadThreshold { get; set; } = 0.4f;
     
     /// <summary>
     /// Ring buffer capacity in seconds
@@ -40,7 +42,7 @@ public class AudioSettings
     /// <summary>
     /// Pre-roll audio before VAD triggers (milliseconds)
     /// </summary>
-    public int PreRollMs { get; set; } = 300;
+    public int PreRollMs { get; set; } = 500;
 }
 
 public class HotkeySettings
@@ -199,6 +201,46 @@ public class DeepgramSettings
     /// Recognition language (e.g., "en")
     /// </summary>
     public string Language { get; set; } = "en";
+
+    /// <summary>
+    /// Model name (e.g., "nova-3")
+    /// </summary>
+    public string Model { get; set; } = "nova-3";
+
+    /// <summary>
+    /// Pricing tier (e.g., "enhanced" or "base")
+    /// </summary>
+    public string Tier { get; set; } = "enhanced";
+
+    /// <summary>
+    /// Endpointing in milliseconds (0 = provider default)
+    /// </summary>
+    public int Endpointing { get; set; } = 300;
+
+    /// <summary>
+    /// Include filler words in transcripts
+    /// </summary>
+    public bool FillerWords { get; set; } = true;
+
+    /// <summary>
+    /// Convert spoken numerals to digits
+    /// </summary>
+    public bool Numerals { get; set; } = true;
+
+    /// <summary>
+    /// Enable speaker diarization
+    /// </summary>
+    public bool Diarize { get; set; } = false;
+
+    /// <summary>
+    /// Enable profanity filtering
+    /// </summary>
+    public bool ProfanityFilter { get; set; } = false;
+
+    /// <summary>
+    /// Key terms to boost recognition
+    /// </summary>
+    public List<string> Keyterms { get; set; } = new();
 }
 
 public class PrivacySettings

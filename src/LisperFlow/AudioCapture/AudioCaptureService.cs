@@ -222,6 +222,7 @@ public class AudioCaptureService : IAudioStreamProvider, IDisposable
         {
             // Convert bytes to float samples
             var samples = ConvertToFloat(e.Buffer, e.BytesRecorded);
+            NormalizeAudio(samples);
             
             // Add to ring buffer (for pre-roll)
             _ringBuffer.Write(samples);
@@ -401,6 +402,25 @@ public class AudioCaptureService : IAudioStreamProvider, IDisposable
         }
         
         return output;
+    }
+
+    private static void NormalizeAudio(float[] samples)
+    {
+        float peak = 0f;
+        for (int i = 0; i < samples.Length; i++)
+        {
+            float abs = Math.Abs(samples[i]);
+            if (abs > peak) peak = abs;
+        }
+
+        if (peak < 0.01f) return;
+
+        float targetPeak = 0.707f; // -3 dB
+        float gain = targetPeak / peak;
+        for (int i = 0; i < samples.Length; i++)
+        {
+            samples[i] *= gain;
+        }
     }
     
     private void OnStateChanged(object? sender, RecordingStateChangedEventArgs e)

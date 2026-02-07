@@ -1,6 +1,7 @@
 using System.IO;
 using System.Text.Json;
 using System.Windows;
+using DotNetEnv;
 using Hardcodet.Wpf.TaskbarNotification;
 using LisperFlow.ASR;
 using LisperFlow.AudioCapture;
@@ -160,8 +161,8 @@ public partial class App : Application
             if (provider.Equals("Deepgram", StringComparison.OrdinalIgnoreCase))
             {
                 return new DeepgramStreamProvider(
-                    settings.Deepgram.ApiKey ?? "",
-                    settings.Deepgram.Language,
+                    settings.Deepgram,
+                    settings.Audio.SampleRate,
                     sp.GetRequiredService<ILogger<DeepgramStreamProvider>>());
             }
             
@@ -289,6 +290,8 @@ public partial class App : Application
     private async Task<AppSettings> LoadSettingsAsync()
     {
         var settingsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "appsettings.json");
+
+        LoadEnvIfPresent();
         
         if (File.Exists(settingsPath))
         {
@@ -302,6 +305,7 @@ public partial class App : Application
                 
                 if (settings != null)
                 {
+                    ApplySecretOverrides(settings);
                     Log.Information("Loaded settings from {Path}", settingsPath);
                     return settings;
                 }
@@ -313,7 +317,55 @@ public partial class App : Application
         }
         
         Log.Information("Using default settings");
-        return new AppSettings();
+        var defaultSettings = new AppSettings();
+        ApplySecretOverrides(defaultSettings);
+        return defaultSettings;
+    }
+
+    private static void LoadEnvIfPresent()
+    {
+        var baseDirEnv = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ".env");
+        var cwdEnv = Path.Combine(Directory.GetCurrentDirectory(), ".env");
+
+        if (File.Exists(baseDirEnv))
+        {
+            Env.Load(baseDirEnv);
+            Log.Information("Loaded .env from {Path}", baseDirEnv);
+            return;
+        }
+
+        if (File.Exists(cwdEnv))
+        {
+            Env.Load(cwdEnv);
+            Log.Information("Loaded .env from {Path}", cwdEnv);
+        }
+    }
+
+    private static void ApplySecretOverrides(AppSettings settings)
+    {
+        var asrKey = Environment.GetEnvironmentVariable("ASR_OPENAI_API_KEY");
+        if (!string.IsNullOrWhiteSpace(asrKey))
+        {
+            settings.Asr.OpenAiApiKey = asrKey;
+        }
+
+        var llmKey = Environment.GetEnvironmentVariable("LLM_OPENAI_API_KEY");
+        if (!string.IsNullOrWhiteSpace(llmKey))
+        {
+            settings.Llm.OpenAiApiKey = llmKey;
+        }
+
+        var azureKey = Environment.GetEnvironmentVariable("AZURE_SPEECH_KEY");
+        if (!string.IsNullOrWhiteSpace(azureKey))
+        {
+            settings.AzureSpeech.SubscriptionKey = azureKey;
+        }
+
+        var deepgramKey = Environment.GetEnvironmentVariable("DEEPGRAM_API_KEY");
+        if (!string.IsNullOrWhiteSpace(deepgramKey))
+        {
+            settings.Deepgram.ApiKey = deepgramKey;
+        }
     }
     
     private void OpenSettingsWindow()

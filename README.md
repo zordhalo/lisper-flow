@@ -22,8 +22,9 @@ Windows voice dictation app with batch and real-time streaming transcription, op
 
 ### Quick Start
 1. Install .NET 8 SDK
-2. Configure `src/LisperFlow/appsettings.json` (see `docs/CONFIGURATION.md`)
-3. Build and run from Visual Studio or:
+2. Copy `src/LisperFlow/.env.example` to `src/LisperFlow/.env` and fill in keys
+3. Configure non-secret settings in `src/LisperFlow/appsettings.json` (see `docs/CONFIGURATION.md`)
+4. Build and run from Visual Studio or:
    - `dotnet build src/LisperFlow/LisperFlow.csproj`
    - `dotnet run --project src/LisperFlow/LisperFlow.csproj`
 
@@ -37,8 +38,8 @@ Start here for the full technical docs:
 - `docs/INDEX.md`
 
 ### Security Notes
-- `appsettings.json` may contain API keys. Do not commit secrets.
-- Use environment variables or a local secrets manager for production.
+- Store API keys in `src/LisperFlow/.env` or OS environment variables.
+- Do not commit secrets; `.env` is ignored by git.
 
 ### Current Limitations
 - Local Whisper and Phi-3 ONNX providers are placeholders (no full inference)

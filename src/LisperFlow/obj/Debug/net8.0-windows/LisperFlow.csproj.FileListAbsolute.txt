@@ -199,3 +199,6 @@ D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\runtimes\win-x86\nat
 D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.CognitiveServices.Speech.extension.kws.ort.dll
 D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.CognitiveServices.Speech.extension.lu.dll
 D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\DotNetEnv.dll
+D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\Sprache.dll
+D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\.env

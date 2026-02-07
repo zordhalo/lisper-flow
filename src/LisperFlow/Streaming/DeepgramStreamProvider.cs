@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using System.Net.WebSockets;
 using System.Text;
 using System.Text.Json;
+using LisperFlow.Configuration;
 using LisperFlow.Streaming.Models;
 using Microsoft.Extensions.Logging;
 
@@ -11,6 +13,8 @@ public class DeepgramStreamProvider : IStreamingAsrProvider
     private readonly string _apiKey;
     private readonly string _language;
     private readonly ILogger<DeepgramStreamProvider> _logger;
+    private readonly DeepgramSettings _settings;
+    private readonly int _sampleRate;
     private ClientWebSocket? _webSocket;
     private CancellationTokenSource? _receiveCts;
     private Task? _receiveTask;
@@ -19,10 +23,15 @@ public class DeepgramStreamProvider : IStreamingAsrProvider
     public event EventHandler<FinalTranscriptEventArgs>? FinalResultReceived;
     public event EventHandler<StreamingErrorEventArgs>? ErrorOccurred;
     
-    public DeepgramStreamProvider(string apiKey, string language, ILogger<DeepgramStreamProvider> logger)
+    public DeepgramStreamProvider(
+        DeepgramSettings settings,
+        int sampleRate,
+        ILogger<DeepgramStreamProvider> logger)
     {
-        _apiKey = apiKey;
-        _language = language;
+        _settings = settings;
+        _apiKey = settings.ApiKey ?? "";
+        _language = settings.Language;
+        _sampleRate = sampleRate;
         _logger = logger;
     }
     
@@ -36,15 +45,62 @@ public class DeepgramStreamProvider : IStreamingAsrProvider
         _webSocket = new ClientWebSocket();
         _webSocket.Options.SetRequestHeader("Authorization", $"Token {_apiKey}");
         
-        var uri = new Uri(
-            $"wss://api.deepgram.com/v1/listen?encoding=linear16&sample_rate=16000&channels=1" +
-            $"&language={_language}&interim_results=true&punctuate=true&smart_format=true");
+        var uri = new Uri(BuildConnectionUri());
         
         await _webSocket.ConnectAsync(uri, cancellationToken);
         _receiveCts = new CancellationTokenSource();
         _receiveTask = ReceiveLoopAsync(_receiveCts.Token);
         
         _logger.LogInformation("Connected to Deepgram streaming ASR");
+    }
+
+    private string BuildConnectionUri()
+    {
+        var queryParts = new List<string>
+        {
+            $"model={Uri.EscapeDataString(_settings.Model)}",
+            "encoding=linear16",
+            $"sample_rate={_sampleRate}",
+            "channels=1",
+            $"language={Uri.EscapeDataString(_language)}",
+            "interim_results=true",
+            "punctuate=true",
+            "smart_format=true",
+            $"diarize={_settings.Diarize.ToString().ToLowerInvariant()}",
+            $"profanity_filter={_settings.ProfanityFilter.ToString().ToLowerInvariant()}",
+            $"filler_words={_settings.FillerWords.ToString().ToLowerInvariant()}",
+            $"numerals={_settings.Numerals.ToString().ToLowerInvariant()}"
+        };
+
+        if (_settings.Endpointing > 0)
+        {
+            queryParts.Add($"endpointing={_settings.Endpointing}");
+        }
+
+        var keyterms = BuildKeyterms();
+        if (!string.IsNullOrWhiteSpace(keyterms))
+        {
+            queryParts.Add($"keyterms={Uri.EscapeDataString(keyterms)}");
+        }
+
+        return $"wss://api.deepgram.com/v1/listen?{string.Join("&", queryParts)}";
+    }
+
+    private string BuildKeyterms()
+    {
+        if (_settings.Keyterms == null || _settings.Keyterms.Count == 0)
+        {
+            return string.Empty;
+        }
+
+        var trimmed = new List<string>();
+        foreach (var term in _settings.Keyterms)
+        {
+            if (string.IsNullOrWhiteSpace(term)) continue;
+            trimmed.Add(term.Trim());
+        }
+
+        return trimmed.Count == 0 ? string.Empty : string.Join(",", trimmed);
     }
     
     public async Task SendAudioAsync(AudioChunk chunk, CancellationToken cancellationToken = default)
@@ -151,6 +207,17 @@ public class DeepgramStreamProvider : IStreamingAsrProvider
             string transcript = transcriptProp.GetString() ?? "";
             if (string.IsNullOrWhiteSpace(transcript)) return;
             
+            double confidence = 0.0;
+            if (alt.TryGetProperty("confidence", out var confProp))
+            {
+                confidence = confProp.GetDouble();
+                _logger.LogDebug("Deepgram transcript confidence: {Confidence:P2}", confidence);
+                if (confidence < 0.85)
+                {
+                    _logger.LogWarning("Low confidence ({Confidence:P2}): {Text}", confidence, transcript);
+                }
+            }
+
             bool isFinal = doc.RootElement.TryGetProperty("is_final", out var isFinalProp) &&
                            isFinalProp.GetBoolean();
             
@@ -160,7 +227,7 @@ public class DeepgramStreamProvider : IStreamingAsrProvider
                 FinalResultReceived?.Invoke(this, new FinalTranscriptEventArgs
                 {
                     Text = transcript,
-                    Confidence = 1.0,
+                    Confidence = confidence,
                     Offset = TimeSpan.Zero,
                     Duration = TimeSpan.Zero
                 });

@@ -78,6 +78,27 @@ public static class Win32Interop
     public static extern IntPtr GetForegroundWindow();
     
     /// <summary>
+    /// Brings the thread that created the specified window into the foreground and activates the window.
+    /// </summary>
+    [DllImport("user32.dll")]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    public static extern bool SetForegroundWindow(IntPtr hWnd);
+    
+    /// <summary>
+    /// Retrieves the identifier of the thread that created the calling process's main thread.
+    /// </summary>
+    [DllImport("kernel32.dll")]
+    public static extern uint GetCurrentThreadId();
+    
+    /// <summary>
+    /// Attaches or detaches the input processing mechanism of one thread to that of another thread.
+    /// Required to reliably call SetForegroundWindow from a background thread.
+    /// </summary>
+    [DllImport("user32.dll")]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    public static extern bool AttachThreadInput(uint idAttach, uint idAttachTo, bool fAttach);
+    
+    /// <summary>
     /// Retrieves the identifier of the thread that created the specified window
     /// </summary>
     [DllImport("user32.dll", SetLastError = true)]

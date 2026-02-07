@@ -69,10 +69,10 @@ public class RealTimeTextInjector : IDisposable
                 var command = await _commandQueue.DequeueAsync(cancellationToken);
                 _logger.LogTrace("Dequeued typing command: {Type}", command.GetType().Name);
                 
-                if (!IsTargetWindowFocused())
+                // Wait until the target window is focused (with restore attempts)
+                if (!await EnsureTargetWindowFocusedAsync(cancellationToken))
                 {
-                    _logger.LogDebug("Target window not focused, waiting");
-                    await Task.Delay(100, cancellationToken);
+                    _logger.LogWarning("Could not restore focus to target window after retries — dropping command");
                     continue;
                 }
                 
@@ -97,11 +97,62 @@ public class RealTimeTextInjector : IDisposable
         }
     }
     
+    /// <summary>
+    /// Ensures the target window has keyboard focus. Tries to restore focus
+    /// up to <see cref="MaxFocusRetries"/> times before giving up.
+    /// </summary>
+    private const int MaxFocusRetries = 10;      // ~1 s total wait
+    private const int FocusRetryDelayMs = 100;
+    
+    private async Task<bool> EnsureTargetWindowFocusedAsync(CancellationToken cancellationToken)
+    {
+        if (_targetWindowHandle == IntPtr.Zero) return false;
+        
+        for (int attempt = 0; attempt < MaxFocusRetries; attempt++)
+        {
+            if (Win32Interop.GetForegroundWindow() == _targetWindowHandle)
+                return true;
+            
+            if (attempt == 0)
+            {
+                _logger.LogDebug("Target window lost focus — attempting to restore");
+            }
+            
+            // Attach our thread input to the foreground thread so
+            // SetForegroundWindow is allowed by the OS.
+            uint currentThreadId = Win32Interop.GetCurrentThreadId();
+            uint foregroundThreadId = Win32Interop.GetWindowThreadProcessId(
+                Win32Interop.GetForegroundWindow(), out _);
+            
+            bool attached = false;
+            if (currentThreadId != foregroundThreadId)
+            {
+                attached = Win32Interop.AttachThreadInput(currentThreadId, foregroundThreadId, true);
+            }
+            
+            try
+            {
+                Win32Interop.SetForegroundWindow(_targetWindowHandle);
+            }
+            finally
+            {
+                if (attached)
+                {
+                    Win32Interop.AttachThreadInput(currentThreadId, foregroundThreadId, false);
+                }
+            }
+            
+            await Task.Delay(FocusRetryDelayMs, cancellationToken);
+        }
+        
+        return Win32Interop.GetForegroundWindow() == _targetWindowHandle;
+    }
+    
     private async Task TypeWordAsync(string word, CancellationToken cancellationToken)
     {
         if (string.IsNullOrWhiteSpace(word)) return;
         
-        _logger.LogTrace("Typing word: {Word}", word);
+        _logger.LogDebug("Typing word: '{Word}' to window {Handle}", word, _targetWindowHandle);
         if (ShouldAddSpaceBefore(word))
         {
             TypeString(" ");

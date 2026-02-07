@@ -4,8 +4,20 @@ Configuration is loaded from `src/LisperFlow/appsettings.json` into
 `AppSettings` in `src/LisperFlow/Configuration/AppSettings.cs`.
 
 ### Security
-- This file may include API keys. Do not commit secrets.
-- Prefer environment variables or a secrets store for production.
+- API keys should live in `src/LisperFlow/.env` or OS environment variables.
+- Do not commit secrets; `.env` is ignored by git.
+
+### .env (Secrets)
+Create `src/LisperFlow/.env` from the example file:
+
+```
+ASR_OPENAI_API_KEY=
+LLM_OPENAI_API_KEY=
+AZURE_SPEECH_KEY=
+DEEPGRAM_API_KEY=
+```
+
+These values override the corresponding settings at startup when present.
 
 ### Settings Reference
 

@@ -1537,3 +1537,852 @@ System.InvalidOperationException: Real-time typing already started.
 2026-02-07 03:08:51.166 -05:00 [INF] Audio capture stopped
 2026-02-07 03:08:51.368 -05:00 [INF] Real-time typing stopped
 2026-02-07 03:08:51.368 -05:00 [INF] Streaming dictation stopped
+2026-02-07 03:09:44.171 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:09:44.172 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:09:44.172 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 03:09:44.172 -05:00 [INF] Streaming target: Notepad - Untitled - Notepad ("2100962")
+2026-02-07 03:09:44.403 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 03:09:44.404 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:09:44.404 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 03:09:44.404 -05:00 [INF] Audio capture started
+2026-02-07 03:09:44.404 -05:00 [INF] Audio capture service started listening
+2026-02-07 03:09:44.404 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 03:09:44.404 -05:00 [INF] Streaming coordinator started
+2026-02-07 03:09:44.404 -05:00 [INF] Real-time typing started for window "2100962"
+2026-02-07 03:09:44.404 -05:00 [INF] Streaming dictation started
+2026-02-07 03:09:48.136 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:09:48.136 -05:00 [DBG] Speech detected
+2026-02-07 03:09:48.458 -05:00 [DBG] Deepgram partial transcript: This
+2026-02-07 03:09:48.458 -05:00 [DBG] Streaming partial transcript: This
+2026-02-07 03:09:49.478 -05:00 [DBG] Deepgram partial transcript: This is me, re
+2026-02-07 03:09:49.478 -05:00 [DBG] Streaming partial transcript: This is me, re
+2026-02-07 03:09:50.170 -05:00 [DBG] Deepgram final transcript: This is me rebuilding
+2026-02-07 03:09:50.170 -05:00 [INF] Streaming final transcript: This is me rebuilding
+2026-02-07 03:09:50.170 -05:00 [DBG] Transcript correction detected: ', re' -> ' rebuilding'
+2026-02-07 03:09:50.531 -05:00 [DBG] LLM generation completed in 361ms, 5 tokens
+2026-02-07 03:09:50.531 -05:00 [DBG] Streaming LLM enhancement ready (len 22)
+2026-02-07 03:09:51.174 -05:00 [DBG] Deepgram partial transcript: whisper flow
+2026-02-07 03:09:51.174 -05:00 [DBG] Streaming partial transcript: whisper flow
+2026-02-07 03:09:52.167 -05:00 [DBG] Deepgram partial transcript: whisper flow and one
+2026-02-07 03:09:52.167 -05:00 [DBG] Streaming partial transcript: whisper flow and one
+2026-02-07 03:09:52.471 -05:00 [DBG] Deepgram final transcript: whisper flow in one sitting.
+2026-02-07 03:09:52.471 -05:00 [INF] Streaming final transcript: whisper flow in one sitting.
+2026-02-07 03:09:52.471 -05:00 [DBG] Transcript correction detected: 'and one' -> 'in one sitting.'
+2026-02-07 03:09:52.537 -05:00 [DBG] Speech ended
+2026-02-07 03:09:52.926 -05:00 [DBG] LLM generation completed in 454ms, 7 tokens
+2026-02-07 03:09:52.926 -05:00 [DBG] Streaming LLM enhancement ready (len 28)
+2026-02-07 03:09:54.977 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:09:54.977 -05:00 [DBG] Speech detected
+2026-02-07 03:09:57.947 -05:00 [DBG] Speech ended
+2026-02-07 03:09:58.689 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:09:58.689 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:09:58.689 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 03:09:58.689 -05:00 [INF] Audio capture stopping
+2026-02-07 03:09:58.689 -05:00 [WRN] No audio captured during recording
+2026-02-07 03:09:58.689 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 03:09:58.690 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 03:09:58.697 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:09:58.697 -05:00 [INF] Audio capture stopped
+2026-02-07 03:09:58.903 -05:00 [INF] Real-time typing stopped
+2026-02-07 03:09:58.903 -05:00 [INF] Streaming dictation stopped
+2026-02-07 03:09:59.369 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:09:59.369 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:09:59.369 -05:00 [DBG] Focused element: Process=Notepad, Title=*This - Notepad, Class=Notepad
+2026-02-07 03:09:59.369 -05:00 [INF] Streaming target: Notepad - *This - Notepad ("2100962")
+2026-02-07 03:09:59.492 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 03:09:59.492 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:09:59.493 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 03:09:59.493 -05:00 [INF] Audio capture started
+2026-02-07 03:09:59.493 -05:00 [INF] Audio capture service started listening
+2026-02-07 03:09:59.493 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 03:09:59.493 -05:00 [INF] Streaming coordinator started
+2026-02-07 03:09:59.493 -05:00 [INF] Real-time typing started for window "2100962"
+2026-02-07 03:09:59.493 -05:00 [INF] Streaming dictation started
+2026-02-07 03:09:59.556 -05:00 [DBG] Speech detected, starting segment with 1280 pre-roll samples
+2026-02-07 03:09:59.556 -05:00 [DBG] Speech detected
+2026-02-07 03:10:00.068 -05:00 [DBG] Speech ended
+2026-02-07 03:10:03.437 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:10:03.437 -05:00 [DBG] Speech detected
+2026-02-07 03:10:03.525 -05:00 [DBG] Deepgram partial transcript: You
+2026-02-07 03:10:03.525 -05:00 [DBG] Streaming partial transcript: You
+2026-02-07 03:10:04.525 -05:00 [DBG] Deepgram partial transcript: This is me.
+2026-02-07 03:10:04.525 -05:00 [DBG] Streaming partial transcript: This is me.
+2026-02-07 03:10:04.525 -05:00 [DBG] Transcript correction detected: 'You' -> 'This is me.'
+2026-02-07 03:10:04.724 -05:00 [DBG] Deepgram final transcript: This is me.
+2026-02-07 03:10:04.724 -05:00 [INF] Streaming final transcript: This is me.
+2026-02-07 03:10:04.777 -05:00 [DBG] Speech ended
+2026-02-07 03:10:05.119 -05:00 [DBG] LLM generation completed in 394ms, 4 tokens
+2026-02-07 03:10:05.119 -05:00 [DBG] Streaming LLM enhancement ready (len 11)
+2026-02-07 03:10:06.237 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:10:06.237 -05:00 [DBG] Speech detected
+2026-02-07 03:10:07.247 -05:00 [DBG] Speech ended
+2026-02-07 03:10:10.158 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:10:10.158 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:10:10.159 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 03:10:10.159 -05:00 [INF] Audio capture stopping
+2026-02-07 03:10:10.159 -05:00 [WRN] No audio captured during recording
+2026-02-07 03:10:10.159 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 03:10:10.159 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 03:10:10.168 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:10:10.168 -05:00 [INF] Audio capture stopped
+2026-02-07 03:10:10.362 -05:00 [INF] Real-time typing stopped
+2026-02-07 03:10:10.362 -05:00 [INF] Streaming dictation stopped
+2026-02-07 03:10:12.976 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:10:12.977 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:10:12.977 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 03:10:12.977 -05:00 [INF] Streaming target: Notepad - Untitled - Notepad ("2100962")
+2026-02-07 03:10:13.202 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 03:10:13.202 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:10:13.203 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 03:10:13.203 -05:00 [INF] Audio capture started
+2026-02-07 03:10:13.203 -05:00 [INF] Audio capture service started listening
+2026-02-07 03:10:13.203 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 03:10:13.203 -05:00 [INF] Streaming coordinator started
+2026-02-07 03:10:13.203 -05:00 [INF] Real-time typing started for window "2100962"
+2026-02-07 03:10:13.203 -05:00 [INF] Streaming dictation started
+2026-02-07 03:10:13.827 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:10:13.827 -05:00 [DBG] Speech detected
+2026-02-07 03:10:14.257 -05:00 [DBG] Deepgram partial transcript: This is
+2026-02-07 03:10:14.257 -05:00 [DBG] Streaming partial transcript: This is
+2026-02-07 03:10:15.258 -05:00 [DBG] Deepgram partial transcript: This is me rebuilding
+2026-02-07 03:10:15.258 -05:00 [DBG] Streaming partial transcript: This is me rebuilding
+2026-02-07 03:10:15.668 -05:00 [DBG] Speech ended
+2026-02-07 03:10:16.259 -05:00 [DBG] Deepgram partial transcript: This is me rebuilding whisper flow.
+2026-02-07 03:10:16.259 -05:00 [DBG] Streaming partial transcript: This is me rebuilding whisper flow.
+2026-02-07 03:10:16.559 -05:00 [DBG] Deepgram final transcript: This is me rebuilding whisper flow.
+2026-02-07 03:10:16.559 -05:00 [INF] Streaming final transcript: This is me rebuilding whisper flow.
+2026-02-07 03:10:16.976 -05:00 [DBG] LLM generation completed in 416ms, 7 tokens
+2026-02-07 03:10:16.976 -05:00 [DBG] Streaming LLM enhancement ready (len 35)
+2026-02-07 03:10:17.557 -05:00 [DBG] Deepgram partial transcript: In one sitting
+2026-02-07 03:10:17.557 -05:00 [DBG] Streaming partial transcript: In one sitting
+2026-02-07 03:10:17.760 -05:00 [DBG] Deepgram final transcript: In one setting.
+2026-02-07 03:10:17.760 -05:00 [INF] Streaming final transcript: In one setting.
+2026-02-07 03:10:17.760 -05:00 [DBG] Transcript correction detected: 'itting' -> 'etting.'
+2026-02-07 03:10:18.176 -05:00 [DBG] LLM generation completed in 415ms, 4 tokens
+2026-02-07 03:10:18.176 -05:00 [DBG] Streaming LLM enhancement ready (len 15)
+2026-02-07 03:10:20.657 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:10:20.657 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:10:20.657 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 03:10:20.657 -05:00 [INF] Audio capture stopping
+2026-02-07 03:10:20.657 -05:00 [WRN] No audio captured during recording
+2026-02-07 03:10:20.657 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 03:10:20.658 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:10:20.658 -05:00 [INF] Audio capture stopped
+2026-02-07 03:10:20.659 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 03:10:20.864 -05:00 [INF] Real-time typing stopped
+2026-02-07 03:10:20.864 -05:00 [INF] Streaming dictation stopped
+2026-02-07 03:10:23.031 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:10:23.031 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:10:23.032 -05:00 [DBG] Focused element: Process=Cursor, Title=lisperflow-20260207.log - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:10:23.032 -05:00 [INF] Streaming target: Cursor - lisperflow-20260207.log - lisper-flow - Cursor ("4851992")
+2026-02-07 03:10:23.296 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 03:10:23.296 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:10:23.296 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 03:10:23.296 -05:00 [INF] Audio capture started
+2026-02-07 03:10:23.296 -05:00 [INF] Audio capture service started listening
+2026-02-07 03:10:23.296 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 03:10:23.296 -05:00 [INF] Streaming coordinator started
+2026-02-07 03:10:23.296 -05:00 [INF] Real-time typing started for window "4851992"
+2026-02-07 03:10:23.296 -05:00 [INF] Streaming dictation started
+2026-02-07 03:10:23.677 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:10:23.677 -05:00 [DBG] Speech detected
+2026-02-07 03:10:24.358 -05:00 [DBG] Deepgram partial transcript: This is me
+2026-02-07 03:10:24.358 -05:00 [DBG] Streaming partial transcript: This is me
+2026-02-07 03:10:24.788 -05:00 [DBG] Speech ended
+2026-02-07 03:10:25.358 -05:00 [DBG] Deepgram partial transcript: This is me of rebuilding was
+2026-02-07 03:10:25.358 -05:00 [DBG] Streaming partial transcript: This is me of rebuilding was
+2026-02-07 03:10:26.358 -05:00 [DBG] Deepgram partial transcript: This is me of rebuilding whisper flow in one
+2026-02-07 03:10:26.358 -05:00 [DBG] Streaming partial transcript: This is me of rebuilding whisper flow in one
+2026-02-07 03:10:26.358 -05:00 [DBG] Transcript correction detected: 'as' -> 'hisper flow in one'
+2026-02-07 03:10:26.958 -05:00 [DBG] Deepgram final transcript: This is me of rebuilding whisper flow in one sitting.
+2026-02-07 03:10:26.958 -05:00 [INF] Streaming final transcript: This is me of rebuilding whisper flow in one sitting.
+2026-02-07 03:10:27.578 -05:00 [DBG] LLM generation completed in 619ms, 10 tokens
+2026-02-07 03:10:27.578 -05:00 [DBG] Streaming LLM enhancement ready (len 50)
+2026-02-07 03:11:20.139 -05:00 [DBG] Speech detected, starting segment with 4800 pre-roll samples
+2026-02-07 03:11:20.139 -05:00 [DBG] Speech detected
+2026-02-07 03:11:21.180 -05:00 [DBG] Speech ended
+2026-02-07 03:11:38.211 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 03:11:38.212 -05:00 [INF] Stopping dictation service...
+2026-02-07 03:11:38.212 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 03:11:38.212 -05:00 [INF] Audio capture stopping
+2026-02-07 03:11:38.221 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:11:38.221 -05:00 [INF] Audio capture stopped
+2026-02-07 03:15:24.998 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 03:15:25.193 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 03:15:25.305 -05:00 [INF] Starting dictation service...
+2026-02-07 03:15:25.305 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 03:15:25.312 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:15:25.341 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 03:15:25.349 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 48000Hz, 16bit, 1ch)
+2026-02-07 03:15:25.350 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:15:25.352 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 03:15:25.352 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 03:15:25.352 -05:00 [INF] Dictation service started successfully
+2026-02-07 03:15:25.352 -05:00 [INF] LisperFlow started successfully
+2026-02-07 03:15:28.053 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:15:28.053 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:15:28.057 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 03:15:28.057 -05:00 [INF] Streaming target: Notepad - Untitled - Notepad ("2100962")
+2026-02-07 03:15:28.232 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:15:33.737 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:15:33.737 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:15:33.738 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 03:15:33.738 -05:00 [INF] Streaming target: Notepad - Untitled - Notepad ("2100962")
+2026-02-07 03:15:33.832 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:15:40.140 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:15:40.140 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:15:40.141 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 03:15:40.141 -05:00 [INF] Streaming target: Notepad - Untitled - Notepad ("2100962")
+2026-02-07 03:15:40.600 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:15:50.850 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:15:50.850 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:15:50.850 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 03:15:50.850 -05:00 [INF] Streaming target: Notepad - Untitled - Notepad ("2100962")
+2026-02-07 03:15:50.964 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:15:57.259 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:15:57.259 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:15:57.259 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 03:15:57.259 -05:00 [INF] Streaming target: Notepad - Untitled - Notepad ("2100962")
+2026-02-07 03:15:57.338 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:16:02.766 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:16:02.766 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:16:02.767 -05:00 [DBG] Focused element: Process=Notepad, Title=Untitled - Notepad, Class=Notepad
+2026-02-07 03:16:02.767 -05:00 [INF] Streaming target: Notepad - Untitled - Notepad ("2100962")
+2026-02-07 03:16:02.848 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:16:02.848 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:16:03.030 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:16:57.097 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:16:57.097 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:16:57.097 -05:00 [DBG] Focused element: Process=Cursor, Title=lisperflow-20260207.log - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:16:57.097 -05:00 [INF] Streaming target: Cursor - lisperflow-20260207.log - lisper-flow - Cursor ("4851992")
+2026-02-07 03:16:57.348 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:31:16.134 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 03:31:16.134 -05:00 [INF] Stopping dictation service...
+2026-02-07 03:31:16.135 -05:00 [INF] Unregistered hotkey: Dictation with ID 1
+2026-02-07 03:31:16.135 -05:00 [INF] Dictation service stopped
+2026-02-07 03:31:16.136 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 03:31:16.137 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 03:31:16.137 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 03:31:16.138 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 03:31:16.139 -05:00 [DBG] DictationService disposed
+2026-02-07 03:32:50.888 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 03:32:51.091 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 03:32:51.210 -05:00 [INF] Starting dictation service...
+2026-02-07 03:32:51.211 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 03:32:51.218 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:32:51.253 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 03:32:51.258 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 48000Hz, 16bit, 1ch)
+2026-02-07 03:32:51.259 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:32:51.261 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 03:32:51.261 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 03:32:51.261 -05:00 [INF] Dictation service started successfully
+2026-02-07 03:32:51.262 -05:00 [INF] LisperFlow started successfully
+2026-02-07 03:32:52.392 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:32:52.393 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:32:52.396 -05:00 [DBG] Focused element: Process=Cursor, Title=.env - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:32:52.396 -05:00 [INF] Streaming target: Cursor - .env - lisper-flow - Cursor ("4851992")
+2026-02-07 03:32:52.400 -05:00 [ERR] Failed to start streaming
+System.InvalidOperationException: Deepgram API key is not configured.
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 42
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:32:58.489 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:32:58.489 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:32:58.490 -05:00 [DBG] Focused element: Process=Cursor, Title=.env - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:32:58.490 -05:00 [INF] Streaming target: Cursor - .env - lisper-flow - Cursor ("4851992")
+2026-02-07 03:32:58.490 -05:00 [ERR] Failed to start streaming
+System.InvalidOperationException: Deepgram API key is not configured.
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 42
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:33:02.772 -05:00 [DBG] Focused element: Process=LisperFlow, Title=, Class=HwndWrapper[LisperFlow;;d22ab9fb-44f9-4f6a-b370-aa9145671eed]
+2026-02-07 03:33:02.772 -05:00 [INF] Streaming target: LisperFlow -  ("8325530")
+2026-02-07 03:33:02.772 -05:00 [ERR] Failed to start streaming
+System.InvalidOperationException: Deepgram API key is not configured.
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 42
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:33:05.732 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:33:05.733 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:33:05.733 -05:00 [DBG] Focused element: Process=Cursor, Title=.env - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:33:05.733 -05:00 [INF] Streaming target: Cursor - .env - lisper-flow - Cursor ("4851992")
+2026-02-07 03:33:05.733 -05:00 [ERR] Failed to start streaming
+System.InvalidOperationException: Deepgram API key is not configured.
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 42
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:34:15.123 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:34:15.123 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:34:15.125 -05:00 [DBG] Focused element: Process=Cursor, Title=lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:34:15.125 -05:00 [INF] Streaming target: Cursor - lisper-flow - Cursor ("4851992")
+2026-02-07 03:34:15.125 -05:00 [ERR] Failed to start streaming
+System.InvalidOperationException: Deepgram API key is not configured.
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 42
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:34:23.903 -05:00 [INF] Found 3 audio capture devices
+2026-02-07 03:34:25.035 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:34:25.035 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:34:25.035 -05:00 [DBG] Focused element: Process=LisperFlow, Title=LisperFlow Settings, Class=HwndWrapper[LisperFlow;;c6d09ca0-e5e6-41fe-b6ed-147c14a9d1b3]
+2026-02-07 03:34:25.035 -05:00 [INF] Streaming target: LisperFlow - LisperFlow Settings ("10357482")
+2026-02-07 03:34:25.035 -05:00 [ERR] Failed to start streaming
+System.InvalidOperationException: Deepgram API key is not configured.
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 42
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:37:05.799 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 03:37:05.799 -05:00 [INF] Stopping dictation service...
+2026-02-07 03:37:05.800 -05:00 [INF] Unregistered hotkey: Dictation with ID 1
+2026-02-07 03:37:05.800 -05:00 [INF] Dictation service stopped
+2026-02-07 03:37:05.801 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 03:37:05.802 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 03:37:05.802 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 03:37:05.803 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 03:37:05.804 -05:00 [DBG] DictationService disposed
+2026-02-07 03:37:12.773 -05:00 [INF] Loaded .env from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\.env
+2026-02-07 03:37:12.871 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 03:37:13.040 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 03:37:13.154 -05:00 [INF] Starting dictation service...
+2026-02-07 03:37:13.155 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 03:37:13.160 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:37:13.194 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 03:37:13.206 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 48000Hz, 16bit, 1ch)
+2026-02-07 03:37:13.207 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:37:13.210 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 03:37:13.210 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 03:37:13.210 -05:00 [INF] Dictation service started successfully
+2026-02-07 03:37:13.210 -05:00 [INF] LisperFlow started successfully
+2026-02-07 03:37:14.768 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:37:14.768 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:37:14.773 -05:00 [DBG] Focused element: Process=Cursor, Title=lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:37:14.773 -05:00 [INF] Streaming target: Cursor - lisper-flow - Cursor ("4851992")
+2026-02-07 03:37:15.069 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:37:19.310 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:37:19.310 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:37:19.311 -05:00 [DBG] Focused element: Process=Cursor, Title=lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:37:19.311 -05:00 [INF] Streaming target: Cursor - lisper-flow - Cursor ("4851992")
+2026-02-07 03:37:19.552 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:37:21.552 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:37:21.552 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:37:21.552 -05:00 [DBG] Focused element: Process=Cursor, Title=lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:37:21.552 -05:00 [INF] Streaming target: Cursor - lisper-flow - Cursor ("4851992")
+2026-02-07 03:37:21.775 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:37:22.479 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:37:22.480 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:37:22.480 -05:00 [DBG] Focused element: Process=Cursor, Title=lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:37:22.480 -05:00 [INF] Streaming target: Cursor - lisper-flow - Cursor ("4851992")
+2026-02-07 03:37:22.688 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:37:23.922 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:37:23.922 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:37:23.923 -05:00 [DBG] Focused element: Process=Cursor, Title=lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:37:23.923 -05:00 [INF] Streaming target: Cursor - lisper-flow - Cursor ("4851992")
+2026-02-07 03:37:24.144 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:37:28.827 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:37:28.827 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:37:28.828 -05:00 [DBG] Focused element: Process=Cursor, Title=lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:37:28.828 -05:00 [INF] Streaming target: Cursor - lisper-flow - Cursor ("4851992")
+2026-02-07 03:37:29.255 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:37:29.921 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:37:29.921 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:37:29.921 -05:00 [DBG] Focused element: Process=Cursor, Title=lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:37:29.921 -05:00 [INF] Streaming target: Cursor - lisper-flow - Cursor ("4851992")
+2026-02-07 03:37:30.135 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:39:08.635 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:39:08.635 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:39:08.635 -05:00 [DBG] Focused element: Process=Cursor, Title=lisperflow-20260207.log - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:39:08.635 -05:00 [INF] Streaming target: Cursor - lisperflow-20260207.log - lisper-flow - Cursor ("4851992")
+2026-02-07 03:39:08.957 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:39:13.072 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:39:13.072 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:39:13.073 -05:00 [DBG] Focused element: Process=Cursor, Title=lisperflow-20260207.log - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:39:13.073 -05:00 [INF] Streaming target: Cursor - lisperflow-20260207.log - lisper-flow - Cursor ("4851992")
+2026-02-07 03:39:13.166 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:39:14.161 -05:00 [INF] LisperFlow shutting down...
+2026-02-07 03:39:14.162 -05:00 [INF] Stopping dictation service...
+2026-02-07 03:39:14.163 -05:00 [INF] Unregistered hotkey: Dictation with ID 1
+2026-02-07 03:39:14.163 -05:00 [INF] Dictation service stopped
+2026-02-07 03:39:14.165 -05:00 [DBG] WasapiCaptureManager disposed
+2026-02-07 03:39:14.166 -05:00 [DBG] VoiceActivityDetector disposed
+2026-02-07 03:39:14.166 -05:00 [DBG] AudioCaptureService disposed
+2026-02-07 03:39:14.168 -05:00 [INF] Hotkey registrar disposed
+2026-02-07 03:39:14.169 -05:00 [DBG] DictationService disposed
+2026-02-07 03:39:20.265 -05:00 [INF] Loaded .env from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\.env
+2026-02-07 03:39:20.366 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 03:39:20.586 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 03:39:20.718 -05:00 [INF] Starting dictation service...
+2026-02-07 03:39:20.719 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 03:39:20.725 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:39:20.757 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 03:39:20.769 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 48000Hz, 16bit, 1ch)
+2026-02-07 03:39:20.770 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:39:20.773 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 03:39:20.773 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 03:39:20.773 -05:00 [INF] Dictation service started successfully
+2026-02-07 03:39:20.774 -05:00 [INF] LisperFlow started successfully
+2026-02-07 03:39:22.387 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:39:22.387 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:39:22.391 -05:00 [DBG] Focused element: Process=Cursor, Title=lisperflow-20260207.log - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:39:22.391 -05:00 [INF] Streaming target: Cursor - lisperflow-20260207.log - lisper-flow - Cursor ("4851992")
+2026-02-07 03:39:22.696 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:39:28.418 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:39:28.419 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:39:28.420 -05:00 [DBG] Focused element: Process=Cursor, Title=lisperflow-20260207.log - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:39:28.420 -05:00 [INF] Streaming target: Cursor - lisperflow-20260207.log - lisper-flow - Cursor ("4851992")
+2026-02-07 03:39:28.639 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:39:37.439 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:39:37.439 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:39:37.439 -05:00 [DBG] Focused element: Process=Cursor, Title=lisperflow-20260207.log - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:39:37.439 -05:00 [INF] Streaming target: Cursor - lisperflow-20260207.log - lisper-flow - Cursor ("4851992")
+2026-02-07 03:39:37.751 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:39:42.746 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:39:42.747 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:39:42.747 -05:00 [DBG] Focused element: Process=Cursor, Title=lisperflow-20260207.log - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:39:42.747 -05:00 [INF] Streaming target: Cursor - lisperflow-20260207.log - lisper-flow - Cursor ("4851992")
+2026-02-07 03:39:42.831 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:39:43.586 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:39:43.586 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:39:43.586 -05:00 [DBG] Focused element: Process=Cursor, Title=lisperflow-20260207.log - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:39:43.586 -05:00 [INF] Streaming target: Cursor - lisperflow-20260207.log - lisper-flow - Cursor ("4851992")
+2026-02-07 03:39:43.684 -05:00 [ERR] Failed to start streaming
+System.Net.WebSockets.WebSocketException (0x80004005): The server returned status code '403' when status code '101' was expected.
+   at System.Net.WebSockets.WebSocketHandle.ValidateResponse(HttpResponseMessage response, String secValue)
+   at System.Net.WebSockets.WebSocketHandle.ConnectAsync(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken, ClientWebSocketOptions options)
+   at System.Net.WebSockets.ClientWebSocket.ConnectAsyncCore(Uri uri, HttpMessageInvoker invoker, CancellationToken cancellationToken)
+   at LisperFlow.Streaming.DeepgramStreamProvider.ConnectAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\DeepgramStreamProvider.cs:line 50
+   at LisperFlow.Streaming.StreamingCoordinator.StartStreamingAsync(CancellationToken cancellationToken) in D:\zDev\lisper-flow\src\LisperFlow\Streaming\StreamingCoordinator.cs:line 37
+   at LisperFlow.Services.DictationService.StartStreamingAsync() in D:\zDev\lisper-flow\src\LisperFlow\Services\DictationService.cs:line 499
+2026-02-07 03:41:08.988 -05:00 [INF] Loaded .env from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\.env
+2026-02-07 03:41:09.093 -05:00 [INF] Loaded settings from D:\zDev\lisper-flow\src\LisperFlow\bin\Debug\net8.0-windows\appsettings.json
+2026-02-07 03:41:09.257 -05:00 [INF] Hotkey registrar initialized
+2026-02-07 03:41:09.369 -05:00 [INF] Starting dictation service...
+2026-02-07 03:41:09.370 -05:00 [INF] No VAD model path specified, using energy-based detection
+2026-02-07 03:41:09.375 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:41:09.407 -05:00 [INF] Using default audio device: Microphone (Blue Snowball )
+2026-02-07 03:41:09.412 -05:00 [INF] Audio format: 32 bit IEEFloat: 48000Hz 2 channels (Target: 48000Hz, 16bit, 1ch)
+2026-02-07 03:41:09.413 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:41:09.414 -05:00 [INF] Registered hotkey: Dictation (Ctrl+Space) with ID 1
+2026-02-07 03:41:09.415 -05:00 [INF] Dictation hotkey registered: Ctrl+Space
+2026-02-07 03:41:09.415 -05:00 [INF] Dictation service started successfully
+2026-02-07 03:41:09.416 -05:00 [INF] LisperFlow started successfully
+2026-02-07 03:41:12.493 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:41:12.493 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:41:12.498 -05:00 [DBG] Focused element: Process=Cursor, Title=lisperflow-20260207.log - lisper-flow - Cursor, Class=Chrome_WidgetWin_1
+2026-02-07 03:41:12.498 -05:00 [INF] Streaming target: Cursor - lisperflow-20260207.log - lisper-flow - Cursor ("4851992")
+2026-02-07 03:41:12.872 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 03:41:12.873 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:41:12.888 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 03:41:12.888 -05:00 [INF] Audio capture started
+2026-02-07 03:41:12.888 -05:00 [INF] Audio capture service started listening
+2026-02-07 03:41:12.888 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 03:41:12.888 -05:00 [INF] Streaming coordinator started
+2026-02-07 03:41:12.890 -05:00 [INF] Real-time typing started for window "4851992"
+2026-02-07 03:41:12.890 -05:00 [INF] Streaming dictation started
+2026-02-07 03:41:12.974 -05:00 [DBG] Speech detected, starting segment with 4320 pre-roll samples
+2026-02-07 03:41:12.974 -05:00 [DBG] Speech detected
+2026-02-07 03:41:13.945 -05:00 [DBG] Deepgram transcript confidence: 61.13 %
+2026-02-07 03:41:13.947 -05:00 [WRN] Low confidence (61.13 %): Testing 1
+2026-02-07 03:41:13.947 -05:00 [DBG] Deepgram partial transcript: Testing 1
+2026-02-07 03:41:13.947 -05:00 [DBG] Streaming partial transcript: Testing 1
+2026-02-07 03:41:13.947 -05:00 [DBG] Enqueuing word from partial: 'Testing'
+2026-02-07 03:41:13.948 -05:00 [DBG] Enqueuing word from partial: '1'
+2026-02-07 03:41:13.950 -05:00 [DBG] Typing word: 'Testing' to window "4851992"
+2026-02-07 03:41:13.981 -05:00 [DBG] Typing word: '1' to window "4851992"
+2026-02-07 03:41:15.113 -05:00 [DBG] Speech ended
+2026-02-07 03:41:15.143 -05:00 [DBG] Deepgram transcript confidence: 97.05 %
+2026-02-07 03:41:15.143 -05:00 [DBG] Deepgram partial transcript: Testing. 1, 2, 3.
+2026-02-07 03:41:15.143 -05:00 [DBG] Streaming partial transcript: Testing. 1, 2, 3.
+2026-02-07 03:41:15.143 -05:00 [DBG] Enqueuing word from partial: '2,'
+2026-02-07 03:41:15.143 -05:00 [DBG] Enqueuing word from partial: '3.'
+2026-02-07 03:41:15.143 -05:00 [DBG] Typing word: '2,' to window "4851992"
+2026-02-07 03:41:15.174 -05:00 [DBG] Typing word: '3.' to window "4851992"
+2026-02-07 03:41:16.243 -05:00 [DBG] Deepgram transcript confidence: 96.88 %
+2026-02-07 03:41:16.243 -05:00 [DBG] Deepgram final transcript: Testing. 1, 2, 3.
+2026-02-07 03:41:16.244 -05:00 [INF] Streaming final transcript: Testing. 1, 2, 3.
+2026-02-07 03:41:16.244 -05:00 [DBG] Final transcript: 4 words, 4 already typed, 0 new
+2026-02-07 03:41:17.005 -05:00 [DBG] LLM generation completed in 758ms, 8 tokens
+2026-02-07 03:41:17.006 -05:00 [DBG] Streaming LLM enhancement ready (len 25)
+2026-02-07 03:41:17.123 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:41:17.123 -05:00 [DBG] Speech detected
+2026-02-07 03:41:17.242 -05:00 [DBG] Deepgram transcript confidence: 79.44 %
+2026-02-07 03:41:17.242 -05:00 [WRN] Low confidence (79.44 %): Oh,
+2026-02-07 03:41:17.242 -05:00 [DBG] Deepgram partial transcript: Oh,
+2026-02-07 03:41:17.242 -05:00 [DBG] Streaming partial transcript: Oh,
+2026-02-07 03:41:17.242 -05:00 [DBG] Enqueuing word from partial: 'Oh,'
+2026-02-07 03:41:17.242 -05:00 [DBG] Typing word: 'Oh,' to window "4851992"
+2026-02-07 03:41:18.248 -05:00 [DBG] Deepgram transcript confidence: 99.95 %
+2026-02-07 03:41:18.248 -05:00 [DBG] Deepgram partial transcript: Okay. Cool. So
+2026-02-07 03:41:18.248 -05:00 [DBG] Streaming partial transcript: Okay. Cool. So
+2026-02-07 03:41:18.248 -05:00 [DBG] Partial diverged at word 0: typed 'Oh,' vs partial 'Okay.' — skipping until stabilised
+2026-02-07 03:41:19.383 -05:00 [DBG] Speech ended
+2026-02-07 03:41:19.461 -05:00 [DBG] Deepgram transcript confidence: 99.90 %
+2026-02-07 03:41:19.461 -05:00 [DBG] Deepgram partial transcript: Okay. Cool. So it works.
+2026-02-07 03:41:19.461 -05:00 [DBG] Streaming partial transcript: Okay. Cool. So it works.
+2026-02-07 03:41:19.462 -05:00 [DBG] Partial diverged at word 0: typed 'Oh,' vs partial 'Okay.' — skipping until stabilised
+2026-02-07 03:41:19.593 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:41:19.593 -05:00 [DBG] Speech detected
+2026-02-07 03:41:20.132 -05:00 [DBG] Speech ended
+2026-02-07 03:41:20.260 -05:00 [DBG] Deepgram transcript confidence: 99.90 %
+2026-02-07 03:41:20.260 -05:00 [DBG] Deepgram final transcript: Okay. Cool. So it works.
+2026-02-07 03:41:20.260 -05:00 [INF] Streaming final transcript: Okay. Cool. So it works.
+2026-02-07 03:41:20.260 -05:00 [DBG] Final transcript: 5 words, 0 already typed, 5 new
+2026-02-07 03:41:20.260 -05:00 [DBG] Enqueuing word from final: 'Okay.'
+2026-02-07 03:41:20.260 -05:00 [DBG] Enqueuing word from final: 'Cool.'
+2026-02-07 03:41:20.260 -05:00 [DBG] Enqueuing word from final: 'So'
+2026-02-07 03:41:20.260 -05:00 [DBG] Enqueuing word from final: 'it'
+2026-02-07 03:41:20.260 -05:00 [DBG] Enqueuing word from final: 'works.'
+2026-02-07 03:41:20.260 -05:00 [DBG] Typing word: 'Okay.' to window "4851992"
+2026-02-07 03:41:20.299 -05:00 [DBG] Typing word: 'Cool.' to window "4851992"
+2026-02-07 03:41:20.330 -05:00 [DBG] Typing word: 'So' to window "4851992"
+2026-02-07 03:41:20.360 -05:00 [DBG] Typing word: 'it' to window "4851992"
+2026-02-07 03:41:20.391 -05:00 [DBG] Typing word: 'works.' to window "4851992"
+2026-02-07 03:41:20.779 -05:00 [DBG] LLM generation completed in 518ms, 7 tokens
+2026-02-07 03:41:20.779 -05:00 [DBG] Streaming LLM enhancement ready (len 22)
+2026-02-07 03:41:20.823 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:41:20.823 -05:00 [DBG] Speech detected
+2026-02-07 03:41:21.323 -05:00 [DBG] Speech ended
+2026-02-07 03:41:22.052 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:41:22.052 -05:00 [DBG] Speech detected
+2026-02-07 03:41:22.983 -05:00 [DBG] Speech ended
+2026-02-07 03:41:23.894 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:41:23.894 -05:00 [DBG] Speech detected
+2026-02-07 03:41:24.538 -05:00 [DBG] Deepgram transcript confidence: 98.73 %
+2026-02-07 03:41:24.538 -05:00 [DBG] Deepgram partial transcript: This is pretty
+2026-02-07 03:41:24.538 -05:00 [DBG] Streaming partial transcript: This is pretty
+2026-02-07 03:41:24.538 -05:00 [DBG] Enqueuing word from partial: 'This'
+2026-02-07 03:41:24.538 -05:00 [DBG] Enqueuing word from partial: 'is'
+2026-02-07 03:41:24.538 -05:00 [DBG] Enqueuing word from partial: 'pretty'
+2026-02-07 03:41:24.538 -05:00 [DBG] Typing word: 'This' to window "4851992"
+2026-02-07 03:41:24.568 -05:00 [DBG] Typing word: 'is' to window "4851992"
+2026-02-07 03:41:24.599 -05:00 [DBG] Typing word: 'pretty' to window "4851992"
+2026-02-07 03:41:25.412 -05:00 [DBG] Speech ended
+2026-02-07 03:41:25.550 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 03:41:25.551 -05:00 [DBG] Deepgram partial transcript: This is pretty sick.
+2026-02-07 03:41:25.551 -05:00 [DBG] Streaming partial transcript: This is pretty sick.
+2026-02-07 03:41:25.551 -05:00 [DBG] Enqueuing word from partial: 'sick.'
+2026-02-07 03:41:25.551 -05:00 [DBG] Typing word: 'sick.' to window "4851992"
+2026-02-07 03:41:26.153 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:41:26.153 -05:00 [DBG] Speech detected
+2026-02-07 03:41:26.255 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 03:41:26.255 -05:00 [DBG] Deepgram partial transcript: This is pretty sick.
+2026-02-07 03:41:26.255 -05:00 [DBG] Streaming partial transcript: This is pretty sick.
+2026-02-07 03:41:26.943 -05:00 [DBG] Speech ended
+2026-02-07 03:41:27.123 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:41:27.123 -05:00 [DBG] Speech detected
+2026-02-07 03:41:27.255 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 03:41:27.256 -05:00 [DBG] Deepgram partial transcript: This is pretty sick.
+2026-02-07 03:41:27.256 -05:00 [DBG] Streaming partial transcript: This is pretty sick.
+2026-02-07 03:41:27.623 -05:00 [DBG] Speech ended
+2026-02-07 03:41:27.751 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 03:41:27.751 -05:00 [DBG] Deepgram partial transcript: This is pretty sick.
+2026-02-07 03:41:27.751 -05:00 [DBG] Streaming partial transcript: This is pretty sick.
+2026-02-07 03:41:27.990 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:41:27.990 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:41:27.992 -05:00 [DBG] Recording state changed to: "Stopping"
+2026-02-07 03:41:27.993 -05:00 [INF] Audio capture stopping
+2026-02-07 03:41:27.993 -05:00 [WRN] No audio captured during recording
+2026-02-07 03:41:27.993 -05:00 [INF] Streaming audio capture stopped
+2026-02-07 03:41:27.994 -05:00 [DBG] Recording state changed to: "Stopped"
+2026-02-07 03:41:27.994 -05:00 [INF] Audio capture stopped
+2026-02-07 03:41:27.995 -05:00 [INF] Streaming coordinator stopped
+2026-02-07 03:41:28.211 -05:00 [INF] Real-time typing stopped
+2026-02-07 03:41:28.211 -05:00 [INF] Streaming dictation stopped
+2026-02-07 03:41:39.444 -05:00 [DBG] Hotkey pressed: Dictation (Ctrl+Space)
+2026-02-07 03:41:39.444 -05:00 [DBG] Dictation hotkey pressed: Dictation
+2026-02-07 03:41:39.445 -05:00 [DBG] Focused element: Process=Notepad, Title=*Untitled - Notepad, Class=Notepad
+2026-02-07 03:41:39.445 -05:00 [INF] Streaming target: Notepad - *Untitled - Notepad ("2100962")
+2026-02-07 03:41:39.675 -05:00 [INF] Connected to Deepgram streaming ASR
+2026-02-07 03:41:39.675 -05:00 [DBG] Recording state changed to: "Starting"
+2026-02-07 03:41:39.675 -05:00 [DBG] Recording state changed to: "Recording"
+2026-02-07 03:41:39.675 -05:00 [INF] Audio capture started
+2026-02-07 03:41:39.675 -05:00 [INF] Audio capture service started listening
+2026-02-07 03:41:39.675 -05:00 [INF] Streaming audio capture started (chunk: 100ms)
+2026-02-07 03:41:39.675 -05:00 [INF] Streaming coordinator started
+2026-02-07 03:41:39.675 -05:00 [INF] Real-time typing started for window "2100962"
+2026-02-07 03:41:39.675 -05:00 [INF] Streaming dictation started
+2026-02-07 03:41:39.753 -05:00 [DBG] Speech detected, starting segment with 4320 pre-roll samples
+2026-02-07 03:41:39.753 -05:00 [DBG] Speech detected
+2026-02-07 03:41:40.273 -05:00 [DBG] Speech ended
+2026-02-07 03:41:40.396 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:41:40.396 -05:00 [DBG] Speech detected
+2026-02-07 03:41:41.443 -05:00 [DBG] Speech ended
+2026-02-07 03:41:41.541 -05:00 [DBG] Deepgram transcript confidence: 77.10 %
+2026-02-07 03:41:41.541 -05:00 [WRN] Low confidence (77.10 %): Okay.
+2026-02-07 03:41:41.541 -05:00 [DBG] Deepgram final transcript: Okay.
+2026-02-07 03:41:41.541 -05:00 [INF] Streaming final transcript: Okay.
+2026-02-07 03:41:41.541 -05:00 [DBG] Final transcript: 1 words, 0 already typed, 1 new
+2026-02-07 03:41:41.541 -05:00 [DBG] Enqueuing word from final: 'Okay.'
+2026-02-07 03:41:41.541 -05:00 [DBG] Typing word: 'Okay.' to window "2100962"
+2026-02-07 03:41:42.083 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:41:42.083 -05:00 [DBG] Speech detected
+2026-02-07 03:41:42.384 -05:00 [DBG] LLM generation completed in 842ms, 12 tokens
+2026-02-07 03:41:42.384 -05:00 [DBG] Streaming LLM enhancement ready (len 61)
+2026-02-07 03:41:42.537 -05:00 [DBG] Deepgram transcript confidence: 96.14 %
+2026-02-07 03:41:42.537 -05:00 [DBG] Deepgram partial transcript: Basic
+2026-02-07 03:41:42.537 -05:00 [DBG] Streaming partial transcript: Basic
+2026-02-07 03:41:42.537 -05:00 [DBG] Enqueuing word from partial: 'Basic'
+2026-02-07 03:41:42.537 -05:00 [DBG] Typing word: 'Basic' to window "2100962"
+2026-02-07 03:41:43.540 -05:00 [DBG] Deepgram transcript confidence: 99.80 %
+2026-02-07 03:41:43.540 -05:00 [DBG] Deepgram partial transcript: Basically, this is with
+2026-02-07 03:41:43.540 -05:00 [DBG] Streaming partial transcript: Basically, this is with
+2026-02-07 03:41:43.540 -05:00 [DBG] Partial diverged at word 0: typed 'Basic' vs partial 'Basically,' — skipping until stabilised
+2026-02-07 03:41:44.544 -05:00 [DBG] Deepgram transcript confidence: 97.61 %
+2026-02-07 03:41:44.544 -05:00 [DBG] Deepgram partial transcript: Basically, this is whisper flow complete
+2026-02-07 03:41:44.544 -05:00 [DBG] Streaming partial transcript: Basically, this is whisper flow complete
+2026-02-07 03:41:44.544 -05:00 [DBG] Partial diverged at word 0: typed 'Basic' vs partial 'Basically,' — skipping until stabilised
+2026-02-07 03:41:45.544 -05:00 [DBG] Deepgram transcript confidence: 96.68 %
+2026-02-07 03:41:45.544 -05:00 [DBG] Deepgram partial transcript: Basically, this is whisper flow completely rebuilt
+2026-02-07 03:41:45.544 -05:00 [DBG] Streaming partial transcript: Basically, this is whisper flow completely rebuilt
+2026-02-07 03:41:45.544 -05:00 [DBG] Partial diverged at word 0: typed 'Basic' vs partial 'Basically,' — skipping until stabilised
+2026-02-07 03:41:46.033 -05:00 [DBG] Speech ended
+2026-02-07 03:41:46.148 -05:00 [DBG] Deepgram transcript confidence: 97.17 %
+2026-02-07 03:41:46.148 -05:00 [DBG] Deepgram partial transcript: Basically, this is whisper flow completely rebuilt.
+2026-02-07 03:41:46.148 -05:00 [DBG] Streaming partial transcript: Basically, this is whisper flow completely rebuilt.
+2026-02-07 03:41:46.148 -05:00 [DBG] Partial diverged at word 0: typed 'Basic' vs partial 'Basically,' — skipping until stabilised
+2026-02-07 03:41:46.549 -05:00 [DBG] Deepgram transcript confidence: 97.31 %
+2026-02-07 03:41:46.549 -05:00 [DBG] Deepgram final transcript: Basically, this is whisper flow completely rebuilt.
+2026-02-07 03:41:46.549 -05:00 [INF] Streaming final transcript: Basically, this is whisper flow completely rebuilt.
+2026-02-07 03:41:46.549 -05:00 [DBG] Final transcript: 7 words, 0 already typed, 7 new
+2026-02-07 03:41:46.549 -05:00 [DBG] Enqueuing word from final: 'Basically,'
+2026-02-07 03:41:46.549 -05:00 [DBG] Enqueuing word from final: 'this'
+2026-02-07 03:41:46.549 -05:00 [DBG] Enqueuing word from final: 'is'
+2026-02-07 03:41:46.549 -05:00 [DBG] Enqueuing word from final: 'whisper'
+2026-02-07 03:41:46.549 -05:00 [DBG] Enqueuing word from final: 'flow'
+2026-02-07 03:41:46.549 -05:00 [DBG] Enqueuing word from final: 'completely'
+2026-02-07 03:41:46.549 -05:00 [DBG] Enqueuing word from final: 'rebuilt.'
+2026-02-07 03:41:46.549 -05:00 [DBG] Typing word: 'Basically,' to window "2100962"
+2026-02-07 03:41:46.582 -05:00 [DBG] Typing word: 'this' to window "2100962"
+2026-02-07 03:41:46.612 -05:00 [DBG] Typing word: 'is' to window "2100962"
+2026-02-07 03:41:46.643 -05:00 [DBG] Typing word: 'whisper' to window "2100962"
+2026-02-07 03:41:46.675 -05:00 [DBG] Typing word: 'flow' to window "2100962"
+2026-02-07 03:41:46.705 -05:00 [DBG] Typing word: 'completely' to window "2100962"
+2026-02-07 03:41:46.737 -05:00 [DBG] Typing word: 'rebuilt.' to window "2100962"
+2026-02-07 03:41:47.099 -05:00 [DBG] LLM generation completed in 550ms, 11 tokens
+2026-02-07 03:41:47.099 -05:00 [DBG] Streaming LLM enhancement ready (len 65)
+2026-02-07 03:41:49.484 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:41:49.484 -05:00 [DBG] Speech detected
+2026-02-07 03:41:49.645 -05:00 [DBG] Deepgram transcript confidence: 93.12 %
+2026-02-07 03:41:49.645 -05:00 [DBG] Deepgram partial transcript: Oh,
+2026-02-07 03:41:49.645 -05:00 [DBG] Streaming partial transcript: Oh,
+2026-02-07 03:41:49.645 -05:00 [DBG] Enqueuing word from partial: 'Oh,'
+2026-02-07 03:41:49.645 -05:00 [DBG] Typing word: 'Oh,' to window "2100962"
+2026-02-07 03:41:50.746 -05:00 [DBG] Deepgram transcript confidence: 99.85 %
+2026-02-07 03:41:50.746 -05:00 [DBG] Deepgram partial transcript: Oh, okay.
+2026-02-07 03:41:50.746 -05:00 [DBG] Streaming partial transcript: Oh, okay.
+2026-02-07 03:41:50.746 -05:00 [DBG] Enqueuing word from partial: 'okay.'
+2026-02-07 03:41:50.746 -05:00 [DBG] Typing word: 'okay.' to window "2100962"
+2026-02-07 03:41:50.984 -05:00 [DBG] Speech ended
+2026-02-07 03:41:51.147 -05:00 [DBG] Deepgram transcript confidence: 99.85 %
+2026-02-07 03:41:51.147 -05:00 [DBG] Deepgram final transcript: Oh, okay.
+2026-02-07 03:41:51.147 -05:00 [INF] Streaming final transcript: Oh, okay.
+2026-02-07 03:41:51.147 -05:00 [DBG] Final transcript: 2 words, 2 already typed, 0 new
+2026-02-07 03:41:51.489 -05:00 [DBG] LLM generation completed in 342ms, 4 tokens
+2026-02-07 03:41:51.489 -05:00 [DBG] Streaming LLM enhancement ready (len 9)
+2026-02-07 03:41:51.794 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:41:51.794 -05:00 [DBG] Speech detected
+2026-02-07 03:41:52.040 -05:00 [DBG] Deepgram transcript confidence: 99.12 %
+2026-02-07 03:41:52.040 -05:00 [DBG] Deepgram partial transcript: I
+2026-02-07 03:41:52.040 -05:00 [DBG] Streaming partial transcript: I
+2026-02-07 03:41:52.040 -05:00 [DBG] Enqueuing word from partial: 'I'
+2026-02-07 03:41:52.040 -05:00 [DBG] Typing word: 'I' to window "2100962"
+2026-02-07 03:41:53.044 -05:00 [DBG] Deepgram transcript confidence: 100.00 %
+2026-02-07 03:41:53.044 -05:00 [DBG] Deepgram partial transcript: I guess I'm getting
+2026-02-07 03:41:53.044 -05:00 [DBG] Streaming partial transcript: I guess I'm getting
+2026-02-07 03:41:53.044 -05:00 [DBG] Enqueuing word from partial: 'guess'
+2026-02-07 03:41:53.044 -05:00 [DBG] Enqueuing word from partial: 'I'm'
+2026-02-07 03:41:53.044 -05:00 [DBG] Enqueuing word from partial: 'getting'
+2026-02-07 03:41:53.044 -05:00 [DBG] Typing word: 'guess' to window "2100962"
+2026-02-07 03:41:53.077 -05:00 [DBG] Typing word: 'I'm' to window "2100962"
+2026-02-07 03:41:53.109 -05:00 [DBG] Typing word: 'getting' to window "2100962"
+2026-02-07 03:41:54.149 -05:00 [DBG] Deepgram transcript confidence: 98.63 %
+2026-02-07 03:41:54.149 -05:00 [DBG] Deepgram partial transcript: I guess I'm getting rate limited.
+2026-02-07 03:41:54.149 -05:00 [DBG] Streaming partial transcript: I guess I'm getting rate limited.
+2026-02-07 03:41:54.149 -05:00 [DBG] Enqueuing word from partial: 'rate'
+2026-02-07 03:41:54.149 -05:00 [DBG] Enqueuing word from partial: 'limited.'
+2026-02-07 03:41:54.149 -05:00 [DBG] Typing word: 'rate' to window "2100962"
+2026-02-07 03:41:54.190 -05:00 [DBG] Typing word: 'limited.' to window "2100962"
+2026-02-07 03:41:54.224 -05:00 [DBG] Speech ended
+2026-02-07 03:41:54.650 -05:00 [DBG] Deepgram transcript confidence: 98.73 %
+2026-02-07 03:41:54.650 -05:00 [DBG] Deepgram final transcript: I guess I'm getting rate limited.
+2026-02-07 03:41:54.650 -05:00 [INF] Streaming final transcript: I guess I'm getting rate limited.
+2026-02-07 03:41:54.650 -05:00 [DBG] Final transcript: 6 words, 6 already typed, 0 new
+2026-02-07 03:41:55.034 -05:00 [DBG] LLM generation completed in 383ms, 7 tokens
+2026-02-07 03:41:55.034 -05:00 [DBG] Streaming LLM enhancement ready (len 33)
+2026-02-07 03:41:55.924 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:41:55.924 -05:00 [DBG] Speech detected
+2026-02-07 03:41:56.694 -05:00 [DBG] Speech ended
+2026-02-07 03:41:57.744 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:41:57.744 -05:00 [DBG] Speech detected
+2026-02-07 03:41:59.574 -05:00 [DBG] Speech ended
+2026-02-07 03:41:59.764 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:41:59.764 -05:00 [DBG] Speech detected
+2026-02-07 03:42:00.304 -05:00 [DBG] Speech ended
+2026-02-07 03:42:01.794 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:42:01.794 -05:00 [DBG] Speech detected
+2026-02-07 03:42:02.464 -05:00 [DBG] Speech ended
+2026-02-07 03:42:03.474 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:42:03.474 -05:00 [DBG] Speech detected
+2026-02-07 03:42:03.975 -05:00 [DBG] Speech ended
+2026-02-07 03:42:11.465 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:42:11.465 -05:00 [DBG] Speech detected
+2026-02-07 03:42:12.284 -05:00 [DBG] Speech ended
+2026-02-07 03:42:13.524 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:42:13.524 -05:00 [DBG] Speech detected
+2026-02-07 03:42:14.504 -05:00 [DBG] Speech ended
+2026-02-07 03:42:15.154 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:42:15.155 -05:00 [DBG] Speech detected
+2026-02-07 03:42:16.335 -05:00 [DBG] Speech ended
+2026-02-07 03:42:16.695 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:42:16.695 -05:00 [DBG] Speech detected
+2026-02-07 03:42:19.424 -05:00 [DBG] Speech ended
+2026-02-07 03:42:20.044 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:42:20.045 -05:00 [DBG] Speech detected
+2026-02-07 03:42:23.965 -05:00 [DBG] Speech ended
+2026-02-07 03:42:23.974 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:42:23.974 -05:00 [DBG] Speech detected
+2026-02-07 03:42:27.505 -05:00 [DBG] Speech ended
+2026-02-07 03:42:27.535 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:42:27.535 -05:00 [DBG] Speech detected
+2026-02-07 03:42:28.265 -05:00 [DBG] Speech ended
+2026-02-07 03:42:28.294 -05:00 [DBG] Speech detected, starting segment with 24000 pre-roll samples
+2026-02-07 03:42:28.294 -05:00 [DBG] Speech detected
+2026-02-07 03:42:31.485 -05:00 [DBG] Speech ended

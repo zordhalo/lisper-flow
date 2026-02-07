@@ -551,20 +551,24 @@ public class DictationService : IDisposable
         var update = _transcriptSynchronizer.ProcessPartialTranscript(e.Text);
         foreach (var word in update.WordsToType)
         {
+            _logger.LogDebug("Enqueuing word from partial: '{Word}'", word);
             _typingQueue.EnqueueWord(word);
         }
-        // Ignore corrections from partials - append only
     }
     
     private void OnFinalTranscriptReceived(object? sender, FinalTranscriptEventArgs e)
     {
         _logger.LogInformation("Streaming final transcript: {Text}", e.Text);
-        var update = _transcriptSynchronizer.ProcessPartialTranscript(e.Text);
+        
+        // Use ProcessFinalTranscript which types remaining words then we reset
+        var update = _transcriptSynchronizer.ProcessFinalTranscript(e.Text);
         foreach (var word in update.WordsToType)
         {
+            _logger.LogDebug("Enqueuing word from final: '{Word}'", word);
             _typingQueue.EnqueueWord(word);
         }
-        // Don't apply corrections - just commit and reset for next utterance
+        
+        // Reset for the next utterance
         _transcriptSynchronizer.Reset();
         
         if (_settings.Streaming.ApplyLlmEnhancement.Equals("AfterFinalization", StringComparison.OrdinalIgnoreCase) &&
