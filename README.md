@@ -1,5 +1,7 @@
 # Lisper Flow
 
+[![MCP servers live](https://whobuildsagents.com/badge/advancelabs.dev.svg)](https://whobuildsagents.com/advancelabs.dev)
+
 Wisper flow clone MVP — built in one sitting. A rapid prototype of a social audio app.
 
 ## Tech
